@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+                 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace ="com.catchdog.notice.dao.CatchDogNoticeDAO">
+
+<insert id="noticeInsert" parameterType="noticeVO">
+	INSERT INTO CATCHDOG_NOTICE( NNUM	
+								,NADMIN
+								,NTITLE
+								,NCONTENT
+								,NIMAGE
+								,NDELETEYN
+								,NINSERTDATE
+								,NUPDATEDATE)
+						 VALUES( #{nnum, jdbcType=VARCHAR},
+						 		 #{nadmin, jdbcType=VARCHAR},
+						 		 #{ntitle, jdbcType=VARCHAR},
+						 		 #{ncontent, jdbcType=VARCHAR},
+						 		 #{nimage, jdbcType=VARCHAR},
+						 		 'Y'
+						 		 SYSDATE,
+						 		 SYSDATE)		
+</insert> 
+
+
+</mapper>

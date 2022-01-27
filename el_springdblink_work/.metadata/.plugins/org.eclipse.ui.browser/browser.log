@@ -1,0 +1,50 @@
+
+10월 21, 2021 18:22:51.540 NEW SESSION
+10월 21, 2021 18:22:51.540 [1976:16628:1021/182251.536:ERROR:chrome_browser_main_extra_parts_metrics.cc(228)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+10월 21, 2021 18:22:51.541 [1976:16628:1021/182251.536:ERROR:chrome_browser_main_extra_parts_metrics.cc(231)] crbug.com/1216328: Checking Bluetooth availability ended.
+10월 21, 2021 18:22:51.542 [1976:16628:1021/182251.537:ERROR:chrome_browser_main_extra_parts_metrics.cc(234)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+10월 21, 2021 18:22:51.542 [1976:16628:1021/182251.541:ERROR:chrome_browser_main_extra_parts_metrics.cc(238)] crbug.com/1216328: Checking default browser status ended.
+10월 21, 2021 18:22:51.543 [1976:9220:1021/182251.543:ERROR:device_event_log_impl.cc(214)] [18:22:51.543] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+10월 21, 2021 18:22:51.574 [1976:9220:1021/182251.574:ERROR:device_event_log_impl.cc(214)] [18:22:51.573] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+10월 21, 2021 19:20:02.340 [3376:16732:1021/192002.339:ERROR:chrome_browser_main_extra_parts_metrics.cc(228)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+10월 21, 2021 19:20:02.340 [3376:16732:1021/192002.339:ERROR:chrome_browser_main_extra_parts_metrics.cc(231)] crbug.com/1216328: Checking Bluetooth availability ended.
+10월 21, 2021 19:20:02.341 [3376:16732:1021/192002.339:ERROR:chrome_browser_main_extra_parts_metrics.cc(234)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+10월 21, 2021 19:20:02.344 [3376:16732:1021/192002.343:ERROR:chrome_browser_main_extra_parts_metrics.cc(238)] crbug.com/1216328: Checking default browser status ended.
+10월 21, 2021 19:20:02.344 [3376:17496:1021/192002.344:ERROR:device_event_log_impl.cc(214)] [19:20:02.344] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+10월 21, 2021 19:20:02.373 [3376:17496:1021/192002.373:ERROR:device_event_log_impl.cc(214)] [19:20:02.373] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+10월 21, 2021 20:18:28.413 [15524:4536:1021/201828.413:ERROR:chrome_browser_main_extra_parts_metrics.cc(228)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+10월 21, 2021 20:18:28.414 [15524:4536:1021/201828.413:ERROR:chrome_browser_main_extra_parts_metrics.cc(231)] crbug.com/1216328: Checking Bluetooth availability ended.
+10월 21, 2021 20:18:28.414 [15524:4536:1021/201828.413:ERROR:chrome_browser_main_extra_parts_metrics.cc(234)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+10월 21, 2021 20:18:28.416 [15524:4536:1021/201828.416:ERROR:chrome_browser_main_extra_parts_metrics.cc(238)] crbug.com/1216328: Checking default browser status ended.
+10월 21, 2021 20:18:28.421 [15524:14160:1021/201828.421:ERROR:device_event_log_impl.cc(214)] [20:18:28.421] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+10월 21, 2021 20:18:28.452 [15524:14160:1021/201828.451:ERROR:device_event_log_impl.cc(214)] [20:18:28.451] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+10월 21, 2021 20:25:03.55 [8312:21268:1021/202503.055:ERROR:chrome_browser_main_extra_parts_metrics.cc(228)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+10월 21, 2021 20:25:03.55 [8312:21268:1021/202503.055:ERROR:chrome_browser_main_extra_parts_metrics.cc(231)] crbug.com/1216328: Checking Bluetooth availability ended.
+10월 21, 2021 20:25:03.57 [8312:21268:1021/202503.055:ERROR:chrome_browser_main_extra_parts_metrics.cc(234)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+10월 21, 2021 20:25:03.60 [8312:21268:1021/202503.059:ERROR:chrome_browser_main_extra_parts_metrics.cc(238)] crbug.com/1216328: Checking default browser status ended.
+10월 21, 2021 20:25:03.60 [8312:13364:1021/202503.060:ERROR:device_event_log_impl.cc(214)] [20:25:03.060] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+10월 21, 2021 20:25:03.92 [8312:13364:1021/202503.091:ERROR:device_event_log_impl.cc(214)] [20:25:03.091] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+10월 21, 2021 20:26:52.214 [18864:18016:1021/202652.213:ERROR:chrome_browser_main_extra_parts_metrics.cc(228)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+10월 21, 2021 20:26:52.214 [18864:18016:1021/202652.213:ERROR:chrome_browser_main_extra_parts_metrics.cc(231)] crbug.com/1216328: Checking Bluetooth availability ended.
+10월 21, 2021 20:26:52.215 [18864:18016:1021/202652.214:ERROR:chrome_browser_main_extra_parts_metrics.cc(234)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+10월 21, 2021 20:26:52.217 [18864:18016:1021/202652.217:ERROR:chrome_browser_main_extra_parts_metrics.cc(238)] crbug.com/1216328: Checking default browser status ended.
+10월 21, 2021 20:26:52.218 [18864:7712:1021/202652.218:ERROR:device_event_log_impl.cc(214)] [20:26:52.218] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+10월 21, 2021 20:26:52.246 [18864:7712:1021/202652.245:ERROR:device_event_log_impl.cc(214)] [20:26:52.245] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+
+10월 22, 2021 15:07:17.60 NEW SESSION
+10월 22, 2021 15:07:17.60 [5024:11356:1022/150717.055:ERROR:chrome_browser_main_extra_parts_metrics.cc(228)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+10월 22, 2021 15:07:17.61 [5024:11356:1022/150717.055:ERROR:chrome_browser_main_extra_parts_metrics.cc(231)] crbug.com/1216328: Checking Bluetooth availability ended.
+10월 22, 2021 15:07:17.61 [5024:11356:1022/150717.055:ERROR:chrome_browser_main_extra_parts_metrics.cc(234)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+10월 22, 2021 15:07:17.62 [5024:11356:1022/150717.060:ERROR:chrome_browser_main_extra_parts_metrics.cc(238)] crbug.com/1216328: Checking default browser status ended.
+10월 22, 2021 15:07:17.62 [5024:13328:1022/150717.060:ERROR:device_event_log_impl.cc(214)] [15:07:17.060] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+10월 22, 2021 15:07:17.95 [5024:13328:1022/150717.095:ERROR:device_event_log_impl.cc(214)] [15:07:17.095] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+
+10월 22, 2021 17:37:12.500 NEW SESSION
+10월 22, 2021 17:37:12.500 [2960:11672:1022/173712.466:ERROR:chrome_browser_main_extra_parts_metrics.cc(228)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+10월 22, 2021 17:37:12.501 [2960:11672:1022/173712.466:ERROR:chrome_browser_main_extra_parts_metrics.cc(231)] crbug.com/1216328: Checking Bluetooth availability ended.
+10월 22, 2021 17:37:12.502 [2960:11672:1022/173712.466:ERROR:chrome_browser_main_extra_parts_metrics.cc(234)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+10월 22, 2021 17:37:12.503 [2960:11552:1022/173712.469:ERROR:device_event_log_impl.cc(214)] [17:37:12.468] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+10월 22, 2021 17:37:12.503 [2960:11552:1022/173712.472:ERROR:device_event_log_impl.cc(214)] [17:37:12.471] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+10월 22, 2021 17:37:12.504 [2960:11552:1022/173712.472:ERROR:device_event_log_impl.cc(214)] [17:37:12.471] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+10월 22, 2021 17:37:12.505 [2960:11672:1022/173712.482:ERROR:chrome_browser_main_extra_parts_metrics.cc(238)] crbug.com/1216328: Checking default browser status ended.
+10월 22, 2021 17:37:12.539 [2960:11552:1022/173712.539:ERROR:device_event_log_impl.cc(214)] [17:37:12.538] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.

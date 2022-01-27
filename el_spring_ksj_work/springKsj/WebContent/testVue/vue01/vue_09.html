@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>vue_09</title>
+</head>
+<script type="text/javascript" src="https://unpkg.com/vue@2.5.16/dist/vue.js"></script>
+<body>
+<!-- 
+	v-pre : 템플릿 문자열을 컴파일하지 않고 그대로 보내기 
+	v-once : 한번만 렌더링 : 초깃값이 주어지면 변경되지 않는 UI를 만들 때 	                             	
+ -->
+<div id="example">
+	<span v-pre>{{message}}</span><br>
+	<span v-once>{{message}}</span><br>
+	<span>{{message}}</span><br>
+	{{sayHello()}}
+</div>
+<script>
+
+	var simple = new Vue({
+		el : '#example',
+		data : { message: "Hello World", },
+		methods: {
+			sayHello: function(){
+				this.message = "안녕"
+				return this.message;
+			}
+		}
+	});
+</script>
+</body>
+</html>

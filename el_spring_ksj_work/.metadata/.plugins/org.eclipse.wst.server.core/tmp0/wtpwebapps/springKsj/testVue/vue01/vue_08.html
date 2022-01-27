@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>vue_08</title>
+</head>
+<script type="text/javascript" src="https://unpkg.com/vue@2.5.16/dist/vue.js"></script>
+<body>
+<!-- 
+	v-for
+-->
+<div id="example">
+	<select id="regions">
+		<option disabled="disabled" selected>지역을 선택하시오</option>
+		
+		<option v-for="(val, key) in regions" v-bind:value="key">{{val}}</option>
+		<!-- 
+		<option v-for="(val, key, index) in regions" v-bind:value="key">
+			{{index+1}}:{{val}}
+		</option>
+		 -->		
+	</select>
+</div>
+<script>	
+	var regions = {
+		"A": "Asia",
+		"B": "America",
+		"C": "Europe",
+		"D": "Africa",
+		"E": "Oceania",
+	};
+	
+	var list = new Vue({
+		el: "#example",
+		data: { regions: regions}
+	});
+</script>
+</body>
+</html>

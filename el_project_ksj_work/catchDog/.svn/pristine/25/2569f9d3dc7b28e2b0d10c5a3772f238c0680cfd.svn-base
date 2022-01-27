@@ -1,0 +1,25 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="com.catchdog.member.vo.MemberVO" %>
+<%@ page import="java.util.List" %>
+<%@ page import="java.util.ArrayList" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Login</title>
+<style type="text/css">
+		div,h3{
+			text-align: center;
+		}
+		
+		/*a 태그 밑줄 없애기*/
+		a{text-decoration:none}
+</style>
+<script type="text/javascript"></script>
+</head>
+<body>
+<h3>LOGIN SUCCESS</h3>
+<hr>
+<% request.setCharacterEncoding("UTF-8"); %>
+</body>
+</html>

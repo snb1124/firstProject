@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>session</title>
+<style type="text/css">
+	table, tr, td {
+		text-align: center;
+	}
+</style>
+<script type="text/javascript">
+	function checkAction(){
+		document.loginForm.method="POST";
+		document.loginForm.action="/springKsj/cgiSession/login.jsp";
+		document.loginForm.submit();
+	} 
+</script>
+</head>
+<body>
+<h3>로그인 세션 테스트</h3>
+<hr>
+<form name="loginFrom" id="loginForm">
+<table border="1">
+<tr>
+<td>id</td>
+<td>&nbsp;<input type="text" name="mid" size="20" maxlength="20"></td>
+</tr>
+<tr>
+	<td>pw</td>
+	<td>&nbsp;<input type="text" name="mpw" size="20" maxlength="10"></td>
+</tr>
+<tr>
+	<td colspan="2">
+		<input type="button" value="로그인" onclick="checkAction();">
+		<input type="reset" value="다시">
+	</td>	
+</tr>
+</table>
+</form>
+</body>
+</html>

@@ -1,0 +1,20 @@
+package com.catchdog.common.service;
+
+import com.catchdog.adoption.review.vo.ReviewVO;
+import com.catchdog.disadoption.vo.DisadoptionVO;
+import com.catchdog.goods.vo.GoodsVO;
+import com.catchdog.member.vo.MemberVO;
+
+public interface ChabunService {
+	//VO 클래스에서 임포트후 겟 채번 함수 만들기 
+		// ex) public CatchDogNoticeVO getNoticeChabun();
+		
+	public GoodsVO getGoodsChabun();
+	public GoodsVO getGpdChabun();
+	public MemberVO getMemChabun();
+	public ReviewVO getReviewChabun();
+//	public NoticeVO getNoticeChabun();
+//	public MemberVO getMemberChabun();
+	public DisadoptionVO getDisadoptionChabun();
+//	public DisappearanceVO getDisappearanceChabun();
+}

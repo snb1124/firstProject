@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>vue_01</title>
+</head>
+<script type="text/javascript" src="https://unpkg.com/vue@2.5.16/dist/vue.js"></script>
+<body>
+	<!-- 
+		v-model : 양방향 데이터 바인딩
+	 -->
+	<div id="simple">
+		<input type="text" v-model="name" placeholder="이름을 입력하세요" />
+		<br>
+		입력된 이름 : <h2 v-html="name"></h2>	
+	</div>
+	<script>		
+		var twoway = new Vue({
+			el : '#simple',
+			data : {name: '' }
+		});
+	</script>
+</body>
+</html>
+</body>
+</html>

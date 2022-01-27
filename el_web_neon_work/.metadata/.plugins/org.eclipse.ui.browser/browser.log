@@ -1,0 +1,388 @@
+
+8월 27, 2021 15:10:17.00 NEW SESSION
+8월 27, 2021 15:10:17.00 [13788:6824:0827/151017.007:ERROR:device_event_log_impl.cc(214)] [15:10:17.007] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+8월 27, 2021 15:10:17.02 [13788:6824:0827/151017.020:ERROR:device_event_log_impl.cc(214)] [15:10:17.021] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+8월 27, 2021 17:37:51.25 [10888:3988:0827/173751.255:ERROR:device_event_log_impl.cc(214)] [17:37:51.255] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+8월 27, 2021 17:37:51.26 [10888:3988:0827/173751.267:ERROR:device_event_log_impl.cc(214)] [17:37:51.267] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+8월 27, 2021 17:45:37.41 [9036:17240:0827/174537.415:ERROR:device_event_log_impl.cc(214)] [17:45:37.414] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+8월 27, 2021 17:45:37.42 [9036:17240:0827/174537.428:ERROR:device_event_log_impl.cc(214)] [17:45:37.428] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+8월 27, 2021 17:46:10.13 [7484:5572:0827/174610.134:ERROR:device_event_log_impl.cc(214)] [17:46:10.133] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+8월 27, 2021 17:46:10.14 [7484:5572:0827/174610.148:ERROR:device_event_log_impl.cc(214)] [17:46:10.148] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+8월 27, 2021 17:47:15.89 [13420:14684:0827/174715.889:ERROR:device_event_log_impl.cc(214)] [17:47:15.889] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+8월 27, 2021 17:47:15.89 [13420:14684:0827/174715.899:ERROR:device_event_log_impl.cc(214)] [17:47:15.899] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+8월 27, 2021 18:08:29.19 [17552:15396:0827/180829.192:ERROR:device_event_log_impl.cc(214)] [18:08:29.192] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+8월 27, 2021 18:08:29.20 [17552:15396:0827/180829.204:ERROR:device_event_log_impl.cc(214)] [18:08:29.204] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+8월 27, 2021 18:11:54.86 [18504:2152:0827/181154.865:ERROR:device_event_log_impl.cc(214)] [18:11:54.865] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+8월 27, 2021 18:11:54.87 [18504:2152:0827/181154.877:ERROR:device_event_log_impl.cc(214)] [18:11:54.876] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+8월 27, 2021 18:14:09.25 [7484:13008:0827/181409.258:ERROR:device_event_log_impl.cc(214)] [18:14:09.257] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+8월 27, 2021 18:14:09.27 [7484:13008:0827/181409.271:ERROR:device_event_log_impl.cc(214)] [18:14:09.270] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+8월 27, 2021 18:20:03.51 [16052:12624:0827/182003.518:ERROR:device_event_log_impl.cc(214)] [18:20:03.518] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+8월 27, 2021 18:20:03.53 [16052:12624:0827/182003.532:ERROR:device_event_log_impl.cc(214)] [18:20:03.532] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+
+8월 30, 2021 21:51:28.89 NEW SESSION
+8월 30, 2021 21:51:28.90 [11204:10284:0830/215128.898:ERROR:device_event_log_impl.cc(214)] [21:51:28.897] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+8월 30, 2021 21:51:28.91 [11204:10284:0830/215128.917:ERROR:device_event_log_impl.cc(214)] [21:51:28.917] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+
+8월 30, 2021 23:40:02.11 NEW SESSION
+8월 30, 2021 23:40:02.11 [11784:20220:0830/234002.117:ERROR:device_event_log_impl.cc(214)] [23:40:02.117] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+8월 30, 2021 23:40:02.14 [11784:20220:0830/234002.145:ERROR:device_event_log_impl.cc(214)] [23:40:02.146] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+8월 31, 2021 24:04:12.69 [14084:19680:0831/000412.698:ERROR:device_event_log_impl.cc(214)] [00:04:12.699] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+8월 31, 2021 24:04:12.71 [14084:19680:0831/000412.716:ERROR:device_event_log_impl.cc(214)] [00:04:12.716] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+8월 31, 2021 24:04:31.45 [14896:18780:0831/000431.456:ERROR:device_event_log_impl.cc(214)] [00:04:31.456] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+8월 31, 2021 24:04:31.47 [14896:18780:0831/000431.474:ERROR:device_event_log_impl.cc(214)] [00:04:31.473] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+8월 31, 2021 24:08:27.15 [9344:12772:0831/000827.150:ERROR:device_event_log_impl.cc(214)] [00:08:27.150] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+8월 31, 2021 24:08:27.16 [9344:12772:0831/000827.167:ERROR:device_event_log_impl.cc(214)] [00:08:27.167] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+8월 31, 2021 24:14:04.85 [16344:12636:0831/001404.856:ERROR:device_event_log_impl.cc(214)] [00:14:04.855] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+8월 31, 2021 24:14:04.87 [16344:12636:0831/001404.873:ERROR:device_event_log_impl.cc(214)] [00:14:04.872] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+
+8월 31, 2021 10:54:12.86 NEW SESSION
+8월 31, 2021 10:54:12.86 [17760:19160:0831/105412.865:ERROR:device_event_log_impl.cc(214)] [10:54:12.865] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+8월 31, 2021 10:54:12.88 [17760:19160:0831/105412.883:ERROR:device_event_log_impl.cc(214)] [10:54:12.882] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+8월 31, 2021 11:02:28.17 [7328:3228:0831/110228.177:ERROR:device_event_log_impl.cc(214)] [11:02:28.177] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+8월 31, 2021 11:02:28.19 [7328:3228:0831/110228.194:ERROR:device_event_log_impl.cc(214)] [11:02:28.194] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+8월 31, 2021 12:03:01.05 [7328:3228:0831/120301.055:ERROR:device_event_log_impl.cc(214)] [12:03:01.054] USB: usb_service_win.cc:258 Failed to get device driver name: 요소가 없습니다. (0x490)
+8월 31, 2021 17:32:04.98 [18168:12956:0831/173204.989:ERROR:device_event_log_impl.cc(214)] [17:32:04.989] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+8월 31, 2021 17:32:05.00 [18168:12956:0831/173205.007:ERROR:device_event_log_impl.cc(214)] [17:32:05.007] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+
+9월 01, 2021 11:16:22.42 NEW SESSION
+9월 01, 2021 11:16:22.42 [17588:11152:0901/111622.425:ERROR:device_event_log_impl.cc(214)] [11:16:22.425] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 01, 2021 11:16:22.44 [17588:11152:0901/111622.442:ERROR:device_event_log_impl.cc(214)] [11:16:22.442] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 01, 2021 11:50:10.83 [8972:1720:0901/115010.833:ERROR:device_event_log_impl.cc(214)] [11:50:10.833] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 01, 2021 11:50:10.90 [8972:1720:0901/115010.901:ERROR:device_event_log_impl.cc(214)] [11:50:10.901] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+
+9월 01, 2021 16:35:30.88 NEW SESSION
+9월 01, 2021 16:35:30.88 [9652:14540:0901/163530.887:ERROR:device_event_log_impl.cc(214)] [16:35:30.887] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 01, 2021 16:35:30.90 [9652:14540:0901/163530.908:ERROR:device_event_log_impl.cc(214)] [16:35:30.908] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 01, 2021 16:35:47.11 [6532:20776:0901/163547.115:ERROR:device_event_log_impl.cc(214)] [16:35:47.115] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 01, 2021 16:35:47.13 [6532:20776:0901/163547.133:ERROR:device_event_log_impl.cc(214)] [16:35:47.133] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 01, 2021 17:31:08.89 [6532:20776:0901/173108.897:ERROR:device_event_log_impl.cc(214)] [17:31:08.897] USB: usb_service_win.cc:258 Failed to get device driver name: 요소가 없습니다. (0x490)
+
+9월 02, 2021 18:00:09.80 NEW SESSION
+9월 02, 2021 18:00:09.80 [17400:20072:0902/180009.807:ERROR:device_event_log_impl.cc(214)] [18:00:09.806] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 02, 2021 18:00:09.82 [17400:20072:0902/180009.825:ERROR:device_event_log_impl.cc(214)] [18:00:09.825] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 02, 2021 18:00:28.74 [21352:6152:0902/180028.745:ERROR:device_event_log_impl.cc(214)] [18:00:28.746] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 02, 2021 18:00:28.76 [21352:6152:0902/180028.763:ERROR:device_event_log_impl.cc(214)] [18:00:28.764] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 02, 2021 18:01:10.85 [12020:14744:0902/180110.852:ERROR:device_event_log_impl.cc(214)] [18:01:10.851] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 02, 2021 18:01:10.87 [12020:14744:0902/180110.870:ERROR:device_event_log_impl.cc(214)] [18:01:10.870] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 02, 2021 18:02:45.87 [1108:9856:0902/180245.878:ERROR:device_event_log_impl.cc(214)] [18:02:45.877] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 02, 2021 18:02:45.89 [1108:9856:0902/180245.897:ERROR:device_event_log_impl.cc(214)] [18:02:45.897] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 02, 2021 18:03:07.37 [19916:8488:0902/180307.373:ERROR:device_event_log_impl.cc(214)] [18:03:07.372] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 02, 2021 18:03:07.39 [19916:8488:0902/180307.390:ERROR:device_event_log_impl.cc(214)] [18:03:07.389] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 02, 2021 18:03:31.51 [15132:2508:0902/180331.516:ERROR:device_event_log_impl.cc(214)] [18:03:31.515] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 02, 2021 18:03:31.53 [15132:2508:0902/180331.536:ERROR:device_event_log_impl.cc(214)] [18:03:31.535] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 02, 2021 18:03:54.28 [10128:11452:0902/180354.286:ERROR:device_event_log_impl.cc(214)] [18:03:54.286] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 02, 2021 18:03:54.30 [10128:11452:0902/180354.304:ERROR:device_event_log_impl.cc(214)] [18:03:54.303] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 02, 2021 18:04:16.23 [19716:3636:0902/180416.231:ERROR:device_event_log_impl.cc(214)] [18:04:16.231] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 02, 2021 18:04:16.25 [19716:3636:0902/180416.249:ERROR:device_event_log_impl.cc(214)] [18:04:16.250] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 02, 2021 18:04:24.84 [19320:17160:0902/180424.841:ERROR:device_event_log_impl.cc(214)] [18:04:24.842] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 02, 2021 18:04:24.85 [19320:17160:0902/180424.858:ERROR:device_event_log_impl.cc(214)] [18:04:24.859] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 02, 2021 18:04:41.47 [20536:11368:0902/180441.472:ERROR:device_event_log_impl.cc(214)] [18:04:41.472] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 02, 2021 18:04:41.49 [20536:11368:0902/180441.489:ERROR:device_event_log_impl.cc(214)] [18:04:41.490] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 02, 2021 18:06:01.67 [20164:6928:0902/180601.674:ERROR:device_event_log_impl.cc(214)] [18:06:01.674] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 02, 2021 18:06:01.69 [20164:6928:0902/180601.692:ERROR:device_event_log_impl.cc(214)] [18:06:01.692] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 02, 2021 18:06:12.38 [17716:15832:0902/180612.388:ERROR:device_event_log_impl.cc(214)] [18:06:12.387] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 02, 2021 18:06:12.40 [17716:15832:0902/180612.407:ERROR:device_event_log_impl.cc(214)] [18:06:12.406] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 02, 2021 18:06:20.14 [3056:19052:0902/180620.147:ERROR:device_event_log_impl.cc(214)] [18:06:20.147] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 02, 2021 18:06:20.16 [3056:19052:0902/180620.164:ERROR:device_event_log_impl.cc(214)] [18:06:20.164] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 02, 2021 18:07:06.88 [2164:7492:0902/180706.883:ERROR:device_event_log_impl.cc(214)] [18:07:06.883] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 02, 2021 18:07:06.90 [2164:7492:0902/180706.899:ERROR:device_event_log_impl.cc(214)] [18:07:06.900] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 02, 2021 18:07:50.47 [12864:18448:0902/180750.473:ERROR:device_event_log_impl.cc(214)] [18:07:50.474] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 02, 2021 18:07:50.49 [12864:18448:0902/180750.491:ERROR:device_event_log_impl.cc(214)] [18:07:50.491] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 02, 2021 18:08:02.92 [16964:19208:0902/180802.925:ERROR:device_event_log_impl.cc(214)] [18:08:02.925] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 02, 2021 18:08:02.94 [16964:19208:0902/180802.942:ERROR:device_event_log_impl.cc(214)] [18:08:02.942] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+
+9월 05, 2021 15:59:03.07 NEW SESSION
+9월 05, 2021 15:59:03.07 [996:19084:0905/155903.076:ERROR:device_event_log_impl.cc(214)] [15:59:03.076] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 05, 2021 15:59:03.08 [996:19084:0905/155903.088:ERROR:device_event_log_impl.cc(214)] [15:59:03.088] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 05, 2021 16:07:10.15 [18244:20320:0905/160710.152:ERROR:device_event_log_impl.cc(214)] [16:07:10.152] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 05, 2021 16:07:10.16 [18244:20320:0905/160710.161:ERROR:device_event_log_impl.cc(214)] [16:07:10.161] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+
+9월 05, 2021 17:05:44.94 NEW SESSION
+9월 05, 2021 17:05:44.94 [11188:16112:0905/170544.942:ERROR:device_event_log_impl.cc(214)] [17:05:44.942] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 05, 2021 17:05:44.95 [11188:16112:0905/170544.952:ERROR:device_event_log_impl.cc(214)] [17:05:44.952] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+
+9월 05, 2021 17:44:32.85 NEW SESSION
+9월 05, 2021 17:44:32.85 [19156:6272:0905/174432.849:ERROR:device_event_log_impl.cc(214)] [17:44:32.849] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 05, 2021 17:44:32.85 [19156:6272:0905/174432.859:ERROR:device_event_log_impl.cc(214)] [17:44:32.858] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 05, 2021 17:45:19.08 [8900:13940:0905/174519.083:ERROR:device_event_log_impl.cc(214)] [17:45:19.083] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 05, 2021 17:45:19.09 [8900:13940:0905/174519.093:ERROR:device_event_log_impl.cc(214)] [17:45:19.094] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 05, 2021 17:46:29.29 [7516:21024:0905/174629.290:ERROR:device_event_log_impl.cc(214)] [17:46:29.290] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 05, 2021 17:46:29.29 [7516:21024:0905/174629.299:ERROR:device_event_log_impl.cc(214)] [17:46:29.299] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 05, 2021 17:47:12.04 [7396:19748:0905/174712.047:ERROR:device_event_log_impl.cc(214)] [17:47:12.047] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 05, 2021 17:47:12.05 [7396:19748:0905/174712.057:ERROR:device_event_log_impl.cc(214)] [17:47:12.057] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 05, 2021 17:48:15.11 [14228:14832:0905/174815.110:ERROR:device_event_log_impl.cc(214)] [17:48:15.110] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 05, 2021 17:48:15.12 [14228:14832:0905/174815.120:ERROR:device_event_log_impl.cc(214)] [17:48:15.119] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 05, 2021 17:50:07.71 [8964:13848:0905/175007.714:ERROR:device_event_log_impl.cc(214)] [17:50:07.713] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 05, 2021 17:50:07.72 [8964:13848:0905/175007.724:ERROR:device_event_log_impl.cc(214)] [17:50:07.724] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+
+9월 06, 2021 09:56:19.25 NEW SESSION
+9월 06, 2021 09:56:19.25 [13708:11284:0906/095619.252:ERROR:device_event_log_impl.cc(214)] [09:56:19.251] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 06, 2021 09:56:19.26 [13708:11284:0906/095619.262:ERROR:device_event_log_impl.cc(214)] [09:56:19.261] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 06, 2021 09:56:46.85 [7288:12176:0906/095646.856:ERROR:device_event_log_impl.cc(214)] [09:56:46.855] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 06, 2021 09:56:46.86 [7288:12176:0906/095646.866:ERROR:device_event_log_impl.cc(214)] [09:56:46.866] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 06, 2021 09:58:14.30 [20484:12812:0906/095814.302:ERROR:device_event_log_impl.cc(214)] [09:58:14.302] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 06, 2021 09:58:14.31 [20484:12812:0906/095814.311:ERROR:device_event_log_impl.cc(214)] [09:58:14.311] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 06, 2021 09:59:08.93 [23120:13620:0906/095908.936:ERROR:device_event_log_impl.cc(214)] [09:59:08.935] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 06, 2021 09:59:08.94 [23120:13620:0906/095908.945:ERROR:device_event_log_impl.cc(214)] [09:59:08.944] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 06, 2021 10:45:14.11 [6836:11180:0906/104514.116:ERROR:device_event_log_impl.cc(214)] [10:45:14.116] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 06, 2021 10:45:14.12 [6836:11180:0906/104514.126:ERROR:device_event_log_impl.cc(214)] [10:45:14.126] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 06, 2021 10:47:00.37 [9980:2312:0906/104700.373:ERROR:device_event_log_impl.cc(214)] [10:47:00.373] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 06, 2021 10:47:00.38 [9980:2312:0906/104700.383:ERROR:device_event_log_impl.cc(214)] [10:47:00.383] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 06, 2021 10:51:41.10 [3636:20108:0906/105141.107:ERROR:device_event_log_impl.cc(214)] [10:51:41.108] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 06, 2021 10:51:41.11 [3636:20108:0906/105141.118:ERROR:device_event_log_impl.cc(214)] [10:51:41.118] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+
+9월 07, 2021 12:19:35.61 NEW SESSION
+9월 07, 2021 12:19:35.61 [2104:19552:0907/121935.611:ERROR:device_event_log_impl.cc(214)] [12:19:35.612] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 07, 2021 12:19:35.62 [2104:19552:0907/121935.626:ERROR:device_event_log_impl.cc(214)] [12:19:35.625] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 07, 2021 12:42:38.61 [2104:19552:0907/124238.614:ERROR:device_event_log_impl.cc(214)] [12:42:38.612] USB: usb_service_win.cc:258 Failed to get device driver name: 요소가 없습니다. (0x490)
+9월 07, 2021 12:42:38.62 [2104:19552:0907/124238.620:ERROR:device_event_log_impl.cc(214)] [12:42:38.620] USB: usb_service_win.cc:281 SetupDiEnumDeviceInterfaces: 사용 가능한 데이터가 없습니다. (0x103)
+
+9월 09, 2021 08:48:04.07 NEW SESSION
+9월 09, 2021 08:48:04.07 [3988:13472:0909/084804.068:ERROR:device_event_log_impl.cc(214)] [08:48:04.067] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 09, 2021 08:48:04.09 [3988:13472:0909/084804.094:ERROR:device_event_log_impl.cc(214)] [08:48:04.094] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 09, 2021 09:01:52.69 [16352:16828:0909/090152.690:ERROR:device_event_log_impl.cc(214)] [09:01:52.690] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 09, 2021 09:01:52.70 [16352:16828:0909/090152.700:ERROR:device_event_log_impl.cc(214)] [09:01:52.700] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 09, 2021 09:03:46.69 [17512:7496:0909/090346.692:ERROR:device_event_log_impl.cc(214)] [09:03:46.692] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 09, 2021 09:03:46.70 [17512:7496:0909/090346.703:ERROR:device_event_log_impl.cc(214)] [09:03:46.702] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 09, 2021 10:43:47.26 [13764:12924:0909/104347.262:ERROR:device_event_log_impl.cc(214)] [10:43:47.263] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 09, 2021 10:43:47.27 [13764:12924:0909/104347.275:ERROR:device_event_log_impl.cc(214)] [10:43:47.276] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 09, 2021 12:29:25.66 [13764:12924:0909/122925.668:ERROR:device_event_log_impl.cc(214)] [12:29:25.668] USB: usb_service_win.cc:281 SetupDiEnumDeviceInterfaces: 사용 가능한 데이터가 없습니다. (0x103)
+9월 09, 2021 20:00:35.96 [2956:1860:0909/200035.965:ERROR:device_event_log_impl.cc(214)] [20:00:35.965] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 09, 2021 20:00:35.99 [2956:1860:0909/200035.990:ERROR:device_event_log_impl.cc(214)] [20:00:35.990] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+
+9월 10, 2021 10:19:08.45 NEW SESSION
+9월 10, 2021 10:19:08.45 [20744:23372:0910/101908.449:ERROR:device_event_log_impl.cc(214)] [10:19:08.449] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 10, 2021 10:19:08.48 [20744:23372:0910/101908.480:ERROR:device_event_log_impl.cc(214)] [10:19:08.480] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 10, 2021 10:20:07.15 [7304:11104:0910/102007.157:ERROR:device_event_log_impl.cc(214)] [10:20:07.157] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 10, 2021 10:20:07.18 [7304:11104:0910/102007.189:ERROR:device_event_log_impl.cc(214)] [10:20:07.189] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 10, 2021 10:22:45.63 [12592:19504:0910/102245.631:ERROR:device_event_log_impl.cc(214)] [10:22:45.631] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 10, 2021 10:22:45.66 [12592:19504:0910/102245.661:ERROR:device_event_log_impl.cc(214)] [10:22:45.661] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 10, 2021 10:56:04.09 [14296:21596:0910/105604.094:ERROR:device_event_log_impl.cc(214)] [10:56:04.094] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 10, 2021 10:56:04.12 [14296:21596:0910/105604.126:ERROR:device_event_log_impl.cc(214)] [10:56:04.126] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 10, 2021 11:15:40.00 [5568:20432:0910/111540.002:ERROR:device_event_log_impl.cc(214)] [11:15:40.001] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 10, 2021 11:15:40.05 [5568:20432:0910/111540.051:ERROR:device_event_log_impl.cc(214)] [11:15:40.052] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+
+9월 10, 2021 11:33:37.56 NEW SESSION
+9월 10, 2021 11:33:37.56 [4576:11492:0910/113337.567:ERROR:device_event_log_impl.cc(214)] [11:33:37.567] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 10, 2021 11:33:37.59 [4576:11492:0910/113337.597:ERROR:device_event_log_impl.cc(214)] [11:33:37.597] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 10, 2021 11:41:09.95 [4576:14108:0910/114109.954:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+9월 10, 2021 11:41:34.91 [4576:14108:0910/114134.914:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+9월 10, 2021 11:42:26.78 [4576:14108:0910/114226.786:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+9월 10, 2021 11:42:58.42 [19888:14768:0910/114258.422:ERROR:device_event_log_impl.cc(214)] [11:42:58.422] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 10, 2021 11:42:58.48 [19888:14768:0910/114258.485:ERROR:device_event_log_impl.cc(214)] [11:42:58.485] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 10, 2021 11:48:54.67 [19888:14768:0910/114854.673:ERROR:device_event_log_impl.cc(214)] [11:48:54.673] USB: usb_service_win.cc:258 Failed to get device driver name: 요소가 없습니다. (0x490)
+9월 10, 2021 11:48:54.68 [19888:14768:0910/114854.687:ERROR:device_event_log_impl.cc(214)] [11:48:54.688] USB: usb_service_win.cc:281 SetupDiEnumDeviceInterfaces: 사용 가능한 데이터가 없습니다. (0x103)
+9월 10, 2021 11:48:56.61 [19888:19832:0910/114856.616:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+
+9월 10, 2021 12:45:46.63 NEW SESSION
+9월 10, 2021 12:45:46.63 [2820:10024:0910/124546.629:ERROR:device_event_log_impl.cc(214)] [12:45:46.629] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 10, 2021 12:45:46.63 [2820:10024:0910/124546.636:ERROR:device_event_log_impl.cc(214)] [12:45:46.636] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 10, 2021 12:45:46.67 [2820:10024:0910/124546.676:ERROR:device_event_log_impl.cc(214)] [12:45:46.675] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 10, 2021 13:09:45.40 [12048:4336:0910/130945.402:ERROR:device_event_log_impl.cc(214)] [13:09:45.402] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 10, 2021 13:09:45.40 [12048:4336:0910/130945.408:ERROR:device_event_log_impl.cc(214)] [13:09:45.409] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 10, 2021 13:09:45.40 [12048:4336:0910/130945.408:ERROR:device_event_log_impl.cc(214)] [13:09:45.409] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 10, 2021 13:09:45.46 [12048:4336:0910/130945.467:ERROR:device_event_log_impl.cc(214)] [13:09:45.468] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 10, 2021 15:19:04.06 [5792:8080:0910/151904.068:ERROR:device_event_log_impl.cc(214)] [15:19:04.068] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 10, 2021 15:19:04.07 [5792:8080:0910/151904.072:ERROR:device_event_log_impl.cc(214)] [15:19:04.072] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 10, 2021 15:19:04.10 [5792:8080:0910/151904.099:ERROR:device_event_log_impl.cc(214)] [15:19:04.099] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 10, 2021 15:41:25.80 [4740:6760:0910/154125.808:ERROR:device_event_log_impl.cc(214)] [15:41:25.808] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 10, 2021 15:41:25.81 [4740:6760:0910/154125.814:ERROR:device_event_log_impl.cc(214)] [15:41:25.814] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 10, 2021 15:41:25.83 [4740:6760:0910/154125.839:ERROR:device_event_log_impl.cc(214)] [15:41:25.839] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+
+9월 15, 2021 15:48:55.82 NEW SESSION
+9월 15, 2021 15:48:55.82 [6936:19960:0915/154855.814:ERROR:device_event_log_impl.cc(214)] [15:48:55.813] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 15, 2021 15:48:55.84 [6936:19960:0915/154855.844:ERROR:device_event_log_impl.cc(214)] [15:48:55.844] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 15, 2021 17:14:59.96 [1448:7748:0915/171459.969:ERROR:device_event_log_impl.cc(214)] [17:14:59.969] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 15, 2021 17:15:00.00 [1448:7748:0915/171500.002:ERROR:device_event_log_impl.cc(214)] [17:15:00.001] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 15, 2021 17:54:10.53 [10912:11976:0915/175410.537:ERROR:device_event_log_impl.cc(214)] [17:54:10.536] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 15, 2021 17:54:10.56 [10912:11976:0915/175410.566:ERROR:device_event_log_impl.cc(214)] [17:54:10.565] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 15, 2021 18:09:34.76 [14048:19768:0915/180934.761:ERROR:device_event_log_impl.cc(214)] [18:09:34.761] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 15, 2021 18:09:34.79 [14048:19768:0915/180934.791:ERROR:device_event_log_impl.cc(214)] [18:09:34.792] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 15, 2021 18:10:22.18 [9596:16580:0915/181022.184:ERROR:device_event_log_impl.cc(214)] [18:10:22.184] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 15, 2021 18:10:22.21 [9596:16580:0915/181022.212:ERROR:device_event_log_impl.cc(214)] [18:10:22.213] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 15, 2021 18:11:19.35 [16028:19756:0915/181119.351:ERROR:device_event_log_impl.cc(214)] [18:11:19.351] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 15, 2021 18:11:19.38 [16028:19756:0915/181119.380:ERROR:device_event_log_impl.cc(214)] [18:11:19.380] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+
+9월 15, 2021 18:12:08.16 NEW SESSION
+9월 15, 2021 18:12:08.16 [4716:8504:0915/181208.159:ERROR:device_event_log_impl.cc(214)] [18:12:08.159] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 15, 2021 18:12:08.18 [4716:8504:0915/181208.188:ERROR:device_event_log_impl.cc(214)] [18:12:08.189] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 15, 2021 18:16:32.81 [15776:18520:0915/181632.811:ERROR:device_event_log_impl.cc(214)] [18:16:32.811] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 15, 2021 18:16:32.84 [15776:18520:0915/181632.842:ERROR:device_event_log_impl.cc(214)] [18:16:32.841] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 15, 2021 18:16:51.03 [11728:2324:0915/181651.037:ERROR:device_event_log_impl.cc(214)] [18:16:51.037] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 15, 2021 18:16:51.07 [11728:2324:0915/181651.072:ERROR:device_event_log_impl.cc(214)] [18:16:51.071] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+
+9월 15, 2021 23:22:20.64 NEW SESSION
+9월 15, 2021 23:22:20.64 [20720:10496:0915/232220.639:ERROR:device_event_log_impl.cc(214)] [23:22:20.639] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 15, 2021 23:22:20.67 [20720:10496:0915/232220.678:ERROR:device_event_log_impl.cc(214)] [23:22:20.677] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 15, 2021 23:43:49.86 [8188:4588:0915/234349.864:ERROR:device_event_log_impl.cc(214)] [23:43:49.864] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 15, 2021 23:43:49.89 [8188:4588:0915/234349.896:ERROR:device_event_log_impl.cc(214)] [23:43:49.896] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+
+9월 16, 2021 09:45:39.16 NEW SESSION
+9월 16, 2021 09:45:39.16 [11684:12760:0916/094539.156:ERROR:device_event_log_impl.cc(214)] [09:45:39.156] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 16, 2021 09:45:39.18 [11684:12760:0916/094539.187:ERROR:device_event_log_impl.cc(214)] [09:45:39.187] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+
+9월 16, 2021 10:08:33.07 NEW SESSION
+9월 16, 2021 10:08:33.08 [14376:19400:0916/100833.078:ERROR:device_event_log_impl.cc(214)] [10:08:33.078] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 16, 2021 10:08:33.11 [14376:19400:0916/100833.110:ERROR:device_event_log_impl.cc(214)] [10:08:33.110] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 16, 2021 10:17:22.12 [15068:14072:0916/101722.127:ERROR:device_event_log_impl.cc(214)] [10:17:22.126] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 16, 2021 10:17:22.15 [15068:14072:0916/101722.158:ERROR:device_event_log_impl.cc(214)] [10:17:22.157] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 16, 2021 11:00:49.35 [1748:11180:0916/110049.354:ERROR:device_event_log_impl.cc(214)] [11:00:49.353] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 16, 2021 11:00:49.38 [1748:11180:0916/110049.384:ERROR:device_event_log_impl.cc(214)] [11:00:49.384] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 16, 2021 11:35:58.57 [10260:17752:0916/113558.576:ERROR:device_event_log_impl.cc(214)] [11:35:58.576] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 16, 2021 11:35:58.60 [10260:17752:0916/113558.607:ERROR:device_event_log_impl.cc(214)] [11:35:58.607] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 16, 2021 11:46:37.86 [16588:788:0916/114637.862:ERROR:device_event_log_impl.cc(214)] [11:46:37.862] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 16, 2021 11:46:37.89 [16588:788:0916/114637.893:ERROR:device_event_log_impl.cc(214)] [11:46:37.894] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 16, 2021 11:46:53.34 [16056:11720:0916/114653.346:ERROR:device_event_log_impl.cc(214)] [11:46:53.347] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 16, 2021 11:46:53.37 [16056:11720:0916/114653.376:ERROR:device_event_log_impl.cc(214)] [11:46:53.377] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 16, 2021 11:54:23.00 [17272:16104:0916/115423.008:ERROR:device_event_log_impl.cc(214)] [11:54:23.007] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 16, 2021 11:54:23.03 [17272:16104:0916/115423.039:ERROR:device_event_log_impl.cc(214)] [11:54:23.039] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 16, 2021 15:55:36.87 [11512:17604:0916/155536.870:ERROR:device_event_log_impl.cc(214)] [15:55:36.870] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 16, 2021 15:55:36.90 [11512:17604:0916/155536.901:ERROR:device_event_log_impl.cc(214)] [15:55:36.901] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 16, 2021 16:11:40.41 [19116:18288:0916/161140.413:ERROR:device_event_log_impl.cc(214)] [16:11:40.414] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 16, 2021 16:11:40.44 [19116:18288:0916/161140.448:ERROR:device_event_log_impl.cc(214)] [16:11:40.449] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 16, 2021 18:07:14.99 [21172:15104:0916/180714.994:ERROR:device_event_log_impl.cc(214)] [18:07:14.995] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 16, 2021 18:07:15.02 [21172:15104:0916/180715.025:ERROR:device_event_log_impl.cc(214)] [18:07:15.025] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+
+9월 16, 2021 18:53:34.63 NEW SESSION
+9월 16, 2021 18:53:34.63 [11864:21964:0916/185334.625:ERROR:device_event_log_impl.cc(214)] [18:53:34.625] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 16, 2021 18:53:34.69 [11864:21964:0916/185334.690:ERROR:device_event_log_impl.cc(214)] [18:53:34.689] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+
+9월 18, 2021 16:01:27.67 NEW SESSION
+9월 18, 2021 16:01:27.68 [12284:12604:0918/160127.678:ERROR:device_event_log_impl.cc(214)] [16:01:27.678] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 18, 2021 16:01:27.72 [12284:12604:0918/160127.724:ERROR:device_event_log_impl.cc(214)] [16:01:27.724] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 18, 2021 17:12:34.69 [824:1568:0918/171234.691:ERROR:device_event_log_impl.cc(214)] [17:12:34.691] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 18, 2021 17:12:34.72 [824:1568:0918/171234.720:ERROR:device_event_log_impl.cc(214)] [17:12:34.720] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 18, 2021 18:05:51.06 [7680:2536:0918/180551.064:ERROR:device_event_log_impl.cc(214)] [18:05:51.064] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 18, 2021 18:05:51.09 [7680:2536:0918/180551.095:ERROR:device_event_log_impl.cc(214)] [18:05:51.094] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 18, 2021 18:17:36.95 [12596:12464:0918/181736.958:ERROR:device_event_log_impl.cc(214)] [18:17:36.957] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 18, 2021 18:17:36.98 [12596:12464:0918/181736.985:ERROR:device_event_log_impl.cc(214)] [18:17:36.984] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+
+9월 18, 2021 18:33:34.40 NEW SESSION
+9월 18, 2021 18:33:34.40 [10328:4616:0918/183334.399:ERROR:device_event_log_impl.cc(214)] [18:33:34.400] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 18, 2021 18:33:34.44 [10328:4616:0918/183334.444:ERROR:device_event_log_impl.cc(214)] [18:33:34.444] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 18, 2021 18:44:24.09 [16864:15120:0918/184424.097:ERROR:device_event_log_impl.cc(214)] [18:44:24.097] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 18, 2021 18:44:24.12 [16864:15120:0918/184424.124:ERROR:device_event_log_impl.cc(214)] [18:44:24.125] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+
+9월 18, 2021 21:13:54.88 NEW SESSION
+9월 18, 2021 21:13:54.88 [4412:12204:0918/211354.885:ERROR:device_event_log_impl.cc(214)] [21:13:54.885] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 18, 2021 21:13:54.93 [4412:12204:0918/211354.932:ERROR:device_event_log_impl.cc(214)] [21:13:54.931] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+
+9월 21, 2021 19:36:02.66 NEW SESSION
+9월 21, 2021 19:36:02.66 [16864:15068:0921/193602.660:ERROR:device_event_log_impl.cc(214)] [19:36:02.661] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 21, 2021 19:36:02.69 [16864:15068:0921/193602.689:ERROR:device_event_log_impl.cc(214)] [19:36:02.690] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+
+9월 23, 2021 10:41:10.05 NEW SESSION
+9월 23, 2021 10:41:10.05 [13980:10464:0923/104110.053:ERROR:device_event_log_impl.cc(214)] [10:41:10.053] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 23, 2021 10:41:10.08 [13980:10464:0923/104110.084:ERROR:device_event_log_impl.cc(214)] [10:41:10.084] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+
+9월 25, 2021 12:14:58.44 NEW SESSION
+9월 25, 2021 12:14:58.44 [21140:17052:0925/121458.419:ERROR:device_event_log_impl.cc(214)] [12:14:58.418] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 25, 2021 12:14:58.47 [21140:17052:0925/121458.478:ERROR:device_event_log_impl.cc(214)] [12:14:58.478] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+
+9월 25, 2021 13:50:23.29 NEW SESSION
+9월 25, 2021 13:50:23.29 [20528:4952:0925/135023.289:ERROR:device_event_log_impl.cc(214)] [13:50:23.289] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 25, 2021 13:50:23.31 [20528:4952:0925/135023.318:ERROR:device_event_log_impl.cc(214)] [13:50:23.318] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 25, 2021 14:16:56.29 [16476:13992:0925/141656.294:ERROR:device_event_log_impl.cc(214)] [14:16:56.294] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 25, 2021 14:16:56.32 [16476:13992:0925/141656.323:ERROR:device_event_log_impl.cc(214)] [14:16:56.323] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 25, 2021 14:28:11.84 [7532:10860:0925/142811.846:ERROR:device_event_log_impl.cc(214)] [14:28:11.846] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 25, 2021 14:28:11.87 [7532:10860:0925/142811.877:ERROR:device_event_log_impl.cc(214)] [14:28:11.877] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+
+9월 25, 2021 14:32:23.83 NEW SESSION
+9월 25, 2021 14:32:23.83 [1904:1644:0925/143223.836:ERROR:device_event_log_impl.cc(214)] [14:32:23.836] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 25, 2021 14:32:23.88 [1904:1644:0925/143223.886:ERROR:device_event_log_impl.cc(214)] [14:32:23.887] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 25, 2021 14:42:24.01 [16524:21164:0925/144224.015:ERROR:device_event_log_impl.cc(214)] [14:42:24.015] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 25, 2021 14:42:24.04 [16524:21164:0925/144224.045:ERROR:device_event_log_impl.cc(214)] [14:42:24.045] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+
+9월 26, 2021 13:42:57.16 NEW SESSION
+9월 26, 2021 13:42:57.16 [10188:19944:0926/134257.165:ERROR:device_event_log_impl.cc(214)] [13:42:57.164] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 26, 2021 13:42:57.19 [10188:19944:0926/134257.195:ERROR:device_event_log_impl.cc(214)] [13:42:57.195] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 26, 2021 14:02:41.85 [10592:16660:0926/140241.857:ERROR:device_event_log_impl.cc(214)] [14:02:41.857] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 26, 2021 14:02:41.88 [10592:16660:0926/140241.886:ERROR:device_event_log_impl.cc(214)] [14:02:41.886] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 26, 2021 16:51:41.62 [20824:18728:0926/165141.627:ERROR:device_event_log_impl.cc(214)] [16:51:41.627] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 26, 2021 16:51:41.66 [20824:18728:0926/165141.665:ERROR:device_event_log_impl.cc(214)] [16:51:41.665] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 26, 2021 16:57:21.27 [19004:15248:0926/165721.271:ERROR:device_event_log_impl.cc(214)] [16:57:21.270] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 26, 2021 16:57:21.30 [19004:15248:0926/165721.300:ERROR:device_event_log_impl.cc(214)] [16:57:21.299] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 26, 2021 19:45:44.90 [9160:21480:0926/194544.902:ERROR:device_event_log_impl.cc(214)] [19:45:44.902] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 26, 2021 19:45:44.93 [9160:21480:0926/194544.932:ERROR:device_event_log_impl.cc(214)] [19:45:44.932] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 26, 2021 20:01:48.03 [2432:15816:0926/200148.033:ERROR:device_event_log_impl.cc(214)] [20:01:48.032] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 26, 2021 20:01:48.06 [2432:15816:0926/200148.061:ERROR:device_event_log_impl.cc(214)] [20:01:48.061] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 26, 2021 20:46:22.62 [1396:10728:0926/204622.625:ERROR:device_event_log_impl.cc(214)] [20:46:22.625] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 26, 2021 20:46:22.67 [1396:10728:0926/204622.677:ERROR:device_event_log_impl.cc(214)] [20:46:22.677] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+
+9월 28, 2021 12:44:49.42 NEW SESSION
+9월 28, 2021 12:44:49.42 [7264:20884:0928/124449.419:ERROR:device_event_log_impl.cc(214)] [12:44:49.419] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 28, 2021 12:44:49.44 [7264:20884:0928/124449.447:ERROR:device_event_log_impl.cc(214)] [12:44:49.447] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 28, 2021 16:09:50.23 [20164:13048:0928/160950.231:ERROR:device_event_log_impl.cc(214)] [16:09:50.230] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 28, 2021 16:09:50.26 [20164:13048:0928/160950.260:ERROR:device_event_log_impl.cc(214)] [16:09:50.260] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+
+9월 29, 2021 10:15:17.81 NEW SESSION
+9월 29, 2021 10:15:17.81 [4748:2568:0929/101517.815:ERROR:device_event_log_impl.cc(214)] [10:15:17.815] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 29, 2021 10:15:17.84 [4748:2568:0929/101517.848:ERROR:device_event_log_impl.cc(214)] [10:15:17.848] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 29, 2021 11:44:36.51 [15160:1052:0929/114436.514:ERROR:device_event_log_impl.cc(214)] [11:44:36.515] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 29, 2021 11:44:36.54 [15160:1052:0929/114436.546:ERROR:device_event_log_impl.cc(214)] [11:44:36.545] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+9월 29, 2021 12:32:29.48 [13772:14496:0929/123229.487:ERROR:device_event_log_impl.cc(214)] [12:32:29.488] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 29, 2021 12:32:29.52 [13772:14496:0929/123229.525:ERROR:device_event_log_impl.cc(214)] [12:32:29.525] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+
+10월 05, 2021 17:57:36.25 NEW SESSION
+10월 05, 2021 17:57:36.25 [9388:12532:1005/175736.246:ERROR:chrome_browser_main_extra_parts_metrics.cc(228)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+10월 05, 2021 17:57:36.25 [9388:12532:1005/175736.246:ERROR:chrome_browser_main_extra_parts_metrics.cc(231)] crbug.com/1216328: Checking Bluetooth availability ended.
+10월 05, 2021 17:57:36.25 [9388:12532:1005/175736.246:ERROR:chrome_browser_main_extra_parts_metrics.cc(234)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+10월 05, 2021 17:57:36.25 [9388:12532:1005/175736.250:ERROR:chrome_browser_main_extra_parts_metrics.cc(238)] crbug.com/1216328: Checking default browser status ended.
+10월 05, 2021 17:57:36.25 [9388:7752:1005/175736.251:ERROR:device_event_log_impl.cc(214)] [17:57:36.251] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+10월 05, 2021 17:57:36.28 [9388:7752:1005/175736.283:ERROR:device_event_log_impl.cc(214)] [17:57:36.283] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+
+10월 07, 2021 13:02:32.03 NEW SESSION
+10월 07, 2021 13:02:32.03 [18704:18444:1007/130232.019:ERROR:chrome_browser_main_extra_parts_metrics.cc(228)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+10월 07, 2021 13:02:32.03 [18704:18444:1007/130232.019:ERROR:chrome_browser_main_extra_parts_metrics.cc(231)] crbug.com/1216328: Checking Bluetooth availability ended.
+10월 07, 2021 13:02:32.03 [18704:18444:1007/130232.019:ERROR:chrome_browser_main_extra_parts_metrics.cc(234)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+10월 07, 2021 13:02:32.03 [18704:18444:1007/130232.023:ERROR:chrome_browser_main_extra_parts_metrics.cc(238)] crbug.com/1216328: Checking default browser status ended.
+10월 07, 2021 13:02:32.03 [18704:12368:1007/130232.024:ERROR:device_event_log_impl.cc(214)] [13:02:32.025] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+10월 07, 2021 13:02:32.05 [18704:12368:1007/130232.058:ERROR:device_event_log_impl.cc(214)] [13:02:32.058] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+
+10월 07, 2021 17:52:26.29 NEW SESSION
+10월 07, 2021 17:52:26.29 [8528:15880:1007/175226.297:ERROR:chrome_browser_main_extra_parts_metrics.cc(228)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+10월 07, 2021 17:52:26.30 [8528:15880:1007/175226.297:ERROR:chrome_browser_main_extra_parts_metrics.cc(231)] crbug.com/1216328: Checking Bluetooth availability ended.
+10월 07, 2021 17:52:26.30 [8528:15880:1007/175226.297:ERROR:chrome_browser_main_extra_parts_metrics.cc(234)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+10월 07, 2021 17:52:26.30 [8528:15880:1007/175226.300:ERROR:chrome_browser_main_extra_parts_metrics.cc(238)] crbug.com/1216328: Checking default browser status ended.
+10월 07, 2021 17:52:26.30 [8528:13716:1007/175226.302:ERROR:device_event_log_impl.cc(214)] [17:52:26.302] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+10월 07, 2021 17:52:26.33 [8528:13716:1007/175226.332:ERROR:device_event_log_impl.cc(214)] [17:52:26.332] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+
+10월 08, 2021 11:56:45.01 NEW SESSION
+10월 08, 2021 11:56:45.01 [12500:8168:1008/115645.015:ERROR:chrome_browser_main_extra_parts_metrics.cc(228)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+10월 08, 2021 11:56:45.01 [12500:8168:1008/115645.015:ERROR:chrome_browser_main_extra_parts_metrics.cc(231)] crbug.com/1216328: Checking Bluetooth availability ended.
+10월 08, 2021 11:56:45.01 [12500:8168:1008/115645.015:ERROR:chrome_browser_main_extra_parts_metrics.cc(234)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+10월 08, 2021 11:56:45.01 [12500:8168:1008/115645.019:ERROR:chrome_browser_main_extra_parts_metrics.cc(238)] crbug.com/1216328: Checking default browser status ended.
+10월 08, 2021 11:56:45.02 [12500:9804:1008/115645.021:ERROR:device_event_log_impl.cc(214)] [11:56:45.021] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+10월 08, 2021 11:56:45.04 [12500:9804:1008/115645.049:ERROR:device_event_log_impl.cc(214)] [11:56:45.050] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+10월 08, 2021 12:50:00.96 [17560:4100:1008/125000.968:ERROR:chrome_browser_main_extra_parts_metrics.cc(228)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+10월 08, 2021 12:50:00.96 [17560:4100:1008/125000.968:ERROR:chrome_browser_main_extra_parts_metrics.cc(231)] crbug.com/1216328: Checking Bluetooth availability ended.
+10월 08, 2021 12:50:00.96 [17560:4100:1008/125000.968:ERROR:chrome_browser_main_extra_parts_metrics.cc(234)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+10월 08, 2021 12:50:00.97 [17560:4100:1008/125000.972:ERROR:chrome_browser_main_extra_parts_metrics.cc(238)] crbug.com/1216328: Checking default browser status ended.
+10월 08, 2021 12:50:00.97 [17560:1280:1008/125000.973:ERROR:device_event_log_impl.cc(214)] [12:50:00.973] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+10월 08, 2021 12:50:01.00 [17560:1280:1008/125001.002:ERROR:device_event_log_impl.cc(214)] [12:50:01.001] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+10월 08, 2021 13:05:36.21 [3336:17516:1008/130536.218:ERROR:chrome_browser_main_extra_parts_metrics.cc(228)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+10월 08, 2021 13:05:36.21 [3336:17516:1008/130536.218:ERROR:chrome_browser_main_extra_parts_metrics.cc(231)] crbug.com/1216328: Checking Bluetooth availability ended.
+10월 08, 2021 13:05:36.21 [3336:17516:1008/130536.218:ERROR:chrome_browser_main_extra_parts_metrics.cc(234)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+10월 08, 2021 13:05:36.22 [3336:17516:1008/130536.222:ERROR:chrome_browser_main_extra_parts_metrics.cc(238)] crbug.com/1216328: Checking default browser status ended.
+10월 08, 2021 13:05:36.22 [3336:19596:1008/130536.223:ERROR:device_event_log_impl.cc(214)] [13:05:36.224] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+10월 08, 2021 13:05:36.25 [3336:19596:1008/130536.251:ERROR:device_event_log_impl.cc(214)] [13:05:36.251] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+10월 08, 2021 13:06:17.72 [15060:932:1008/130617.727:ERROR:chrome_browser_main_extra_parts_metrics.cc(228)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+10월 08, 2021 13:06:17.72 [15060:932:1008/130617.727:ERROR:chrome_browser_main_extra_parts_metrics.cc(231)] crbug.com/1216328: Checking Bluetooth availability ended.
+10월 08, 2021 13:06:17.72 [15060:932:1008/130617.727:ERROR:chrome_browser_main_extra_parts_metrics.cc(234)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+10월 08, 2021 13:06:17.73 [15060:932:1008/130617.731:ERROR:chrome_browser_main_extra_parts_metrics.cc(238)] crbug.com/1216328: Checking default browser status ended.
+10월 08, 2021 13:06:17.73 [15060:1292:1008/130617.732:ERROR:device_event_log_impl.cc(214)] [13:06:17.731] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+10월 08, 2021 13:06:17.76 [15060:1292:1008/130617.760:ERROR:device_event_log_impl.cc(214)] [13:06:17.760] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+10월 08, 2021 14:53:19.81 [20236:7592:1008/145319.813:ERROR:chrome_browser_main_extra_parts_metrics.cc(228)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+10월 08, 2021 14:53:19.81 [20236:7592:1008/145319.813:ERROR:chrome_browser_main_extra_parts_metrics.cc(231)] crbug.com/1216328: Checking Bluetooth availability ended.
+10월 08, 2021 14:53:19.81 [20236:7592:1008/145319.813:ERROR:chrome_browser_main_extra_parts_metrics.cc(234)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+10월 08, 2021 14:53:19.81 [20236:7592:1008/145319.817:ERROR:chrome_browser_main_extra_parts_metrics.cc(238)] crbug.com/1216328: Checking default browser status ended.
+10월 08, 2021 14:53:19.81 [20236:9432:1008/145319.819:ERROR:device_event_log_impl.cc(214)] [14:53:19.819] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+10월 08, 2021 14:53:19.84 [20236:9432:1008/145319.848:ERROR:device_event_log_impl.cc(214)] [14:53:19.849] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+
+10월 09, 2021 20:29:47.27 NEW SESSION
+10월 09, 2021 20:29:47.27 [16504:10084:1009/202947.264:ERROR:chrome_browser_main_extra_parts_metrics.cc(228)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+10월 09, 2021 20:29:47.27 [16504:10084:1009/202947.264:ERROR:chrome_browser_main_extra_parts_metrics.cc(231)] crbug.com/1216328: Checking Bluetooth availability ended.
+10월 09, 2021 20:29:47.27 [16504:10084:1009/202947.264:ERROR:chrome_browser_main_extra_parts_metrics.cc(234)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+10월 09, 2021 20:29:47.27 [16504:10084:1009/202947.267:ERROR:chrome_browser_main_extra_parts_metrics.cc(238)] crbug.com/1216328: Checking default browser status ended.
+10월 09, 2021 20:29:47.27 [16504:484:1009/202947.269:ERROR:device_event_log_impl.cc(214)] [20:29:47.269] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+10월 09, 2021 20:29:47.29 [16504:484:1009/202947.298:ERROR:device_event_log_impl.cc(214)] [20:29:47.299] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.

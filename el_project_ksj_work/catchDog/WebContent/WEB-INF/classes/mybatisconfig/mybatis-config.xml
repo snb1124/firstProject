@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD config 3.0//EN"
+					    "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<typeAliases>
+		<typeAlias type="com.catchdog.recommend.vo.RecommendVO" alias="recommendVO"/>
+		<typeAlias type="com.catchdog.goods.vo.GoodsVO" alias="goodsVO"/>
+		<typeAlias type="com.catchdog.notice.vo.NoticeVO" alias="noticeVO"/>
+		<typeAlias type="com.catchdog.member.vo.MemberVO" alias="memberVO"/>
+		<typeAlias type="com.catchdog.adoption.vo.AdoptionVO" alias="adoptionVO"/>
+		<typeAlias type="com.catchdog.review.vo.ReviewVO" alias="reviewVO"/>
+		<typeAlias type="com.catchdog.disadoption.vo.DisadoptionVO" alias="disadoptionVO"/>
+		<typeAlias type="com.catchdog.login.vo.TempPwVO" alias="pwVO"/>
+		<typeAlias type="com.catchdog.disappearance.vo.DisappearanceVO" alias="disappearanceVO"/>
+		<typeAlias type="com.catchdog.mypage.vo.MypageVO" alias="mypageVO"/>
+	</typeAliases>
+</configuration>

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="EUC-KR">
+<title>문자 80바이트 이하로 끊기</title>
+<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript">
+
+	$(document).ready(function () {
+	   
+		//.js-sms-content 키업시 일어날 이벤트 
+		$('.js-sms-content').keyup(function(){
+			//cut_80를 호출 자기자신을 매개변수로 
+	        cut_80(this);
+	    });
+		
+	    $('.js-send-sms').click(function(){
+	        if(getTextLength($('.js-sms-content').val()) > 80){
+	            alert("문자는 80바이트 이하로 적어 주세요.");
+	            return false;
+	        }else{
+	            alert("문자가 80바이트 이하입니다.");
+	        }
+	    });
+	});
+	//%20
+	
+	//한글포함 문자열 길이를 구한다	
+	//str은 textarea val
+	function getTextLength(str) {
+	    var len = 0;
+	    console.log("escape(str.charAt(i)) if out->" + escape(str.charAt(i)));
+	    console.log("escape(str.charAt(i)).length if out->" + escape(str.charAt(i)).length);
+	    for (var i = 0; i < str.length; i++) {
+	    	//길이가 6개가 넘으면  if문으로 들어온다. 
+	       if (escape(str.charAt(i)).length == 6) {
+	    	   console.log("escape(str.charAt(i)) if in->" + escape(str.charAt(i)));
+	    	   console.log("escape(str.charAt(i)).length if in->" + escape(str.charAt(i)).length);
+	            len++;
+	            console.log("len++ if in->"+ (len));
+	        }
+	        len++;
+	        console.log("len++ if in->"+ (len));
+	    }
+	    return len;
+	}
+	//cut_80 obj 자기자신 
+	function cut_80(obj){
+		console.log("cut80 obj->"+ obj)
+		// 텍스트 에어리어에 있는 값들 var text에 초기화
+	    var text = $(obj).val();
+		//text의 길이 leng에 초기화
+	    var leng = text.length;
+		//텍스트에리어에 있는 개수가 80보다 크다면 실행
+	    while(getTextLength(text) > 80){
+	    	console.log("cut_80 while text->"+text);
+	    	//leng을 감소시킨다
+	        leng--;
+	    	console.log("cut_80 while leng ->"+leng);
+	    	//text = 0~80 까지만 초기화
+	        text = text.substring(0, leng);
+	        console.log("cut_80 while text->"+text);
+	    }// end of cut 80
+		// 자기자신.val 텍스트에리어 
+	    $(obj).val(text);
+		//text함수이용  .bytes 에 표기하는 이벤트 추가 
+	    $('.bytes').text(getTextLength(text));
+		 
+	}
+</script>
+<style type="text/css">
+	div.content {		
+		width: 300px;
+		height: 150px;
+		margin: 100px auto;		
+	}
+</style>
+</head>
+<body>
+<!-- 텍스트 에어리어 객체  -->
+<div class="content">
+<textarea name="" id="" cols="35" rows="5" class="js-sms-content"></textarea>
+<!-- 바이트 올라가는 객체? -->
+<div class="bytes-wrapper">
+    <span class="bytes">0</span> bytes
+</div>
+<button class="js-send-sms">확인</button>
+</div>
+</body>
+</html>

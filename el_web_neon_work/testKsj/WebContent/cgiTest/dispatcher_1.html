@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<!-- <meta> 태그의 charset 속성은 해당 HTML 문서의 문자 인코딩 방식을 명시합니다. -->
+		<meta charset="EUC-KR">
+		<!-- 타이틀 -->
+		<title>Insert title here</title>
+		<!-- 제이쿼리 cdn  -->
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<!--  자바스크립트  -->
+		<script type="text/javascript">
+		//제이쿼리 부분 시작
+			$(document).ready(function(){
+				//펑션 추가 
+				$("#btnSAll").click(function(){
+					//알람
+					alert("btnSAll 클릭됨 >>> : ");
+					//변수 val() -> Form Element의 값을 받아온다.
+					//val함수는 비어있으면 가지고 있는 값 리턴
+					// 채워져있으면 그 값을 초기화한다. 
+					var v1 = $("#isudtype").val('SALL');
+					
+					console.log("v1 >>> : " + v1.val());
+					
+					formSubmit(v1);
+				});
+				
+				$("#btnS").click(function(){
+					alert("btnS 클릭됨 >>> : ");
+					var v2 = $("#isudtype").val('S');
+					console.log("v2 >>> : " + v2.val());
+					
+					formSubmit(v2);
+				});
+				
+				function formSubmit(isudtype){
+					alert("isudtype >>> : " + isudtype);
+					
+					$("#locationForm").attr({
+									//location_1은 EmpServlet의 앨리어스임
+					
+						"action":"/testKsj/location_1?isudtype=" + isudtype,
+						"method":"GET",
+						"enctype":"application/x-www-form-urlencoded"
+					}).submit();
+				}
+			})
+		
+		</script>
+	</head>
+	<body>
+		<h3>dispatcher.html</h3>
+		<hr>
+		<form id="locationForm" name="locationForm">
+		<!-- <input type=“hidden”>은 사용자에게는 보이지 않는 숨겨진 입력 필드를 정의합니다.
+숨겨진 입력 필드는 렌더링이 끝난 웹 페이지에서는 전혀 보이지 않으며, 페이지 콘텐츠 내에서 그것을 볼 수 있게 만드는 방법도 없습니다.
+따라서 숨겨진 입력 필드는 폼 제출 시 사용자가 변경해서는 안 되는 데이터를 함께 보낼 때 유용하게 사용됩니다. -->
+			<input type="hidden" id="isudtype" name="isudtype"><br>
+			사번 : <input type="text" id="empno" name="empno"><br>
+			사원명 : <input type="text" id="ename" name="ename"><br>
+			
+			<input type="button" id="btnSAll" value="전체조회">
+			<input type="button" id="btnS" value="조건조회">
+		</form>
+	</body>
+</html>

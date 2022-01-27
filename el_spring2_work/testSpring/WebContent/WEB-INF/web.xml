@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns="http://xmlns.jcp.org/xml/ns/javaee" 
+xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee 
+http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>testSpring</display-name>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  
+  
+  <servlet>
+  	<!-- aliases 설정  -> 실제 서블릿 클래스에 연결-->
+  	<!--  얼라이어스 servlet-name과 servlet-name 의servlet-name이 같아야한다 
+  	작성한 Java Servlet 파일이 나중에 .class로 이곳에 모두 저장된다.
+ -->
+  	<servlet-name>spring</servlet-name>
+  	<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+  	<!--init-param은 private변수처럼 특정 서블릿에서만 사용가능하다. 
+  	 	<param-name>contextConfigLocation</param-name>
+  	<param-value>/WEB-INF/spring-servlet.xml</param-value>는 init-param태그안에서만 사용가능하다. 
+  	  <context-param은 모든 서블릿에서만 사용가능
+  	  -->
+  	<init-param>
+  	<!--  contextConfigLocation가 어떤 객체들을 미리 만들어 놓을지가 작성된 설정파일의 경로의 값을 할당한다.
+  	/ 설정파일을 쓸 수 있게 해준다?  -->
+  	<param-name>contextConfigLocation</param-name>
+  	<!--  그값이 아래 값이다.  -->
+  	<param-value>/WEB-INF/spring-servlet.xml</param-value>
+  	</init-param>
+  	<load-on-startup>1</load-on-startup>
+  </servlet>
+  <!--  매핑 -->
+  <servlet-mapping>
+  	<servlet-name>spring</servlet-name>
+  	<url-pattern>*.ksj</url-pattern>
+  </servlet-mapping>
+  	<!-- POST방식 인코딩 -->
+	<filter>
+		<filter-name>encodingFilter</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>EUC-KR</param-value>
+		</init-param>
+		<init-param>
+			<param-name>forceEncoding</param-name>
+			<param-value>true</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>encodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+  
+  <!-- log4j setting -->
+  <context-param>
+  		<param-name>log4ConfigLocation</param-name>
+ 		<param-value>/WEB-INF/classes/log4j.properties</param-value> 
+  </context-param>
+  
+  
+</web-app>

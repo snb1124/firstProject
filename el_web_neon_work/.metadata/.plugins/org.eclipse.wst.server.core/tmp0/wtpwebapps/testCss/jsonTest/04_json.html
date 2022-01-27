@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>04_json.html</title>
+<script type="text/javascript">
+	
+	var bbs = {		//bbs 변수안에 key 값 title, description, total, item 존재 
+					//item 안에 배열 객체 존재
+	}
+					"title": "Javascript + jQuery + Ajax"
+				   ,"description": "완벽 가이드"
+				   ,"total": 4
+				   ,"item": 
+					   [ { "no": "공지"					  
+						  ,"subject": "강의자료 "
+						  ,"hit": 4
+						  ,"date": "2019.01.29"
+					     }
+					    ,{ "no": 3					  
+						  ,"subject": "강의자료 "
+						  ,"hit": 6
+						  ,"date": "2019.02.19"
+						 }
+					    ,{ "no": 2					  
+						  ,"subject": "강의자료 "
+						  ,"hit": 15
+						  ,"date": "2019.03.19"
+						 }
+					    ,{ "no": 1					  
+						  ,"subject": "강의자료 "
+						  ,"hit": 19
+						  ,"date": "2019.04.19"
+						 }
+				       ]   
+			    };
+		//bbs는 오브젝트 객체
+		alert(bbs);
+			//h1태그 사용 bbs. 타이틀 호출
+		var html = "<h1>" + bbs.title + "</h1>";
+		// p태그안에 description 객체 호출 
+		html += "<p>" + bbs.description + "</p>";
+		// bbs.totla 호출
+		html += "<p>총 게시물 수: " + bbs.total + "</p>";
+		html += "<ul>";
+		
+		// 반복문 이용 item뽑아내기 
+		for (var i=0; i < bbs.item.length; i++){
+			//변수 item에 bbs.item[i]를 호출 
+			var item = bbs.item[i];
+			//html 변수에 새기기 
+			html += "<li>("
+						+ item.no + ")"
+						+ item.subject
+						+ "(조회수: " 
+						+ item.hit
+						+ " / 날짜: " 
+						+ item.date
+					    +")</li>";					
+		}
+		
+		html += "</ul>";
+		
+		document.write(html);
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

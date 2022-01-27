@@ -1,0 +1,19 @@
+INDEX VERSION 1.131
+C:\00.KOSMO93\30.WEB\el_spring2_work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1718745262.index
+\springEmp\src
+C:\00.KOSMO93\30.WEB\el_spring2_work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\480720474.index
+\testSpring\src
+C:\00.KOSMO93\30.WEB\el_spring2_work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3433715023.index
+\testSpring\src
+C:\00.KOSMO93\30.WEB\el_spring2_work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2444438297.index
+\testSpring\src
+C:\00.KOSMO93\30.WEB\el_spring2_work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3925778092.index
+\springTest2\src
+C:\00.KOSMO93\30.WEB\el_spring2_work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\878763743.index
+\springTest2\src
+C:\00.KOSMO93\30.WEB\el_spring2_work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1610020942.index
+\springTest2\src
+C:\00.KOSMO93\30.WEB\el_spring2_work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1727994293.index
+\springEmp\src
+C:\00.KOSMO93\30.WEB\el_spring2_work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\62547356.index
+\springStudy\src

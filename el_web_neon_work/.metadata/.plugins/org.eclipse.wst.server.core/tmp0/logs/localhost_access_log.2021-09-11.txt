@@ -1,0 +1,13 @@
+127.0.0.1 - - [11/Sep/2021:21:33:47 +0900] "GET / HTTP/1.1" 404 807
+127.0.0.1 - - [11/Sep/2021:21:33:49 +0900] "GET /testKsj/kosmo_ksj/board/bookSelectAll.jsp HTTP/1.1" 200 2766
+127.0.0.1 - - [11/Sep/2021:21:33:49 +0900] "GET /favicon.ico HTTP/1.1" 404 818
+127.0.0.1 - - [11/Sep/2021:21:35:13 +0900] "GET /testKsj/kosmo_ksj/board/board.html HTTP/1.1" 200 4299
+127.0.0.1 - - [11/Sep/2021:21:35:24 +0900] "POST /testKsj/board?ISUD_TYPE=I HTTP/1.1" 200 219
+127.0.0.1 - - [11/Sep/2021:21:35:24 +0900] "GET /testKsj/board?ISUD_TYPE=SALL HTTP/1.1" 200 19525
+127.0.0.1 - - [11/Sep/2021:21:35:32 +0900] "GET /testKsj/board?knumCheck=BD0019&ISUD_TYPE=D HTTP/1.1" 200 3320
+127.0.0.1 - - [11/Sep/2021:21:35:32 +0900] "GET /testksj/fileupload/board/null HTTP/1.1" 404 848
+127.0.0.1 - - [11/Sep/2021:21:35:34 +0900] "POST /testKsj/board?ISUD_TYPE=DOK HTTP/1.1" 200 219
+127.0.0.1 - - [11/Sep/2021:21:35:34 +0900] "GET /testKsj/board?ISUD_TYPE=SALL HTTP/1.1" 200 19039
+127.0.0.1 - - [11/Sep/2021:22:18:09 +0900] "GET / HTTP/1.1" 404 807
+127.0.0.1 - - [11/Sep/2021:22:18:10 +0900] "GET /testKsj/kosmo_ksj/board/bookSelectAll.jsp HTTP/1.1" 200 2796
+127.0.0.1 - - [11/Sep/2021:22:19:07 +0900] "GET /testKsj/kosmo_ksj/board/bookSelectAll.jsp HTTP/1.1" 200 2796

@@ -1,0 +1,212 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ page import="com.catchdog.common.DogSizeUtil" %>
+<%
+
+String[] dogSize = DogSizeUtil.DOG_SIZE;
+String[] dogKind = DogSizeUtil.DOG_KIND;
+
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>관심 동물 선택</title>
+<style type="text/css">
+	
+</style>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){	
+				
+		$("#location").on('change',function(){
+			
+			var selectlocation = $(this).val(); // 첫번째 select 선택 값 가져오기
+			
+			$('#location2').children('option:not(:first)').remove(); // 두번째 select option값 지우기 (첫번째 option 제외)
+			
+			for(var i=0; i<combo1.length; i++){ // combo1의 크기만큼 for문 반복
+				
+				if(combo1[i].indexOf(selectlocation) > -1){ // combo1 데이터중 selectlocation 값이 포함된 데이터만 추출
+					var optiondata = combo1[i].split("@")[1]; // 추출한 데이터 중 필요한 부분만 잘라내기 (@ 기준)
+					$('#location2').append('<option value="'+optiondata+'">'+optiondata+'</option>'); // option 추가하기
+					
+				}
+			}	
+		});
+		
+		$("#btn").click(function(){
+			
+			// 성별
+			var agender_check = document.getElementsByName('agender');
+			for (var i=0; i < agender_check.length; i++){
+				if (agender_check[i].checked == true){
+					console.log("agender_check["+i+"].value >>> : " + agender_check[i].value);
+				}
+			}
+			
+			var mgender_check = $('input:radio[name=agender]:checked').val();
+			console.log("mgender_check.value >>> : " + mgender_check);
+			
+			$("#recommendForm").attr({
+				"action":"recommendInsert.cd",
+				"method":"POST"
+			}).submit();
+		});
+		
+		$("img[name=imgAupkind]").click(function(){ // 여러 객체 이벤트 동시
+			var idNo = ($(this).attr("id")).replace("imgAupkind_",""); // 고유 값 갖고오기
+			
+			if(idNo == "01"){ // 고유값에 따른 처리 분기
+				$("#imgAupkind_2").fadeOut();
+				$("#dogsize").slideDown("slow");
+			} else {
+				$("#dogsize").slideUp("slow");
+			}
+			$("#aupkind").val(idNo);
+			
+			//alert($("#aupkind").val())
+		});
+		
+		$("[name=asize]").click(function(){
+			var asize = $(this).val();
+			if (asize == "대형견"){
+				$(".big").show();
+				$(".mid").hide();
+				$(".small").hide();
+			}else if(asize == "중형견"){
+				$(".mid").show();
+				$(".big").hide();
+				$(".small").hide();
+			}else if(asize == "소형견"){
+				$(".small").show();
+				$(".big").hide();
+				$(".mid").hide();
+			}
+		});
+		
+	});
+	var combo1 = ["서울@금천구", "서울@구로구", "경기도@고양시", "경기도@파주시", "인천@부평구", "인천@서구"];
+	var combo2 = ["경기도@고양시@일산서구", "경기도@고양시@일산동구"];
+	
+	
+
+</script>
+</head>
+<body>
+<jsp:include page="/include/header.jsp" flush="true"></jsp:include>
+
+	<form name="recommendForm" id="recommendForm">
+		<input type="hidden" name="mnum" id="mnum" value="욜받아" />
+		<input type="hidden" name="aupkind" id="aupkind" value="" />
+		
+		<table class="intable" align="center">		
+		<tr>
+			<td>종</td>
+			<td>
+				<img name="imgAupkind" id="imgAupkind_01" src="image/recommendimg/88_1423.jpg" height="200" width="200" style="cursor: pointer;"/>
+				<img name="imgAupkind" id="imgAupkind_02" src="image/recommendimg/KakaoTalk_20210913_100553050.jpg" height="200" width="200"  style="cursor: pointer;"/>
+
+			</td>
+		</tr>
+		</table>
+		<div id="dogsize" style="display:none;">
+		<table>
+		<tr>
+			<td>크기</td>
+			<td>
+				<div class="asize">
+					<label>
+						<input type="radio" name="asize" value="대형견">
+						<div class="label">대형견</div>
+					</label>
+					<label>
+						<input type="radio" name="asize" value="중형견">
+						<div class="label">중형견</div>
+					</label>
+					<label>
+						<input type="radio" name="asize" value="소형견">
+						<div class="label">소형견</div>
+					</label>					
+				</div>
+				
+				<div class="akind">
+				<%
+				for(int i=0; i<dogSize.length; i++){
+					if (dogSize[i] == "대형") {
+						%>
+						<label class="big" style="display: none;">
+							<input type="radio" name="akind" value="<%=dogKind[i] %>">
+							<div class="label"><%=dogKind[i] %></div>
+						</label>
+						<%
+					} else if (dogSize[i] == "중형") {
+						%>
+						<label class="mid" style="display: none;">
+							<input type="radio" name="akind" value="<%=dogKind[i] %>">
+							<div class="label"><%=dogKind[i] %></div>
+						</label>
+						<%
+					} else if (dogSize[i] == "소형") {
+						%>
+						<label class="small" style="display: none;">
+							<input type="radio" name="akind" value="<%=dogKind[i] %>">
+							<div class="label"><%=dogKind[i] %></div>
+						</label>
+						<%
+					}
+				}
+				%>
+				</div>
+				
+			</td>
+		</tr>
+		</table>
+		</div>
+		<table>
+		<tr>
+			<td>털 길이</td>
+			<td><input type="radio" name="afur" id="afur" value="01" checked /> 장모
+				<input type="radio" name="afur" id="afur" value="02" /> 단모
+			</td>
+		</tr>
+		<tr>
+			<td>동물 색</td>
+			<td><input type="text" name="acolor" id="acolor" />
+			</td>
+		</tr>
+		<tr>
+			<td>세부 종</td>
+			<td><input type="text" name="akind"></td>
+		</tr>
+		<tr>
+			<td>성별</td>
+			<td><input type="radio" name="agender" value="01" checked /> 암컷
+				<input type="radio" name="agender" value="02" /> 수컷
+			</td>
+		<tr>
+			<td>지역</td>
+			<td>
+				<select id="location">
+					<option value="선택">선택</option>
+					<option value="서울">서울</option>
+					<option value="경기도">경기도</option>
+					<option value="인천">인천</option>
+				</select>
+				<select id="location2">
+					<option value="선택">선택</option>
+				</select>
+				<select id="location3">
+					<option value="선택">선택</option>
+				</select>
+		</td>
+	<tr>
+		<td colspan="2">
+			<button type="button" id="btn">가입하기</button>
+			<button type="reset">다시</button>
+		</td>
+	</tr>
+</table>
+</form>
+</body>
+</html>

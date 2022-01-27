@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;cgiForm.jsp&apos; to &apos;cgiForm&apos;&#x0D;&#x0A;- Original project: &apos;testKsj&apos;&#x0D;&#x0A;- Destination element: &apos;cgiForm&apos;&#x0D;&#x0A;- Original element: &apos;cgiForm.jsp&apos;" description="Copy file" element1="WebContent/cgiTest/cgiForm/cgiForm.jsp" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1633774534618" target="/testKsj/WebContent/cgiTest/cgiForm" units="0" version="1.0"/>
+</session>

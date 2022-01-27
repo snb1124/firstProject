@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>vue_04</title>
+<script type="text/javascript" src="https://unpkg.com/vue@2.5.16/dist/vue.js"></script>
+</head>
+<body>
+<!-- 
+	v-model : 
+		text, textarea  태그 : value  속성과  input 이벤트 사용
+		체크박스, 라디오버튼 : checked  속성과  change 이벤트 사용
+		select  박스는 value를 prop으로, change 이벤트 사용
+		
+	.lazy .number .trim : 수식어
+	v-model : 입력 이벤트 후 입력과 데이터를 동기화 한다. 	
+	v-model.lazy :  .lazy 수식어가 추가되면 change 이벤트 이후에 동기화 할 수 있다.
+		<input v-model.lazy="msg"> 
+	v-model.number: 사용자 입력이 자동으로 숫자로 형변환 한다. 
+		<input v-model.number="age" type="number">
+	v-model.trim: 공백문자 제거
+		<input v-model.trim="msg"> 		
+ -->
+<div id="chek">
+	<div>좋아하는 과일을 모두 골라주세요 : </div>
+	<input type="checkbox" value="수박" v-model="fruits">수박
+	<input type="checkbox" value="포도" v-model="fruits">포도,
+	<input type="checkbox" value="감" v-model="fruits">감,
+	<input type="checkbox" value="배" v-model="fruits">배,
+	<input type="checkbox" value="복숭아" v-model="fruits">복숭아
+</div>
+<hr>
+<div id="chek2">
+	선택한 과일들: <span v-html="fruits"></span>
+</div>
+<script>
+	var model = { fruits: [] }
+	var vm = new Vue({
+		el: '#chek', data: model
+	});
+	var vm2g = new Vue({
+		el: '#chek2', data: model
+	});
+	
+</script>
+</body>
+</html>

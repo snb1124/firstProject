@@ -1,0 +1,306 @@
+<!-- html5.0버전임을 알려주는 코드 -->
+<!DOCTYPE html>
+<!-- html돔트리 최상위 루트 태그 -->
+<html>
+<!--head 부분엔 메타데이터, 타이틀 설정한다.  -->
+<head>
+<meta charset="EUC-KR">
+<title>회원가입 폼</title>
+<!-- jQuery CDN 불러오기  -->
+<!--CDN은 해당 URL에 연결해 API사용 jquery를 사용하기 위해서는 아래와 같이 코드를 작성해야한다.  -->
+<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+<!-- 다음 주소록 OPEN API CDN 불러오기  -->
+<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+<!-- 자바스크립트 부분임을 명시 -->
+<script type="text/javascript">
+	alert("자바스크립트 블럭 시작 >>> : ")
+//제이쿼리문  시작 알람 
+	$(document).ready(function(){	
+		alert("제이쿼리 블럭 시작 >>> : ")
+		// 회원번호 		
+		// 이름 		
+		// 아이디 중복체크		
+		$("#kidbtn").click(function(){		
+			alert("idCheck >>> : Ajax 배워서 할 예정임 ㅋ ");		
+			console.log("idCheck >>> : ");
+			//let은 변수 선언임 var와 다른점은 var는 여러번 선언이 가능하지만 let은 한 번 만 선언이 가능하다. 
+			//val() Form Element 의 값을 받아오는데 쓰인다. - 주의해야할 점은 Form Element 이외의 값은 받아오질 못한다는 점.
+			let midVal = $("#kid").val();
+			if (midVal == '') {
+				alert("중복 체크할 아이디를 입력하세요 >>> : ");
+				$("#kid").focus();
+				return false;
+			}
+		});
+		// 비밀번호 체크 
+		$("#pwCheck").click(function(){
+			console.log(" pwCheck 함수 진입");
+			// var pw = $("#kpw");
+			// var pw_r = $("#kpw_r");
+			var pw = document.getElementById("kpw").value;
+			var pw_r = document.getElementById("kpw_r").value;			
+			alert(pw + " : " + pw_r);
+			if(pw == pw_r) {
+				alert("비밀번호가 같습니다.");
+				// pw_r.val('');
+				document.memForm.mpw_r.value = "";
+				$("#mgender").focus();						
+				return true;
+			} else {
+				alert("비밀번호가 다릅니다.");
+				pw.val('');
+				pw_r.val('');
+				
+				//Document 객체는 웹 페이지 그 자체를 의미합니다. 
+				//웹 페이지에 존재하는 HTML 요소에 접근하고자 할 때는 반드시 Document 객체부터 시작해야 합니다.
+				//현재 HTML에서 memForm에서  mpw 는 ""이다
+				//document.memForm.mpw.value = "";
+				//document.memForm.mpw_r.value = "";
+				 pw.focus();			
+				//document.memForm.mpw.focus();
+				return false;
+			}
+		});
+		
+		// 성별
+		
+		// 생년월일
+		$("#kbirth").on("input", function(){
+			var m = $("#kbirth");
+			if (m.val().length > m.maxlength){
+				m.value = m.value.slice(0, m.maxlength);
+			}
+		});
+        // 월 
+        $("#kbirth1").append("<option value=''>월--- </option>");
+        for(var i = 1; i <= 12; i++){
+        	if (i < 10){ i = '0'+i;}
+            $("#kbirth1").append("<option value='"+ i +"'>"+ i + "</option>");
+        }
+        // 일 
+        $("#kbirth2").append("<option value=''>일 ---</option>");
+        for(var i = 1; i <= 31; i++){
+        	if (i < 10){ i = '0'+i;}
+            $("#kbirth2").append("<option value='"+ i +"'>"+ i + "</option>");
+        }
+
+		
+		// 핸드폰		
+		// 전화번호
+		
+		// 이메일 
+		$('#kemail2').change(function(){	
+		$("#kemail2 option:selected").each(function () {
+			if($(this).val()== '1'){ //직접입력일 경우 
+					var aa = $("#kemail1").val();
+					//alert("aa >>> : " + aa);
+					$("#kemail1").val(''); //값 초기화 
+					$("#kemail1").attr("readonly",false); //활성화 				
+			}else{ //직접입력이 아닐경우 
+					$("#kemail1").val($(this).text()); //선택값 입력 
+					$("#kemail1").attr("readonly",true); //비활성화 
+			}}); 
+		}); 	
+		
+		// 우편번호	
+		$("#zonecode").click(function(){
+			console.log("zonecode >>> : ");
+			new daum.Postcode({
+				oncomplete: function(data) {
+				    $("#kzonecode").val(data.zonecode); //5자리 새우편번호 사용
+				    $("#kroadaddress").val(data.roadAddress); //도로명 주소
+				    $("#kgibunaddress").val(data.jibunAddress); //지번주소			
+				}
+			}).open();
+		});
+		
+		// 취미		
+		// 소개글 		
+		// 사진 
+		
+		// 폼태그 데이터 JSP 보내기 
+		$("#btn").click(function(){
+			alert("btn click() 함수 진입 >>> : ");
+			
+			/*
+			console.log("btn click() 함수 진입 >>> : ");
+			console.log("knum->"+$('#knum').val());
+			console.log("kname->"+$('#kname').val());
+			console.log("kid->"+$('#kid').val());
+			console.log("kpw->"+$('#kpw').val());
+			console.log("kpw_r->"+$('#kpw_r').val());
+			console.log("kgender->"+$('#kgender').val());
+			console.log("kbirth1->"+$('#kbirth1').val());
+			console.log("kbirth2->"+$('#kbirth2').val());
+			console.log("kbirth->"+$('#kbirth').val());
+			console.log("kph1->"+$('#kph1').val());
+			console.log("kph2->"+$('#kph2').val());
+			console.log("kph->"+$('#kph').val());
+			console.log("ktel1->"+$('#ktel1').val());
+			console.log("ktel2->"+$('#ktel2').val());
+			console.log("ktel->"+$('#ktel').val());
+			console.log("kemail->"+$('#kemail').val());
+			console.log("kzonecode->"+$('#kzonecode').val());
+			console.log("zonecode"+$('#zonecode').val());
+			console.log("kroddadrress->"+$('#kroadaddress').val());
+			console.log("kroadaddressdetail->"+$('#kroadaddressdetail').val());
+			console.log("kgibunaddress->"+$('#kgibunaddress').val());
+			//console.log("khobby->"+$('#khobby').val());
+			//console.log("khobby->"+$('input[id="khobby"]:check').val();
+			console.log("kinfo->"+$('#kinfo').val());
+			console.log("kphoto->"+$('#kphoto').val());
+			var khobby1 = document.getElementsByName("khobby");
+            for(var i=0; i< khobby1.length; i++){
+               if(khobby1[i].checked){
+                  console.log("khobby>> : " + khobby1[i].value);
+               }
+            }
+            */
+			let v1 = $("#ISUD_TYPE").val();
+			alert("v1 >>> : " + v1);
+			$("#memForm")
+			.attr({
+					"action":"/testKsj/mem?ISUD_TYPE="+v1,
+				    "method":"POST",
+				    "enctype":"multipart/form-data"
+			       })
+			.submit();	
+		});
+	});
+</script>	
+</head>
+<body>
+<h3 align="center">회원 가입</h3>
+<hr>
+<form name="memForm" id="memForm">
+<table border="1" align="center">
+<tr>
+	<td colspan="2" align="center">					
+		KOSMO 93기 
+		<!-- <img src="/testWeb/img/ase.gif" width="25" height="25" alt="image">-->
+	</td>
+</tr>
+<tr>
+	<td>회원번호</td>
+	<td><input type="text" name="knum" id="knum" readonly/></td>
+ </tr>
+<tr>
+	<td>이름</td>
+	<td><input type="text" name="kname" id="kname"/></td>
+</tr>
+<tr>
+	<td>아이디</td>
+	<td>
+		<input type="text" name="kid" id="kid" placeholder="아이디체크" style="width:100px" />
+		<input type="button" name="kidbtn" id="kidbtn" value="아이디중복확인"  />
+	</td>
+</tr>
+<tr>
+	<td>패스워드</td>
+	<td>
+		<input type="text" name="kpw" id="kpw" style="width:100px" /><br/>
+		<input type="text" id="kpw_r" name="kpw_r" placeholder="비밀번호확인" style="width:100px" />
+		<input type="button" value="비밀번호확인" id="pwCheck"/><br/>
+	</td>
+</tr>
+<tr>
+	<td>성별</td>
+	<td> 
+	<!-- 기본적으로 체크 되어있게 만드는 키워드  checked -->
+		<input type="radio" name="kgender" id="kgender" value="F" checked /> 여자
+      	<input type="radio" name="kgender" id="kgender" value="M" /> 남자
+    </td>
+</tr>
+<tr>
+	<td>생년월일</td>
+	<td>		
+		<input type="text" name="kbirth" id=kbirth 
+		       placeholder="년(4자)" maxlength="4" style="width:50px"/>
+		<select name="kbirth1" id="kbirth1"></select>
+        <select name="kbirth2" id="kbirth2"></select>
+	</td>
+</tr>
+<tr>
+	<td>핸드폰</td>
+	<td>
+		<select name="khp" id="khp">
+        	<option value="010">010</option>
+        	<option value="011">011</option>
+        	<option value="016">016</option>
+        	<option value="017">017</option>		        	
+         </select>
+         - <input type="text" name="khp1" id="khp1" size="2"/>
+         - <input type="text" name="khp2" id="khp2" size="2"/>
+	</td>
+</tr>
+<tr>
+	<td>전화번호</td>
+	<td>
+		<select name="ktel" id="ktel">
+        	<option value="02">02</option>
+        	<option value="031">031</option>
+        	<option value="041">041</option>
+        	<option value="051">051</option>
+        	<option value="061">061</option>	        			       
+         </select>
+		- <input type="text" name="ktel1" id="ktel1" size="2"/>
+		- <input type="text" name="ktel2" id="ktel2" size="2"/>
+	</td>
+</tr>
+<tr>
+	<td>이메일</td>
+	<td>		
+		<input type="text" name="kemail"  id="kemail" style="width:100px"/>
+		@ <input type="text" name="kemail1" id="kemail1" style="width:100px" placeholder="직접입력" />
+		<select name="kemail2" id="kemail2">
+        	 <option value="1" selected>직접입력</option>
+       		 <option value="naver.com">naver.com</option>	       	   
+      		 <option value="gmail.com">gmail.com</option>
+      		 <option value="daum.net">daum.net</option>	       	   
+         </select>
+	</td>
+</tr>
+<tr>
+ 	<td>주소</td>
+ 	<td>
+ 		<input type="text" name="kzonecode" id="kzonecode" placeholder="우편번호" style="width:50px">
+ 		<input type="button" name="zonecode" id="zonecode" value="우편번호 찾기"><br>	 	
+ 		<input type="text" name="kroadaddress" id="kroadaddress" placeholder="도로명주소" style="width:250px"><br>	 	
+ 		<input type="text" name="kroadaddressdetail" id="kroadaddressdetail" placeholder="도로명주소 상세주소" style="width:250px"><br>	 	
+ 		<input type="text" name="kgibunaddress" id="kgibunaddress" placeholder="지번주소" style="width:250px">
+ 	</td>
+</tr>	 
+<tr>
+	<td>취미 (널값시 오류 발생)</td>
+	<td> 
+		<input type="checkbox" name="khobby" value="01" />알고리즘		      
+        <input type="checkbox" name="khobby" value="02" />코딩
+        <input type="checkbox" name="khobby" value="03" />분석설계<br>
+        <input type="checkbox" name="khobby" value="04" />데이터베이스
+        <input type="checkbox" name="khobby" value="05" />스크립트
+    </td>
+</tr>	 
+<tr>
+	<td>소개글</td>
+	<td>
+		<textarea name="kinfo" id="kinfo" rows="5" cols="50">내 소개글					
+		</textarea>
+	</td>
+ </tr>
+ <tr>
+	<td>사진</td>
+	<td> 
+		<input type="file" name="kphoto"  /><br>
+    </td>
+</tr>
+<tr>
+	<td colspan="2"> 		
+		<input type = "hidden" name = "ISUD_TYPE" id ="ISUD_TYPE" value="I";>	
+		<button type="button" id="btn">보내기</button>
+		<button type="reset">다시 </button>	
+	</td>				
+</tr>
+</table>				 		        		     
+</form>	
+</body>
+</html>

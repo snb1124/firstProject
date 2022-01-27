@@ -1,0 +1,166 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import="java.util.List" %>
+<%@ page import="com.catchdog.goods.vo.GoodsVO"%> 
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>셀렉트올</title>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$(document).on("click", "#gnum", function(){
+		
+		if($(this).prop('checked')){			 
+			$('.gnum').prop('checked',false);
+			$(this).prop('checked',true);
+		}
+	});//gnum
+	
+	/* 검색
+	// 검색버튼
+		//  U
+		$(document).on("click", "#searchBtn", function(){
+			alert("searchBtn >>> : ");			
+			$("#boardList").attr({ "method":"GET"
+				                  ,"action":"boardSelectAll.h"}).submit();
+		});
+		// datepicker : from ~ to 기간조회
+		$("#startdate").datepicker({		
+			showOn: "button",    // 달력을 표시할 타이밍 (both: focus or button)
+			buttonImage: "/springHbe/img/cal_0.gif", 
+			buttonImageOnly : true,            
+			buttonText: "날짜선택",             
+			dateFormat: "yy-mm-dd",             
+			changeMonth: true,                  			
+			onClose: function(selectedDate) {    
+				$("#enddate").datepicker("option", "minDate", selectedDate);
+			}                
+		});		
+		$("#enddate").datepicker({
+			showOn: "button", 
+			buttonImage: "/springHbe/img/cal_0.gif", 
+			buttonImageOnly : true,
+			buttonText: "날짜선택",
+			dateFormat: "yy-mm-dd",
+			changeMonth: true,			
+			onClose: function(selectedDate) {	
+				$("#startdate").datepicker("option", "maxDate", selectedDate);
+			}               
+		});			*/
+	
+
+	
+	$(document).on("click", "#I", function(){
+		//alert("I >>> : ");
+		location.href="goodsForm.cd";
+	}); // I
+	
+	$(document).on("click", "#U", function(){
+		// alert("U >>> : ");	
+		if ($('.gnum:checked').length == 0){
+			alert("수정할 글번호 하나를 선택하세요!!");
+			return;
+		}
+		 $("#goodsList").attr({ "method":"POST"
+			                   ,"action":"goodsSelect.cd"}).submit();
+	});
+	//  D
+	$(document).on("click", "#D", function(){
+		//alert("D >>> : ");	
+		if ($('.gnum:checked').length == 0){
+			alert("삭제할 글번호 하나를 선택하세요!!");
+			return;
+		}
+		$("#goodsList").attr({ "method":"POST"
+			                  ,"action":"goodsSelect.cd"}).submit();
+	});
+		
+})//ready
+
+</script>
+</head>
+<body>
+<%
+int pageSize = 0;
+int groupSize = 0;
+int curPage = 0;
+int totalCount = 0;
+	
+Object objPaging = request.getAttribute("pagingVO");
+GoodsVO pagingVO = (GoodsVO)objPaging;
+
+	Object obj = request.getAttribute("listAll");
+	List<GoodsVO> list = (List)obj;
+	
+	int nCnt = list.size();
+	System.out.println("nCnt >>> : " + nCnt);	
+%>
+<form name="goodsList" id="goodsList">
+<table border="1" align="center">
+<thead>
+<tr>
+	<td colspan="10" align="center">
+		<h2>게시판</h2>
+	</td>
+</tr>
+<tr>
+	<td class="tt">상품글번호</td>
+	<td class="tt">상품번호</td>
+	<td class="tt">상품이름</td>
+	<td class="tt">목표금액</td>		
+	<td class="tt">상품가격</td>
+	<td class="tt">현재금액</td>
+	<td class="tt">사진</td>
+</tr>
+</thead>
+
+<%
+for(int i=0; i<nCnt; i++){		
+	GoodsVO gvo = list.get(i);
+	pageSize = Integer.parseInt(pagingVO.getPageSize());
+	groupSize = Integer.parseInt(pagingVO.getGroupSize());
+	curPage = Integer.parseInt(pagingVO.getCurPage());
+	totalCount = Integer.parseInt(gvo.getTotalCount());
+%>
+<tbody>
+<tr>
+	<td align="center">
+		<input type="checkbox" name="gnum" id="gnum" class="gnum" value=<%= gvo.getGnum() %>>
+	</td>		
+	<td class="tt"><%= gvo.getGpdnum() %> </td>
+	<td class="tt"><%= gvo.getGname() %> </td>
+	<td class="tt"><%= gvo.getGtarget() %> </td>
+	<td class="tt"><%= gvo.getGprice() %> </td>
+	<td class="tt"><%= gvo.getGmoney() %> </td>
+	<td class="tt"><img src="image/goodsimg/<%=gvo.getGimage() %>"> </td>
+</tr>
+<%
+}//end of for
+%>
+
+<tr>
+	<td colspan="7" align="right">		
+		<input type="button" value="글쓰기" id='I'>	
+		<input type="button" value="글수정" id='U'>
+		<input type="button" value="글삭제" id='D'>							
+	</td>
+</tr>
+<tr>
+<td colspan="7">
+<jsp:include page="goodsPaging.jsp" flush="true">
+	<jsp:param name="url" value="goodsSelectAllpaging.jsp"/>
+	<jsp:param name="str" value=""/>
+	<jsp:param name="pageSize" value="<%=pageSize%>"/>
+	<jsp:param name="groupSize" value="<%=groupSize%>"/>
+	<jsp:param name="curPage" value="<%=curPage%>"/>
+	<jsp:param name="totalCount" value="<%=totalCount%>"/>	
+</jsp:include>
+</td>
+</tr>
+</tbody>
+</table>
+</form>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Vue 시작</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script> 
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script type="text/javascript">
+
+/* 
+# 인스턴스(instance)
+
+1.	객체지향 프로그래밍에서 객체를 생성한 후, 
+	참조 변수를 지칭하는 의미로,
+	vue에서는 new Vue를 통해서 객체가 생성이 되고, 
+	그 안에 여러 요소객체를 사용하고, 
+	또한 life cycle에 의해서 Vue객체의 생성소멸 주기에 따른 메서드 처리를 포함하고 있다.
+	
+2. data : 	객체 사이에 프록시를 두어 처리, 
+			변경 사항을 즉시 반영하는 데이터를 말하고,
+			실제는 모델 데이터에 대한 처리를 말한다.
+			
+3. el : 	하나의 Vue 인스턴스의 대상이 되는 요소객체(범위)를 의미하고, 
+			하나의 인스턴스에서는 하나의 el(요소객체)만 지정할 수 있다.
+			
+4. computed : 	지정한 값은 함수로 프록시 처리로 속성처럼 종속된 값에 의해 결과값을 캐시하여 처리한다. 
+				ex) methods와 궁극적 차이점은 캐시메모리를 쓰느냐에 있다.
+
+# Computed 속성을 이용한 특정한 모델데이터의 get(가져오는 처리), set(저장하는 처리)의
+	기능 메서드 구현하기..	
+ */
+ 
+ 	$(document).ready(function(){
+		//$("h2").text("jquery 로딩 완료!!");
+		var vm = new Vue({
+			el:"#show",
+			data:{
+				msg:"instance와 computed의 set/get",
+				amt:15000
+			},
+			computed:{
+				amount:{
+					// amount의 get기능메서드와 set기능메서드를 구분하여 처리.
+					// 1. get : 모델데이터를 directive형식으로 화면에 출력할 때 처럼 활용된다.
+					get:function(){
+							// 1000단위 컴마 처리.
+						console.log("## get 호출 ##");
+						var s = new String(""+this.amt);
+						var result = ""; //최종 결과물..
+						var num = 0; //숫자 데이터(3개단위가 입력되었는지 여부를 check)
+						// 1,000,000 천단위로 컴마처리..
+						for(var i=s.length-1;i>=0;i--){
+							// i는  최종 크기부터  0까지 감소 
+							// result 첫단위로 컴마.
+							// "15000"  s[0]  s[1] s[2] s[3] s[4]  s[5]
+							//            1     5    0    0    0    0
+							result = s[i]+result;
+							// 언제 ,(천단위) 콤마를 추가 하는지?
+							if(num%3==2 && i !== 0){
+								result = ","+result;
+							}
+							num++;
+						}
+						return result;
+					},
+					// 2. set : 모델데이터에 할당하는 v-model을 쓸때, 호출되어 활용된다.
+					// 3. 단위 컴마로 된 천자리를 삭제하고 숫자로 모델데이터에 저장 처리.
+					set:function(amt){
+						console.log("## set 호출 ##");
+						if(typeof(amt) === 'string'){
+							// 정규식을 이용하여, (,)를 삭제 처리하고 정수형 숫자로 변환
+							var result = parseInt(amt.replace(/,/g,""));
+							if( isNaN(result) ) this.amt = 0;
+							else this.amt = result;
+						}else if(typeof(amt)==="number"){
+							this.amt = amt;
+						}
+					}
+				}
+			}
+		});
+	});
+</script> 
+</head>
+<body>
+	<div id="show">
+		<h3>{{msg}}</h3>
+		<input v-model="amt"/><br>
+		<input v-model="amount"/><br> <!-- amount함수 set메서드 호출 -->
+		금액 : <span>{{amount}}원</span><!-- amount함수 get메서드 호출 -->
+		
+	</div>
+</body>
+</html>

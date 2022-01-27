@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Vue 시작</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script> 
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){		
+/* 
+# Vue의 instance life cycle
+
+1. 뷰는 크게
+		creation(생성), 
+		mounting(로딩),
+		updating(수정),
+		destruction(소멸) 
+		단계로 라이프 사이클을 가지고 있다.
+
+2. 인스턴스 라이프 사이클에 따른 기능 메서드.
+	
+	1) 인스턴스 생성(new Vue())
+		
+		- 이벤트 및 라이프 사이클 초기화.
+		- beforeCreate() 메서드 호출.
+		- 화면에 반응성을 주입.
+		- created() 메서드 호출 : 이벤트 저장공간에 데이터 전달
+		- el, template 속성 확인
+		- template 속성 내용을 render()로 변환 처리.
+		- beforeMount() 메서드 호출
+		- $el 생성 후, el 속성 값을 대입처리..
+		- mounted()메서드 호출
+	
+	2) 인스턴스 화면에 부착
+		
+		- 인스턴스의 데이터 변경
+		- beforeUpdate()
+		- 화면 재 랜더링 및 데이터 갱신
+		- updated()
+	
+	3) 인스턴스의 내용 갱신
+		
+		- 인스턴스 접근 가능
+		- beforeDestory()
+		- 컴포넌트, 인스턴스, 디렉티브 등 모두 삭제
+		- destoryed()
+	
+	4) 인스턴스 소멸			
+*/		
+		var vm = new Vue({
+			el:"#show",
+			data:{
+				msg:"instance life cycle",
+				id:"",
+				pass:""
+			},
+			//Vue인스턴스가 life cycle 실행 메서드 정의
+			created:function(){
+				console.log("## 인스터스 생성 ##");
+			},
+			// Vue객체의 life cycle에서 수정 직전
+			beforeUpdate:function(){
+				console.log("## 수정 직전 ##");
+				console.log("아이디:"+this.id);
+				console.log("패스워드:"+this.pass);
+			},
+			// 수정 이후,
+			updated:function(){
+				console.log("## 수정 이후 ##");
+				console.log("아이디:"+this.id);
+				console.log("패스워드:"+this.pass);				
+			}			
+		});
+		// vm.$el
+	});
+</script> 
+</head>
+<body>
+	<div id="show">
+		<h3>{{msg}}</h3>
+		아이디 : <input type="text" v-model="id"/><br>
+		패스워드 : <input type="password" v-model="pass"/>
+		<span v-if=" id=='abc' && pass=='1234' ">
+			<h2>로그인  성공</h2>
+			<h4>{{id}}님  환영합니다.</h4>
+		</span>
+		<span v-else>
+			로그인  실패 
+		</span>
+	</div>	
+</body>
+</html>		

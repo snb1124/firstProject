@@ -1,0 +1,275 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	BOARDINSERTFORM
+	<hr>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script type="text/javascript">
+	//location.href="/disadoptionBoardInsertForm.cd";
+	/*
+	 $(document).ready(function(){
+		 $("#disadoptionBoardInsertForm").attr({ "method":"POST"
+	         ,"action":"disadoptionBoardInsertForm.cd"}).submit();
+		});
+	*/
+
+
+//alert("자바스크립트 블럭 시작 >>> : ")
+
+	$(document).ready(function(){	
+		//alert("제이쿼리 블럭 시작 >>> : ")
+		// 회원번호 		
+		// 이름 
+		
+		// 비밀번호 체크 
+		$("#pwCheck").click(function(){
+			console.log(" pwCheck 함수 진입");
+			var pw = $("#mpw").val();
+			// var pw = document.getElementById("mpw").value;
+			// var pw_r = document.getElementById("mpw_r").value;			
+			// alert(pw + " : " + pw_r);
+			 if (pw == "") {
+            alert("비밀번호를 입력해 주세요.");
+            pw.focus();
+            return;
+			 }
+		});
+		
+		// 폼태그 데이터 JSP 보내기 
+		$("#btn").click(function(){
+			//alert("btn click() 함수 진입 >>> : ");
+			console.log("btn click() 함수 진입 >>> : ");
+			
+			/* 
+			form 태그에서 서블릿으로 전송되는 데이터 
+			콘솔에서 확인하기, alert으로 확인하기				
+		*/
+		
+		//############################################# START
+		/*
+			자바스크립트 버전 
+			
+			id 값 : 
+				var v1 = document.getElementById('id_name').value;
+			name 값 : 
+				var v2 = document.form_name.input_name.value;
+			class 값 : 
+				var v3 = document.getElementsByName('mgender');
+			
+		*/		
+		/*
+		1. console.log() : 함수는 웹 브라우저 콘솔에 프린트 하는 함수 이다. 
+		                    System.out.println() 과 같다.
+		2. document : <html></html>
+		3. disadoptionBoardInsertForm : form 태그의 name 속성의 값 form name="disadoptionBoardInsertForm"
+		4. mnum : disadoptionBoardInsertForm 태그의 intpu name="mnum" 속성
+		5. value : mnum 의 값
+		
+		<form name="disadoptionBoardInsertForm" id="disadoptionBoardInsertForm">
+			<input type="text" name="mnum" id="mnum" readonly/>
+		</from>
+		*/			
+			console.log("anum >>> : " + document.disadoptionBoardInsertForm.anum.value);
+			console.log("asubject >>> : " + document.disadoptionBoardInsertForm.asubject.value);
+			console.log("apw >>> : " + document.disadoptionBoardInsertForm.apw.value);
+			console.log("apw_r >>> : " + document.disadoptionBoardInsertForm.apw_r.value);
+			console.log("aname >>> : " + document.disadoptionBoardInsertForm.aname.value);
+		
+			// 종구분
+			var aupkind_check = document.getElementsByName('aupkind');
+			for (var i=0; i < aupkind_check.length; i++){
+				if(aupkind_check[i].checked == true){
+					console.log("aupkind_check["+i+"].value >>> : " + aupkind_check[i].value);
+				}
+			}
+			
+			// 세부종
+			console.log("akind >>> : " + document.disadoptionBoardInsertForm.akind.value);
+			
+			console.log("acolor >>> : " + document.disadoptionBoardInsertForm.acolor.value);
+			console.log("asize >>> : " + document.disadoptionBoardInsertForm.asize.value);
+			console.log("aneut >>> : " + document.disadoptionBoardInsertForm.aneut.value);
+			console.log("aage >>> : " + document.disadoptionBoardInsertForm.aage.value);
+			// 사진
+			console.log("aimage >>> : " + document.disadoptionBoardInsertForm.aimage.value);
+			// 거주지역			
+			console.log("acaresite >>> : " + document.disadoptionBoardInsertForm.acaresite.value);
+			
+			// 보호자 연락처
+			console.log("acaretel >>> : " + document.disadoptionBoardInsertForm.acaretel.value);
+			console.log("acaretel1 >>> : " + document.disadoptionBoardInsertForm.acaretel1.value);
+			console.log("acaretel2 >>> : " + document.disadoptionBoardInsertForm.acaretel2.value);
+	
+			
+			// 소개글
+			console.log("aspecial >>> : " + document.disadoptionBoardInsertForm.aspecial.value);			
+			//############################################# END
+			
+			
+			//############################################# START
+		
+			$("#disadoptionBoardInsertForm")
+			.attr({
+					"action":"disadoptionBoardInsertForm.cd",
+				    "method":"POST",
+				    "enctype":"multipart/form-data"
+			       })
+			.submit();	
+		});
+	});
+</script>	
+</head>
+<body>
+<jsp:include page="/include/header.jsp" flush="true"></jsp:include>
+
+<hr>
+<form name="disadoptionBoardInsertForm" id="disadoptionBoardInsertForm">
+<table border="1" align="center">
+	
+	<tr>
+		<td>글번호</td>
+		<td><input type="text" name="anum" id="anum" readonly/></td>
+	</tr>
+	<tr>
+		<td>제목</td>
+		<td><input type="text" name="asubject" id="asubject"/></td>
+	</tr>
+	<tr>
+		<td>작성자</td>
+		<td><input type="text" name="mid" id="mid" readonly/></td>
+	</tr>
+	<tr>
+		<td>글비밀번호</td>
+			<td>
+			<input type="text" name="apw" id="apw" /><br/>	
+			<input type="text" id="apw_r" name="apw_r" placeholder="비밀번호확인" />
+			<input type="button" value="비밀번호확인" id="pwCheck"/><br/>
+		</td>
+	</tr>
+	<tr>
+		<td>이름</td>
+		<td><input type="text" name="aname" id="aname"/></td>
+	</tr>
+	<tr>
+	<td>종구분</td>
+	<td> 
+		<input type="radio" name="aupkind" id="aupkind" value="01" checked /> 고양이
+      	<input type="radio" name="aupkind" id="aupkind" value="02" /> 강아지
+    </td>
+	</tr>
+	<tr>
+	<td>세부종</td>		
+	<td><input type="text" name="akind" id="akind"/></td>
+	</tr>
+	<tr>
+	<td>색상</td>
+	<td>
+		<select name="acolor" id="acolor">
+        	<option value="1">흰</option>
+        	<option value="2">검</option>
+        	<option value="2">갈</option>
+        	<option value="4">노</option>		        	
+        	<option value="5">고등어</option>		        	
+        	<option value="6">주</option>		        	
+        	<option value="7">회</option>		        	
+         </select>
+	</td>
+	</tr>
+	<tr>
+	<td>털길이</td>
+	<td>
+		<select name="afur" id="afur">
+        	<option value="01">중장모</option>
+        	<option value="02">단모</option>
+        	<option value="03">장모</option>	        	
+         </select>
+	</td>
+	</tr>
+	<tr>
+	<td>크기</td>
+	<td>
+		<select name="asize" id="asize">
+        	<option value="대">대</option>
+        	<option value="중">중</option>
+        	<option value="소">소</option>	        	
+         </select>
+	</td>
+	</tr>
+	<tr>
+	<td>중성화 여부</td>
+	<td>
+		<select name="aneut" id="aneut">
+        	<option value="유">유</option>
+        	<option value="무">무</option>
+        	<option value="미상">미상</option>	        	
+         </select>
+	</td>
+	</tr>
+	<tr>
+		<td>추정나이</td>
+		<td><input type="text" name="aage" id="aage"/></td>
+	</tr>
+	<tr>
+	<td>사진</td>
+	<td> 
+		<input type="file" name="aimage"  /><br>
+    </td>
+    </tr>
+    <tr>
+    <td>성별</td>
+    <td> 
+		<input type="radio" name="agender" id="agender" value="01" checked /> 남
+      	<input type="radio" name="agender" id="agender" value="02" /> 여
+    </td>
+    </tr>
+    <tr>
+	<td>보호중인 장소</td>
+	<td><input type="text" name="acaresite" id="acaresite"/></td>
+	</tr>
+	<tr>
+	<td>보호자 전화번호</td>
+	<td>
+		<select name="acaretel" id="acaretel">
+        	<option value="010">010</option>
+        	<option value="011">011</option>        			       
+         </select>
+		- <input type="text" name="acaretel1" id="acaretel1" size="2" maxlength="4" />
+		- <input type="text" name="acaretel2" id="acaretel2" size="2" maxlength="4" />
+	</td>
+	</tr>
+	<tr>
+	<td>특징</td>
+	<td>
+		<textarea name="aspecial" id="aspecial" rows="5" cols="50"> 파양이유 , 소개 , 접종여부					
+		</textarea>
+	</td>
+ 	</tr>
+<!-- 	
+<tr>
+	<td>취미</td>
+	<td> 
+		<input type="checkbox" name="mhobby" value="01" />알고리즘		      
+        <input type="checkbox" name="mhobby" value="02" />코딩
+        <input type="checkbox" name="mhobby" value="03" />분석설계<br>
+        <input type="checkbox" name="mhobby" value="04" />데이터베이스
+        <input type="checkbox" name="mhobby" value="05" />스크립트
+    </td>
+</tr>
+ -->	 
+
+<tr>
+	<td colspan="2"> 			
+		<button type="button" id="btn">보내기</button>
+		<button type="reset">다시 </button>	
+	</td>				
+</tr>
+</table>				 		        		     
+</form>	
+</body>
+</html>

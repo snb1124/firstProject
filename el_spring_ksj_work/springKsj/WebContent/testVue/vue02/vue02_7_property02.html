@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script> 
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script type="text/javascript">
+
+	$(document).ready(function(){
+		var vm = new Vue({
+			el:"#show",
+			data:{
+				msg:"회원가입",
+				idMsg:"아이디를 입력하세요!",
+				id:"아이디",
+				passMsg:"패스워드를 입력하세요!",
+				pass:"패스워드",
+				nameMsg:"이름을 입력하세요!",
+				name:"이름",				
+				gender:"성별",
+				genTxt:["남자","여자"],
+				regMsg:"등록",
+				txtAlign:{textAlign:"center"}
+			}
+		});
+	});
+
+</script>
+</head>
+<body>
+	<div id="show">
+		<h3>{{msg}}</h3>
+		<table border>
+			<tr>
+				<th v-text="id"></th>
+				<td><input type="text" v-bind:placeholder="idMsg"/></td>
+			</tr>
+			<tr>
+				<th v-text="pass"></th>
+				<td><input type="password" v-bind:placeholder="passMsg"/></td>
+			</tr>
+			<tr>
+				<th v-text="name"></th>
+				<td><input type="text" :placeholder="nameMsg"/></td>
+			</tr>
+			<tr>
+				<th v-text="gender"></th>
+				<td>	
+						<select>
+						<option v-text="genTxt[0]"></option>
+						<option v-text="genTxt[1]"></option>
+					</select>
+				</td>						
+			</tr>	
+						<tr><td colspan="2" :style="txtAlign">
+					<input type="button" :value="regMsg"/>
+				</td>						
+			</tr>
+		</table>
+	
+	</div>
+
+</body>
+</html>

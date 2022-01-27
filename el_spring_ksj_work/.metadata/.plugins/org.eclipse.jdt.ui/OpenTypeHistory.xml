@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+<typeInfo handle="=springKsj/src&lt;a.b.c.com.board.dao{SpringBoardDAO.java[SpringBoardDAO" modifiers="513" timestamp="1635585800892"/>
+<typeInfo handle="=springKsj/src&lt;a.b.c.com.board.service{SpringBoardService.java[SpringBoardService" modifiers="513" timestamp="1635585749838"/>
+<typeInfo handle="=springKsj/src&lt;a.b.c.com.rboard.dao{SpringRboardDAO.java[SpringRboardDAO" modifiers="513" timestamp="1635227767183"/>
+<typeInfo handle="=springKsj/src&lt;a.b.c.com.rboard.service{SpringRboardService.java[SpringRboardService" modifiers="513" timestamp="1635227775289"/>
+<typeInfo handle="=springKsj/src&lt;a.b.c.com.mem.dao{SpringMemberDAO.java[SpringMemberDAO" modifiers="513" timestamp="1635606417125"/>
+<typeInfo handle="=springKsj/src&lt;a.b.c.com.mem.service{SpringMemberService.java[SpringMemberService" modifiers="513" timestamp="1635606444485"/>
+</typeInfoHistroy>

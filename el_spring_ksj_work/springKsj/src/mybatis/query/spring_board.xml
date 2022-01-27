@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+                 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="a.b.c.com.board.dao.SpringBoardDAO">
+
+<resultMap type="a.b.c.com.board.vo.SpringBoardVO" id="bvo">
+	<result property="knum" 		column="KNUM"/>
+	<result property="ksubject"		column="KSUBJECT"/>
+	<result property="kname" 		column="KNAME"/>
+	<result property="kcontent" 	column="KCONTENT"/>
+	<result property="kfile" 		column="KFILE"/>
+	<result property="kpw" 			column="KPW"/>
+</resultMap>
+
+<insert id="boardInsert" parameterType="boardVO">
+
+	INSERT INTO SPRING_BOARD( KNUM, 
+							  KSUBJECT, 
+							  KNAME, 
+							  KCONTENT, 
+							  KFILE, 
+							  KPW, 
+						      KDELYN, 
+						      KINSERTDATE, 
+						      KUPDATEDATE)
+							  VALUES(#{knum, jdbcType=VARCHAR}, 
+							  		 #{ksubject, jdbcType=VARCHAR}, 
+							  		 #{kname, jdbcType=VARCHAR}, 
+									 #{kcontent, jdbcType=VARCHAR}, 
+									 #{kfile, jdbcType=VARCHAR}, 
+									 #{kpw, jdbcType=VARCHAR}, 
+									 'Y', 
+									 SYSDATE, 
+									 SYSDATE)
+</insert>
+
+
+<select id="boardSelectPaging" parameterType="boardVO" resultType="boardVO">	
+	SELECT * FROM (
+		SELECT 	A.KNUM 	KNUM
+		       ,A.KSUBJECT KSUBJECT
+		       ,A.KNAME 	KNAME
+		       ,A.KCONTENT KCONTENT
+		       ,A.KFILE 	KFILE
+		       ,A.KDELYN 	KDELYN
+		       ,TO_CHAR(A.KINSERTDATE, 'YYYY-MM-DD') KINSERTDATE
+		       ,TO_CHAR(A.KUPDATEDATE, 'YYYY-MM-DD') KUPDATEDATE	  
+		       <!--  ? : 페이지 사이즈 : pageSize  -->
+		       ,CEIL(ROW_NUMBER() OVER(ORDER BY A.KNUM)/ #{pageSize, jdbcType=VARCHAR} ) pageSize		
+			   ,COUNT(A.KNUM) OVER() AS totalCount       
+		FROM 	SPRING_BOARD A
+		WHERE 	A.KDELYN = 'Y' 	
+		ORDER BY 1 DESC  
+		<!--  ? : 현재 페이지 : curPage -->
+	) WHERE pageSize = #{curPage, jdbcType=VARCHAR}
+</select>
+
+
+<select id="boardSelectAll" parameterType="boardVO" resultType="boardVO">
+	SELECT A.KNUM KNUM
+		  ,A.KSUBJECT KSUBJECT
+		  ,A.KNAME KNAME
+		  ,A.KCONTENT KCONTENT
+		  ,A.KFILE KFILE
+		  ,A.KDELYN KDELYN
+		  ,TO_CHAR(A.KINSERTDATE, 'YYYY-MM-DD') KINSERTDATE
+		  ,TO_CHAR(A.KUPDATEDATE, 'YYYY-MM-DD') KUPDATEDATE
+	FROM	SPRING_BOARD A
+	WHERE  A.KDELYN ='Y'
+	<if test="startdate !=null and startdate!='' and enddate!=null and enddate!=''">
+		<![CDATA[AND TO_CHAR(A.KINSERTDATE, 'YYYY-MM-DD') >= TO_CHAR(TO_DATE(#{startdate, jdbcType=VARCHAR}),'YYYY-MM-DD)]]>
+		<![CDATA[AND TO_CHAR(A.KINSERTDATE, 'YYYY-MM-DD') >= TO_CHAR(TO_DATE(#{enddate, jdbcType=VARCHAR}),'YYYY-MM-DD)]]>
+	</if> 
+	<if test="keyfilter=='key1'">
+		<![CDATA[AND A.KSUBJECT LIKE '%' || #{keyword, jdbcType=VARCHAR} || '%']]>
+		</if>
+		<if test="keyfilter=='key2'">
+		<![CDATA[AND A.KCONTENT LIKE '%' || #{keyword, jdbcType=VARCHAR} || '%']]>
+		</if>
+		<if test="keyfilter=='key3'">
+		<![CDATA[AND A.KSUBJECT LIKE '%' || #{keyword, jdbcType=VARCHAR} || '%']]>
+		<![CDATA[AND A.KCONTENT LIKE '%' || #{keyword, jdbcType=VARCHAR} || '%']]>
+		</if>
+		<if test="keyfilter=='key4'">
+		<![CDATA[AND A.KNAME LIKE '%' || #{keyword, jdbcType=VARCHAR} || '%']]>
+		</if>
+		<if test="keyfilter=='key5'">
+		<![CDATA[AND A.KNUM LIKE '%' || #{keyword, jdbcType=VARCHAR} || '%']]>
+		</if>
+		  ORDER BY 1
+</select>
+<select id="boardSelect" parameterType="boardVO" resultType="boardVO">
+	SELECT A.KNUM 	KNUM
+		   ,A.KSUBJECT KSUBJECT
+		   ,A.KNAME	KNAME
+		   ,A.KCONTENT KCONTENT
+		   ,A.KFILE KFILE
+		   ,A.KDELYN KDELYN
+		   ,TO_CHAR(A.KINSERTDATE, 'YYYY-MM-DD') KINSERTDATE
+		   ,TO_CHAR(A.KUPDATEDATE, 'YYYY-MM-DD') KUPDATEDATE
+	FROM SPRING_BOARD A WHERE A.KDELYN='Y' AND A.KNUM=#{knum, jdbcType=VARCHAR} 		
+</select>
+
+<update id="boardUpdate" parameterType="boardVO">
+	UPDATE SPRING_BOARD SET KCONTENT=#{kcontent, jdbcType=VARCHAR}, 
+							KUPDATEDATE = SYSDATE
+							WHERE KDELYN ='Y' 
+							AND KNUM = #{knum, jdbcType=VARCHAR}
+</update>
+
+<update id="boardDelete" parameterType="boardVO">
+	UPDATE SPRING_BOARD SET KDELYN='N', 
+							KUPDATEDATE = SYSDATE
+						WHERE KDELYN ='Y' 
+						AND KNUM=#{knum, jdbcType=VARCHAR}
+</update>
+
+<select id="boardPwCheck" parameterType="boardVO" resultType="boardVO">
+	SELECT A.KPW KPW
+	FROM SPRING_BOARD A
+	WHERE A.KDELYN='Y'
+	AND A.KNUM= #{knum, jdbcType=VARCHAR}
+	AND A.KPW= #{kpw, jdbcType=VARCHAR}
+
+</select>
+
+
+
+
+</mapper>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>05_json.html</title>
+<script type="text/javascript">
+	// 자바스크립트 객체 중 key & value 형태일 때 함수도 호출해서 사용할 수 있따. 
+	var sayHello = {
+					 "name": "javaScript"
+					
+					 ,"eng": function(){
+								var console = document.getElementById("console");
+								console.innerHTML = "Hello " + this.name;
+								console.style.color = "#ff0000";
+						   }
+					
+					,"kor": function(){
+								var console = document.getElementById("console");
+								console.innerHTML = "안녕하세요 " + this.name;
+								console.style.color = "#0000ff";
+			   			}	
+					}
+
+</script>
+</head>
+<body>
+	<h1>JSON으로 그룹화된 함수 호출</h1>
+	<!-- <h2>"sayHello.name" </h2> -->
+	
+	<input type="button" value="sayEng" onclick="sayHello.eng()" />
+	<input type="button" value="sayKor" onclick="sayHello.kor()" />
+	<h1 id="console"></h1>
+</body>
+</html>

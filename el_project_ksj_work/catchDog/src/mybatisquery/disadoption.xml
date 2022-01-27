@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+                 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.catchdog.disadoption.dao.DisadoptionDAO">
+
+<resultMap type="com.catchdog.disadoption.dao.DisadoptionDAO" id="dvo">
+	<result property="anum" 		column="ANUM"/>
+	<result property="asubject"	column="ASUBJECT"/>
+	<result property="mid" 		column="MID"/>
+</resultMap>
+
+<select id="disadoptionboardSelectPaging" parameterType="disadoptionVO" resultType="disadoptionVO">	
+	SELECT * FROM (
+		SELECT 	A.ANUM 	ANUM
+		       ,A.ASUBJECT ASUBJECT
+		       ,A.MNAME    MNAME
+		       ,TO_CHAR(A.INSERTDATE, 'YYYY-MM-DD') INSERTDATE  
+		       <!--  ? : 페이지 사이즈 : pageSize  -->
+		       ,CEIL(ROW_NUMBER() OVER(ORDER BY A.ANUM)/ #{pageSize, jdbcType=VARCHAR} ) pageSize		
+			   ,COUNT(A.ANUM) OVER() AS totalCount       
+		FROM 	DISADOPTION_BOARD A, CATCHDOG_MEMBER B
+		WHERE 	A.DELETEYN = 'Y'
+		AND		A.MNUM = B.MNUM (+)
+		AND 	ASUBJECT NOT LIKE 'API%'	<!-- api검색 제외 -->
+		ORDER BY 1 DESC  
+		<!--  ? : 현재 페이지 : curPage -->
+	) WHERE pageSize = #{curPage, jdbcType=VARCHAR}
+</select>
+<select id="disadoptionboardSelectAll" parameterType="disadoptionVO" resultType="disadoptionVO">
+	
+	SELECT * FROM (
+		SELECT 	A.ANUM 	ANUM
+		       ,A.ASUBJECT ASUBJECT
+		       ,A.MNAME    MNAME
+		       ,TO_CHAR(A.INSERTDATE, 'YYYY-MM-DD') INSERTDATE
+		       <!--  ? : 페이지 사이즈 : pageSize  -->
+		       ,CEIL(ROW_NUMBER() OVER(ORDER BY A.ANUM)/ #{pageSize, jdbcType=VARCHAR} ) pageSize		
+			   ,COUNT(A.ANUM) OVER() AS totalCount
+		FROM 	DISADOPTION_BOARD A, CATCHDOG_MEMBER B
+		WHERE 	A.DELETEYN  = 'Y' 	<!-- A.DELETEYN  = '1'  -->
+		AND		A.MNUM = B.MNUM (+)
+ 	    AND 	ASUBJECT NOT LIKE 'API%'	<!-- api검색 제외 -->
+		ORDER BY 1 DESC
+			<!--  ? : 현재 페이지 : curPage -->
+	) WHERE pageSize = #{curPage, jdbcType=VARCHAR}
+</select>
+<select id="disadoptionboardSelect" parameterType="disadoptionVO" resultType="disadoptionVO">
+	SELECT  A.ANUM 		ANUM
+		   ,A.ASUBJECT 	ASUBJECT
+		   ,A.MNAME     MNAME
+		   ,B.MID 		MID
+	       ,A.APW 		APW 				
+      	   ,A.ADNO		ADNO		   		
+      	   ,A.ANAME		ANAME		 		
+      	   ,A.AUPKIND	AUPKIND	 	
+           ,A.AKIND		AKIND				
+           ,A.ACOLOR	ACOLOR	   		
+           ,A.AFUR		AFUR		  	
+      	   ,A.ASIZE  	ASIZE		
+      	   ,A.ANEUT		ANEUT	 		
+      	   ,A.AAGE		AAGE		   	
+      	   ,A.AIMAGE	AIMAGE			
+      	   ,A.AGENDER	AGENDER	
+      	   ,A.ACARESITE	ACARESITE	 
+      	   ,A.ACARETEL	ACARETEL		
+      	   ,A.ASPECIAL	ASPECIAL		
+      	   ,DELETEYN	DELETEYN			
+	       ,TO_CHAR(A.INSERTDATE, 'YYYY-MM-DD') INSERTDATE
+	       ,TO_CHAR(A.UPDATEDATE, 'YYYY-MM-DD') UPDATEDATE
+			FROM 	DISADOPTION_BOARD A, CATCHDOG_MEMBER B 
+			WHERE A.DELETEYN='Y' 
+			AND A.ANUM = #{anum, jdbcType=VARCHAR}
+			AND A.MNUM = B.MNUM(+) 
+</select>
+
+<insert id="disadoptionboardInsert" parameterType="disadoptionVO">
+
+	INSERT INTO DISADOPTION_BOARD( 	 
+								 MNUM      			<!-- COLUMN 1 -->
+								,MNAME				
+								,ANUM 				<!-- COLUMN 2 -->
+								,ASUBJECT 			<!-- COLUMN 3 -->
+								,APW 				<!-- COLUMN 4 -->
+	                          	,ADNO		   		<!-- COLUMN 5 --> 
+	                          	,ANAME		 		<!-- COLUMN 6 -->
+	                          	,AUPKIND		 	<!-- COLUMN 7 -->
+	                          	,AKIND				<!-- COLUMN 8 -->
+	                          	,ACOLOR		   		<!-- COLUMN 9 -->
+	                          	,AFUR			  	<!-- COLUMN 10 -->
+	                          	,ASIZE  			<!-- COLUMN 11 -->
+	                          	,ANEUT		 		<!-- COLUMN 12 -->
+	                          	,AAGE			   	<!-- COLUMN 13 -->
+	                          	,AIMAGE 			<!-- COLUMN 14 -->
+	                          	,AGENDER			<!-- COLUMN 15 -->
+	                          	,ACARESITE		 	<!-- COLUMN 16 -->
+	                          	,ACARETEL			<!-- COLUMN 17 -->
+	                          	,ASPECIAL			<!-- COLUMN 18 -->
+	                          	,DELETEYN			<!-- COLUMN 19 -->
+	                          	,INSERTDATE	 		<!-- COLUMN 20 -->
+	                          	,UPDATEDATE			<!-- COLUMN 21 -->
+	                         ) 
+	                  VALUES
+	                  		( 	 
+	                  			 #{mnum, jdbcType=VARCHAR} 				<!-- placeholer 1 -->
+	                  			,#{mname, jdbcType=VARCHAR}
+	                  			,#{anum, jdbcType=VARCHAR} 				<!-- placeholer 2 --> 
+	                  			,#{asubject, jdbcType=VARCHAR} 			<!-- placeholer 3 -->
+	                          	,#{apw, jdbcType=VARCHAR}  				<!-- placeholer 4 -->
+	                          	,#{adno, jdbcType=VARCHAR} 				<!-- placeholer 5 -->
+	                          	,#{aname, jdbcType=VARCHAR}  			<!-- placeholer 6 -->
+	                  			,#{aupkind, jdbcType=VARCHAR} 			<!-- placeholer 7 -->
+	                          	,#{akind, jdbcType=VARCHAR}  			<!-- placeholer 8 -->
+	                          	,#{acolor, jdbcType=VARCHAR}  			<!-- placeholer 9 -->
+	                          	,#{afur, jdbcType=VARCHAR} 				<!-- placeholer 10 -->
+	                          	,#{asize, jdbcType=VARCHAR}  			<!-- placeholer 11 -->
+	                  			,#{aneut, jdbcType=VARCHAR} 			<!-- placeholer 12 -->
+	                          	,#{aage, jdbcType=VARCHAR}  			<!-- placeholer 13 -->
+	                          	,#{aimage, jdbcType=VARCHAR}  			<!-- placeholer 14 -->
+	                          	,#{agender, jdbcType=VARCHAR} 			<!-- placeholer 15 -->
+	                          	,#{acaresite, jdbcType=VARCHAR} 		<!-- placeholer 16 -->
+	                          	,#{acaretel, jdbcType=VARCHAR} 			<!-- placeholer 17 -->
+	                          	,#{aspecial, jdbcType=VARCHAR} 			<!-- placeholer 18 -->
+	                          	,'Y'  									<!-- placeholer 19 -->
+	                          	,SYSDATE  								<!-- placeholer 20 -->
+	                          	,SYSDATE 								<!-- placeholer 21 -->
+	                         ) 
+</insert>
+<select id="disadoptionPwCheck" parameterType="disadoptionVO" resultType="disadoptionVO">
+	SELECT A.APW APW
+	FROM DISADOPTION_BOARD A 
+	WHERE A.DELETEYN = 'Y' 
+	AND A.ANUM = #{anum, jdbcType=VARCHAR}
+	AND A.APW = #{apw, jdbcType=VARCHAR}
+</select>
+<update id="disadoptionboardUpdate" parameterType="disadoptionVO">
+	UPDATE DISADOPTION_BOARD 
+	SET ASUBJECT	=#{asubject, jdbcType=VARCHAR}
+		,AKIND	=#{akind, jdbcType=VARCHAR}
+		, UPDATEDATE = SYSDATE
+	WHERE DELETEYN = 'Y' 
+	AND ANUM = #{anum, jdbcType=VARCHAR}
+</update>
+
+<update id="disadoptionboardDelete" parameterType="disadoptionVO">
+	UPDATE DISADOPTION_BOARD SET DELETEYN = 'N', UPDATEDATE = SYSDATE
+	WHERE DELETEYN = 'Y' AND ANUM = #{anum, jdbcType=VARCHAR}
+</update>
+</mapper>

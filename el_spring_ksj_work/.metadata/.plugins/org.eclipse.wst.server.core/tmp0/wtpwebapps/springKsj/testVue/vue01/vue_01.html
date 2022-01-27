@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>vue_01</title>
+</head>
+<script type="text/javascript" src="https://unpkg.com/vue@2.5.16/dist/vue.js"></script>
+<body>
+<!-- 
+	MVVM 패턴 : Model -View - ViewModle : 어플리케이션 조직과 U의 분리를 위해 설계 패턴 
+	View : 유저 언터페이스 : HTML, CSS 로 작성
+	ViewMode : 상태와 연산 : View의 실제논리 밑 데이터 흐름을 담당  
+	Model : 도메인 특화 데이터
+	
+	Vue라우터(vue-router)를 이용해 
+	SPA(Single Page Application : 단일 페이지 어플리케이션) 아키텍처 어플리케이션 개발 
+	
+	{{}} : Mustache Expression: 콧수염표현식 : HTML DOM에 데이터 렌더링
+	
+	v-text, {{}} : innerText 속성에 연결됨,
+	                            태그 문자열을 HTML 인코딩하여 나타내기 때문에 
+	                            화면에는 태그 문자열이 그대로 나타남
+	v-html :innerHTML 속성에 연결됨, 태그 문자열을 파싱하여 화면에 나타냄
+			단 : XSS(Cros Site Scripting) 공격 등에 취약  	                              
+	
+ -->
+ <!-- View -->
+<div id="simple">
+	<h2>{{message}}</h2>
+	<h2 v-text="message"></h2>
+	<h2 v-html="message"></h2>
+</div>
+<script>
+	// Model
+	var model= { message: '첫 번째 Vue.js 앱 입니다.'};
+	
+	// ViewModel
+	var simple = new Vue({
+		el : '#simple',
+		data : model
+	});
+</script>
+</body>
+</html>

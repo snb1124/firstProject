@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="EUC-KR"?>
+<!-- xml 문서에서는 루트 태그가 1개만 존재해야한다-->
+<!-- xml을 읽어오는 파서가 브라우저마다 다르다 -->
+<!-- xml을 파서가 읽어준다 -->
+<kosmo93>
+	<dept1tag>
+		<dept2tag> 
+			<dept3tag> 
+				Hello XML !
+			</dept3tag>
+		</dept2tag>
+	</dept1tag>
+		<dept1tag>
+		<dept2tag> 
+			<dept3tag> 
+				Hello XML2 !
+			</dept3tag>
+		</dept2tag>
+	</dept1tag>
+		<dept1tag>
+		<dept2tag> 
+			<dept3tag> 
+				Hello XML3 !
+			</dept3tag>
+		</dept2tag>
+	</dept1tag>
+</kosmo93>

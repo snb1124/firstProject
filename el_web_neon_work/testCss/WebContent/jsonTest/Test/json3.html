@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>한개의 key : value 안에  또다른 key : value 객체</title>
+<script type="text/javascript">
+
+	var keyword = {
+			"r1" :  {"k1" : "key1", "s1" : "see1", "y1" : 1},
+			"r2" :  {"k2" : "key2", "s2" : "see2", "y2" : 2},
+			"r3" :  {"k3" : "key3", "s3" : "see3", "y3" : 3}
+	}
+	var tag = "<h3>인기 검색 순위</h3>";
+	
+	tag += "<li>"+keyword.r1.k1+","+keyword.r1.s1+","+keyword.r1.y1;
+	tag += "<li>"+keyword.r2.k2+","+keyword.r2.s2+","+keyword.r2.y2;
+	tag += "<li>"+keyword.r3.k3+","+keyword.r3.s3+","+keyword.r3.y3+"</li>";
+
+	document.write(tag);
+</script>
+
+
+</head>
+<body>
+
+</body>
+</html>

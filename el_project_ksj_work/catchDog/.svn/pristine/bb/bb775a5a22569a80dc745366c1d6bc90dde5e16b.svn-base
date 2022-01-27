@@ -1,0 +1,48 @@
+package com.catchdog.recommend.controller;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import com.catchdog.recommend.service.RecommendService;
+import com.catchdog.recommend.vo.RecommendVO;
+
+@Controller
+public class RecommendController {
+
+	private RecommendService recommendService;
+
+	@Autowired(required=false)
+	public RecommendController(RecommendService recommendService) {
+		this.recommendService = recommendService;
+	}
+	
+	@GetMapping("recommendForm")
+	public String recommendForm() {
+		return "recommend/RecommendForm";
+	}
+	
+	@PostMapping("recommendInsert")
+	public String RecommendInsert(HttpServletRequest req) {
+		RecommendVO rvo = null;
+		rvo = new RecommendVO();
+
+		rvo.setMnum(req.getParameter("mnum"));
+		rvo.setAupkind(req.getParameter("aupkind"));
+		rvo.setAkind(req.getParameter("akind"));
+		rvo.setAsize(req.getParameter("asize"));
+		rvo.setAfur(req.getParameter("afur"));
+		rvo.setAgender(req.getParameter("agender"));
+		rvo.setAcaresite(req.getParameter("acaresite"));
+		
+		int nCnt = recommendService.recommendInsert(rvo);
+		if (nCnt > 0) {
+			return "recommend/RecommendInsert";
+		}else {
+			return "recommend/RecommendForm";
+		}
+	}
+}

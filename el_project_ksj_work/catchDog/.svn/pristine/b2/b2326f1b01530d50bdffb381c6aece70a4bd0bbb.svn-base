@@ -1,0 +1,148 @@
+<%@page import="java.util.List"%>
+<%@page import="com.catchdog.disadoption.vo.DisadoptionVO"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>게시판 목록</title>
+<style type="text/css">
+.tt{ text-align:center; font-weight:bold;}
+.button { border:none;}
+</style>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function(){			
+	// mnum
+	$(document).on("click", "#mnum", function(){
+		//alert("chkInSbnum >>> : ");		
+		if($(this).prop('checked')){			 
+			//$('input[type="checkbox"][name="sbnum"]').prop('checked',false);
+			$('.mnum').prop('checked',false);
+			$(this).prop('checked',true);
+		}
+	});
+		
+	//  U
+	$(document).on("click", "#searchBtn", function(){
+			alert("searchBtn >>> : ");			
+			$("#boardList").attr({ "method":"POST"
+				                  ,"action":"springBoardSelectAll.hj"}).submit();
+		});	
+	
+	//  I
+	$(document).on("click", "#I", function(){
+		alert("I >>> : ");
+		location.href="/disadoptionBoardInsert.cd";
+	});
+	//  U
+	$(document).on("click", "#U", function(){
+		// alert("U >>> : ");	
+		if ($('.sbnum:checked').length == 0){
+			alert("수정할 글번호 하나를 선택하세요!!");
+			return;
+		}
+		 $("#boardList").attr({ "method":"POST"
+			                   ,"action":"springBoardSelect.hj"}).submit();
+	});
+	//  D
+	$(document).on("click", "#D", function(){
+		//alert("D >>> : ");	
+		if ($('.sbnum:checked').length == 0){
+			alert("삭제할 글번호 하나를 선택하세요!!");
+			return;
+		}
+		$("#boardList").attr({ "method":"POST"
+			                  ,"action":"springBoardSelect.hj"}).submit();
+	});
+});
+	
+</script>
+
+</head>
+<body>
+
+<% request.setCharacterEncoding("EUC-KR"); %>
+<jsp:include page="/include/header.jsp" flush="true"></jsp:include>
+<%
+	//페이징 변수 세팅
+	int pageSize = 0;
+	int groupSize = 0;
+	int curPage = 0;
+	int totalCount = 0;
+
+	Object objPaging = request.getAttribute("pagingDVO");
+	DisadoptionVO pagingDVO = (DisadoptionVO)objPaging;
+	
+	Object obj = request.getAttribute("listAll");
+	List<DisadoptionVO> list = (List)obj;
+	System.out.println("Obj >>> : " + list);
+	int nCnt= list.size();
+	System.out.println("nCnt >>> : " + nCnt);
+%>
+	
+	<form name="boardList" id="boardList" class="boardList">
+		<table border="1" align="center">
+			<thead>
+			<tr>
+				<td colspan ="10" align="center">
+					<h2>파양신청게시판</h2>
+				</td>	
+			</tr>
+			<tr>
+				<td class="tt">체크</td>
+				<td class="tt">글번호</td>
+				<td class="tt">제목</td>
+				<td class="tt">이름</td>		
+				<td class="tt">최종작성일</td>
+			</tr>
+			</thead>
+<%
+for(int i=0; i<nCnt; i++){
+		DisadoptionVO dvo = list.get(i);
+		pageSize = Integer.parseInt(pagingDVO.getPageSize());
+		groupSize = Integer.parseInt(pagingDVO.getGroupSize());
+		curPage = Integer.parseInt(pagingDVO.getCurPage());
+		totalCount = Integer.parseInt(dvo.getTotalCount());
+%>	
+	<tbody>
+		<tr>
+	<td align="center">
+		<input type="checkbox" name="anum" id="anum" class="anum" value=<%= dvo.getAnum() %> >
+	</td>		
+	<td class="tt"><%= dvo.getAnum() %> </td>
+	<td class="tt"><%= dvo.getAsubject() %> </td>
+	<td class="tt"><%= dvo.getMid() %> </td>
+	<td class="tt"><%= dvo.getInsertdate() %> </td>
+</tr>
+		
+<%
+}// end of for	
+%>	
+	<tr>
+	<td colspan="7">
+	<jsp:include page="disadoptionBoardSelectPaging.jsp" flush="true">
+		<jsp:param name="url" value="disadoptionBoardSelectPaging.cd"/>
+		<jsp:param name="str" value=""/>
+		<jsp:param name="pageSize" value="<%=pageSize%>"/>
+		<jsp:param name="groupSize" value="<%=groupSize%>"/>
+		<jsp:param name="curPage" value="<%=curPage%>"/>
+		<jsp:param name="totalCount" value="<%=totalCount%>"/>
+	</jsp:include>
+	</td>
+	</tr>
+	<tr class="button">
+		<td colspan="7" align="right">
+			<input type="button" value="파양신청하기" id="I">
+			<input type="button" value="글수정" id="U">
+			<input type="button" value="글삭제" id="D">
+		</td>	
+	</tr>
+
+	</tbody>		
+		</table>
+	</form>
+</body>
+</html>

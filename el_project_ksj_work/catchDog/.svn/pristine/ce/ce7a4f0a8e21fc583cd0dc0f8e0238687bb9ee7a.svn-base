@@ -1,0 +1,40 @@
+package com.catchdog.adoption.controller;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.catchdog.adoption.service.AdoptionService;
+import com.catchdog.adoption.vo.AdoptionVO;
+
+@Controller
+public class AdoptionController {
+	
+	private Logger logger = Logger.getLogger(AdoptionController.class);
+	
+	private AdoptionService adoptionService;
+	
+	@Autowired(required=false)
+	public AdoptionController(AdoptionService adoptionService) {
+		this.adoptionService = adoptionService;
+	}
+	
+	@GetMapping("adoptionSelectAll")
+	public String adoptionSelectAll(AdoptionVO avo, Model model) {
+		
+		logger.info("adoption selectAll >>> : ");
+		
+		List<AdoptionVO> listAll = adoptionService.adoptionSelectAll(avo);
+		
+		logger.info("adoption listAll.size >>> : " + listAll.size());
+		
+		model.addAttribute("listAll", listAll);
+		
+		return "/adoption/adoptionSelectAll";
+	}
+}

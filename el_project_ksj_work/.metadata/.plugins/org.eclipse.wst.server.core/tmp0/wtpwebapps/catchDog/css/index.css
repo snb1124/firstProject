@@ -1,0 +1,19 @@
+@charset "EUC-KR";
+
+/*header*/
+
+.header {  width:100%; height:90px; padding-top:36px; background:transparent; line-height:60px; transition: all 0.5s;}
+.header.fixed { position:fixed; left:0; top:0; padding-top:0; width:100%; background:rgba(0,0,0,0.5); z-index:99; box-sizing:border-box;}
+.header h1 { padding:0 0 0 100px;} 
+.header h1 a img { width:300px;}
+.header h1 { float:left;}
+.lnb { float:right; margin-right:95px;}
+.lnb ul li { float:left; background: white;}
+.lnb ul li a { display:inline-block; padding:0 10px; color:black; font-size:20px; text-align:center; box-sizing:border-box;}
+.lnb ul li a:hover { color:#f9ca79; border-bottom:2px solid #734a1f;}
+.spot { position:absolute; right:0; top:0; padding-right:98px;}
+.spot li { float:left;  background: url(../image/layout/bu_gray.jpg) no-repeat left; padding:3px 11px 10px 11px;}
+.spot li.one {background:none;}
+.spot li a {font-size:11px; color:#8b898c;}
+.spot ul li:first-child {background:none;}
+img.fo {padding-top:14px; position: absolute; z-index: -999}

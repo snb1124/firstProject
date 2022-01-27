@@ -1,0 +1,179 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import="com.catchdog.review.vo.ReviewVO" %>
+<%@ page import="java.util.List" %>
+<!DOCTYPE html>
+<html>
+<head>
+<jsp:include page="/include/header.jsp" flush="true"></jsp:include>
+<meta charset="UTF-8">
+<title>게시판 목록</title>
+<style type="text/css">
+	.tt{
+		text-align: center;
+		font-weight: bold;
+		
+		}
+</style>
+<link rel="stylesheet" href="/catchdog/common/datepiker/jquery-ui-1.12.1/jquery-ui.min.css">
+<script src = "http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="//catchdog/common/datepiker/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+<script type="text/javascript">
+	
+	//rbnum
+	$(document).ready(function(){
+		
+		$(document).on("click", "#rbnum", function(){
+			if($(this).prop('checked')){
+				$('.rbnum').prop('checked', false);
+				$(this).prop('checked', true);
+			}
+		});
+
+
+		//검색버튼
+		// U
+		$(document).on("click", "#searchBtn", function(){
+			alert("searchBtn >>> : ");			
+			$("#reviewList").attr({ "method":"GET"
+				                  ,"action":"reviewSelectAll.cd"}).submit();
+		});
+		
+		//  I
+		$(document).on("click", "#I", function(){
+			//alert("I >>> : ");
+			location.href="reviewForm.cd";
+		});
+		//  U
+		$(document).on("click", "#U", function(){
+			// alert("U >>> : ");	
+			if ($('.rbnum:checked').length == 0){
+				alert("수정할 글번호 하나를 선택하세요!!");
+				return;
+			}
+			 $("#reviewList").attr({ "method":"POST"
+				                   ,"action":"reviewSelect.cd"}).submit();
+		});
+		//  D
+		$(document).on("click", "#D", function(){
+			//alert("D >>> : ");	
+			if ($('.rbnum:checked').length == 0){
+				alert("삭제할 글번호 하나를 선택하세요!!");
+				return;
+			}
+			$("#reviewList").attr({ "method":"POST"
+				                  ,"action":"reviewSelect.cd"}).submit();
+		});
+	});
+
+</script>
+</head>
+<body>
+<% request.setCharacterEncoding("UTF-8"); %>
+<%
+	int pageSize = 0;
+	int groupSize = 0;
+	int curPage = 0;
+	int totalCount = 0;
+	
+	Object obj = request.getAttribute("listAll");
+	List<ReviewVO> list = (List)obj;
+	
+	int nCnt = list.size();
+	System.out.println("nCnt >>> : " + nCnt);
+
+	Object obj2 = request.getAttribute("pagingRVO");
+	ReviewVO prvo = (ReviewVO)obj2;
+
+
+%>
+<form name ="riviewList" id="reviewList">
+<table border="1" align="center">
+<thead>
+<tr>
+	<td colspan="10" align="center">
+		<h2>게시판</h2>
+	</td>
+</tr>
+<tr>
+<td colspan="10" align="left">
+<select id="keyfilter" name="keyfilter">
+	<option value="key1">제목</option>
+	<option value="key2">내용</option>
+	<option value="key3">제목+내용</option>
+	<option value="key4">작성자</option>
+	<option value="key5">글번호</option> 
+</select>
+<input type="text" id="keyword" name="keyword" placeholder="검색어입력"><br>
+<input type="text" id="startdate" name="startdate" size="12" placeholder="시작일">
+~<input type="text" id="enddate" name="enddate" size="12" placeholder="종료일">
+<button type="button" id="searchBtn">검색</button>
+</td>
+</tr>
+<tr>
+	<td class="tt">체크</td>
+	<td class="tt">글번호</td>
+	<td class="tt">제목</td>
+	<td class="tt">이름</td>
+	<td class="tt">내용</td>
+	<td class="tt">최종작성일</td>
+	<td class="tt">사진</td>
+</tr>
+</thead>
+	<%
+	pageSize = Integer.parseInt(prvo.getPageSize());
+	groupSize = Integer.parseInt(prvo.getGroupSize());
+	curPage = Integer.parseInt(prvo.getCurPage());
+	totalCount = nCnt;
+	for(int i=0; i<nCnt; i++){
+		ReviewVO rvo = list.get(i);
+%>
+
+<tbody>
+<tr>
+	<td align="center">
+		<input type="checkbox" name="rbnum" id="rbnum" class="rbnum" value=<%= rvo.getRbnum() %> >
+	</td>
+	<td class="tt"><%= rvo.getRbnum() %> </td>
+	<td class="tt"><%= rvo.getRbsubject() %> </td>
+	<td class="tt"><%= rvo.getRbwriter() %> </td> <!-- 작성자 -->
+	<td class="tt"><%= rvo.getRbcontent() %> </td>
+	<td class="tt"><%= rvo.getRbupdatedate() %> </td>
+	<td class="tt"><img src="/image/reviewimg/<%= rvo.getRbimage() %>"> </td>
+
+</tr>
+<%
+}//end of for
+%>
+<tr>
+ 
+	<td colspan="7"	align="right">
+		<input type="button" value="글쓰기" id='I'>
+		<input type="button" value="글수정" id='U'>
+		<input type="button" value="글삭제" id='D'>
+	</td>
+</tr>
+<tr>
+				<td colspan="7">
+				
+				<jsp:include page="reviewSelectPaging.jsp" flush="true">
+					<jsp:param name="url" value="reviewSelectAll.cd" />
+					<jsp:param name="str" value=""/>
+					<jsp:param name="curPage" value="<%=curPage %>" />
+					<jsp:param name="pageSize" value="<%=pageSize %>" />
+					<jsp:param name="groupSize" value="<%=groupSize %>" />
+					<jsp:param name="totalCount" value="<%=totalCount %>" />
+				</jsp:include>
+				</td>
+			</tr>
+
+</tbody>
+</table>
+</form>
+</body>
+</html>
+
+
+
+
+

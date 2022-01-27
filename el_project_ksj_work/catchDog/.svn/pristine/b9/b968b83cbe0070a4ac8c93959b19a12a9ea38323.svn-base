@@ -1,0 +1,79 @@
+package com.catchdog.notice.vo;
+
+public class NoticeVO {
+	
+	private String nnum; //게시판번호 --1
+	private String nadmin; //관리자 --2
+	private String ntitle; //제목  --3
+	private String ncontent; //글내용 --4
+	private String nimage; //사진 --5
+	private String ndeleteyn; //삭제여부 --6
+	private String ninsertdate; //신청일 --7
+	private String nupdatedate; //삭제여부 --8
+	
+	//생성자 
+	public NoticeVO() {
+		
+	}
+	
+	public NoticeVO(String nnum, String nadmin, String ntitle, String ncontent, String nimage, String ndeleteyn,
+			String ninsertdate, String nupdatedate) {
+		
+		this.nnum = nnum;
+		this.nadmin = nadmin;
+		this.ntitle = ntitle;
+		this.ncontent = ncontent;
+		this.nimage = nimage;
+		this.ndeleteyn = ndeleteyn;
+		this.ninsertdate = ninsertdate;
+		this.nupdatedate = nupdatedate;
+	}
+	public String getNnum() {
+		return nnum;
+	}
+	public void setNnum(String nnum) {
+		this.nnum = nnum;
+	}
+	public String getNadmin() {
+		return nadmin;
+	}
+	public void setNadmin(String nadmin) {
+		this.nadmin = nadmin;
+	}
+	public String getNtitle() {
+		return ntitle;
+	}
+	public void setNtitle(String ntitle) {
+		this.ntitle = ntitle;
+	}
+	public String getNcontent() {
+		return ncontent;
+	}
+	public void setNcontent(String ncontent) {
+		this.ncontent = ncontent;
+	}
+	public String getNimage() {
+		return nimage;
+	}
+	public void setNimage(String nimage) {
+		this.nimage = nimage;
+	}
+	public String getNdeleteyn() {
+		return ndeleteyn;
+	}
+	public void setNdeleteyn(String ndeleteyn) {
+		this.ndeleteyn = ndeleteyn;
+	}
+	public String getNinsertdate() {
+		return ninsertdate;
+	}
+	public void setNinsertdate(String ninsertdate) {
+		this.ninsertdate = ninsertdate;
+	}
+	public String getNupdatedate() {
+		return nupdatedate;
+	}
+	public void setNupdatedate(String nupdatedate) {
+		this.nupdatedate = nupdatedate;
+	}
+}

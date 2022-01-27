@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Vue 시작</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script> 
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script type="text/javascript">
+/* 
+# watch 속성.
+
+1. model 데이터의 변경 따른, 특정 프로세스가 필요한 경우에
+	watch속성 하위에 모델명을 함수로 정의하여 처리한다.
+
+2. 기본 형식
+	watch:{
+		선언된모델명:function(입력된데이터){
+			프로세스 처리..
+		}
+	}
+	
+ex) vue02_5(exp).html
+	watch 속성을 활용한 유효성 check
+	회원가입
+	ID: [   ]  id는  8~12사이로 입력해주세요.
+	패스워드: [    ]    패스워드는 4로 입력
+	패스워드확인: [    ] 동일한패스워드가 아닙니다.
+	
+*/
+	$(document).ready(function(){
+		var vm = new Vue({
+			el:"#show",
+			data:{
+				msg:"watch 속성 연습",
+				num01:0,
+				num02:0,
+				sum:0
+			},
+			watch:{
+				num01:function(num){
+					// num : num01의 변경되는 모델 데이터..
+					console.log("## num01 변경 ##");
+					// 하위에 여러 기능 메서드를 통해서, 모델데이터를 접근시, this.모델명
+					// 하위에 여러 기능 메서드를 통해서, 다른 메서드를 접근시, this.메서드명()
+					var sum = Number(num) + Number(this.num02);
+					this.sum = sum; // 모델에 있는 sum에 할당.
+				},
+				num02:function(num){
+					console.log("## num02 변경 ##");
+					var sum = Number(this.num01) + Number(num);
+					this.sum = sum;
+				}
+			}
+		});
+	});
+</script> 
+</head>
+<body>
+	<div id="show">
+		<h3>{{msg}}</h3>
+		num01:<input v-model="num01"/><br>
+		num02:<input v-model="num02" /><br>
+		덧셈 결과 : {{sum}}
+	</div>
+</body>
+</html>

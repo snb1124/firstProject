@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>JOSN stringify</title>
+
+
+</head>
+<body>
+<h3>JSON.stringify()는 인수로 전달받은 js 객체를 문자열로 변환해 반환한다.</h3>
+<hr>
+<p id="json">innerHTML사용 </p> 
+<script type="text/javascript">
+var dog = {name:"웰시코기", age:2, weight:"3.4kg"}
+console.log("dog"+dog); 
+console.log("typeof(dog)"+typeof(dog));// object
+var data = JSON.stringify(dog);
+console.log("data"+data);
+console.log("typeof(data)"+typeof(data));//string
+</script>
+<h3>JSON.parse는 전달 받은 문자열을 js 객체로 변화해 반환한다. </h3>
+<script>
+var data1 = '{"name":"웰시코기", "age":2, "weight":"3.4kg"}'
+var dog1 = JSON.parse(data1);
+console.log("data1"+data1);
+console.log("dog1"+dog1);
+console.log("typeof(dog1)"+typeof(dog1));
+console.log("typeof(data1)"+typeof(data1));
+</script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+
+<meta name= "viewport" content="width=device-width, iitail-scale=1">
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript">
+
+
+//서블릿으로 보내기 
+function formTestCheck(){
+	alert("formTestCheck()함수 진입");
+	document.memberForm.action="/testKsj/form";
+	document.memberForm.method="GET";
+	document.memberForm.enctype="application/x-www-form-urlencoded";				
+	document.memberForm.submit();
+	
+}
+
+$(document).ready(function (){
+	$("#jspBtn").click(function(){
+	alert("jsp버튼 함수 진입");
+	console.log("jsp버튼 함수 진입");
+	
+	let v1=$("#isudtype").val();
+	alert("v1->"+v1);
+	
+	$("#memberForm").attr({
+		"action":"/testKsj/cgiTest/cgiTestFormjsp.jsp?isudtype="+v1,
+		"method":"GET",
+		"enctype":"application/x-www-form-urlencoded"
+	})
+	.submit();
+	});
+});
+</script>
+<style type="text/css">
+ div{
+  margin : 50px 0px 0px 100px;
+ }
+</style>
+</head>
+<body>
+<div>
+<form name="memberForm" id="memberForm">
+<table border="1">
+<input type="hidden" name= "isudtype" value="I">
+<tr>
+	<td>이름</td>
+	<td><input type="text" name ="mname"></td>
+</tr>
+<tr>
+	<td>아이디</td>
+	<td>
+		<input type="text" name="mid" value="아이디">
+		<input type="button" name="midCheck" value="아이디중복확인">
+	</td>	
+</tr>
+<tr>
+	<td>패스워드</td>
+	<td>
+		<input type="text" name="mpw" ">
+	</td>	
+</tr>
+<tr>
+	<td>핸드폰</td>
+	<td>
+		<input type="text" name="mhp">		
+	</td>	
+</tr>
+<tr>
+	<td>성별</td>
+	<td>
+		<input type="radio" name="mgender" value="M" checked="checked"> 남자
+		<input type="radio" name="mgender" value="F">여자		
+	</td>	
+</tr>
+<tr>
+	<td>취미</td>
+	<td>
+		<input type="checkbox" name="mhobby" value="book">독서
+		<input type="checkbox" name="mhobby" value="sports">운동
+		<input type="checkbox" name="mhobby" value="music">음악감상
+	<input type="checkbox" name="mhobby" value="travel">여행
+	</td>	
+</tr>
+<tr>
+<td>
+	<select name="mlocal">
+	<option value="seoul">서울</option>
+	<option value="gungido">경기도</option>
+	<option value="junju">전주</option>
+	</select>
+</td>
+</tr>
+<tr>
+<td>
+<textarea name="mmsg" rows="5" cols="50"></textarea>
+</td>
+</tr>
+</td colspan="2">
+	<input type = "hidden" id="isudtype" name="isudtype" value="I">
+	<input type = "button" value= "서블릿 보내기" onclick="formTestCheck()">
+	<input type = "button" value = "jsp 보내기 " id= "jspBtn">
+	<input type ="reset" value=" 취소">
+</table>
+</form>
+</div>
+
+</body>
+</html>

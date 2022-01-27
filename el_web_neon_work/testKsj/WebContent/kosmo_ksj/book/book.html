@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>도서 정보 입력 화면</title>
+<!-- css -->
+<style type="text/css">
+
+	* {
+		margin: 0 auto;
+		text-align: center;
+	}
+	
+	fieldset {
+		width: 400px;
+	}
+
+	legend {
+		font-size: 1.2em;
+		/*font-weight: bold;*/
+	}
+
+	td {
+		padding: 5px;
+	}
+	
+	.attr {
+		font-weight: bold;
+	}
+	
+	.align {
+		text-align: left;
+	}
+</style>
+
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<!-- 
+2021년09년05일  현재 jQuery 최신 버전 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="/testBook/js/jquery-3.6.0.min.js"></script>
+ -->
+<script type="text/javascript">
+	
+$(document).ready(function() {	
+
+	var regIsbn = /^\d{3}[\-]\d{2}[\-]\d{4}[\-]\d{3}[\-]\d{1}$/ 
+			
+	//확인 버튼	
+	$("#btnI").click(function() {
+	//confirm함수는 ture false를 반환하는 함수이다. 선택창에서 예, 아니오 
+		var iConfirm = confirm("웹브라우저에서 웹서버로 폼데이터를 정말 입력하시겠습니까?");
+	//true면 실행 
+		if(iConfirm) {
+			//isudtype id를 가진 태그를 v1에 넣는다. 
+			//val -> 값을 가져오거나 넣는 함수이다. 
+			// 현재 val에는 매개변수에 아무 값도 없다 이런경우 해당 호출한 데이터에 값을 가져온다. 
+			//만약 매개변수에 값이 들어간다면 호출한 데이터에 매개변수 값을 초기화한다.
+			//isudtype 에는 I가 초기화 되어있다. 
+			var v1 = $("#isudtype").val();
+			
+			alert("v1 >>> : "+ v1);
+			//bookInsertForm는 form태그 아이디다 
+			//$( 'div' ).attr( 'class' ); div요소에 class 속성값을 가져온다. 
+			//.attr( attributeName, value ) 선택한 요소에 속성을 추가한다. 
+			//$( 'h1' ).attr( 'title', 'Hello' ); h1요소에 속성 추가. 
+			//즉 아래 코드는 bookInsertForm요소에 				"action":"/testKsj/book?isudtype="+v1,
+				//"method":"POST",
+				//"enctype":"multipart/form-data"
+				//을 추가하고  submit한다. 
+			$("#bookInsertForm").attr({
+				"action":"/testKsj/book?isudtype="+v1,
+				"method":"POST",
+				"enctype":"multipart/form-data"				
+				//submit함수는 form요소를 바인딩해 전송하는 객체이다. 
+			}).submit();
+			return true;
+		} else {
+			return false;
+		}
+	}); // btnI click()
+	
+	//취소 버튼
+	//reset태그 
+	$("#btnR").click(function() {
+		//컨펌 함수이용 한 번 더 확인 
+		var rConfirm = confirm("폼태그에 입력한 데이터를 정말 취소하시겠습니까?");
+		if(rConfirm) {
+			return true;
+		} else {
+			return false;
+		}
+	}); // btnR click()
+}); // ready()
+</script>
+</head>
+<body>
+<table>
+<tr>
+<td calspan="2">
+<font size="4" color="blue">
+	<!--  <img src="/testKsj/img/img_mando/ase.gif" width="25" height="25" alter="image">-->
+	BOOK TEST
+</font>
+</td>
+</tr>
+</table>
+<hr>
+
+<fieldset>
+<legend>도서 정보 입력</legend>
+<!-- 폼요소는 데이터는 입력된 데이터를 서버로 보낼 때 사용된다.    -->
+<form id="bookInsertForm" name="bookInsertForm">
+<table border="1">
+	<tr>
+		<td class="attr">도서번호</td>
+		<td><input type="text" id="knum" name="knum" class="align" readonly /></td>
+	</tr>
+	<tr>
+		<td class="attr">도서명</td>
+		<td><input type="text" id="ktitle" name="ktitle" class="align" /></td>
+	</tr>
+	<tr>
+		<td class="attr">저&nbsp;&nbsp;&nbsp;자</td>
+		<td><input type="text" id="kauth" name="kauth"  class="align" /></td>
+	</tr>
+	<tr>
+		<td style="letter-spacing: 3px" class="attr">ISBN</td>
+		<td><input type="text" id="isbn" name="isbn"  class="align" placeholder="xxx-xx-xxxx-xxx-x" /></td>
+	</tr>
+	<tr>
+		<td class="attr">출판사</td>
+		<td><input type="text" id="kcomp" name="kcomp"  class="align" /></td>
+	</tr>
+	<tr>
+		<td class="attr">단&nbsp;&nbsp;&nbsp;가</td>
+		<td><input type="number" id="kprice" name="kprice"  class="align" /></td>
+	</tr>
+	<tr>
+		<td class="attr">수&nbsp;&nbsp;&nbsp;량</td>
+		<td><input type="number" id="kqty" name="kqty"  class="align" /></td>
+	</tr>
+	<tr>
+		<td class="attr">표&nbsp;&nbsp;&nbsp;지</td>
+		<td><input type="file" id="kcover" name="kcover" /></td>
+	</tr>
+	<tr>
+		<td colspan="3">	
+			<input type="hidden" id="isudtype" name="isudtype" value="I">
+			<button type="button" id="btnI">도서 정보 입력</button>
+			<button type="reset" id="btnR">입력 정보 취소</button> 
+			
+		</td>
+	</tr>
+</table>
+</form>
+</fieldset>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>data form</title>
+<script type="text/javascrpit">
+	alert("자바스크립트 블럭시작");
+
+	function formFunction() {
+	alert("함수 시작");
+	console.log("함수내부진입");
+
+	alert(document.getDataForm.action);
+	alert(document.getDataForm.method);
+	alert(document.getDataForm.enctype);
+}
+
+
+</script>
+</head>
+<body>
+<form id="getDataForm" name = "getDataForm"
+	  action = "http://locahost:8088/testWeb/jsp/getdata.jsp"
+	  method = "GET"
+	  enctype="application/x-www-form-urlencoded">
+	이름 : <input type = "text" id ="mname" name = "mname"><br>	  
+	주소 : <input type = "text" id ="maddr" name = "maddr"><br>
+	<input type ="button" value="보내기" style = "Color:red" onclick = "formFunction()">
+	<input type = "reset" value="다시" style = "Color:blue">
+	   </form>
+
+
+
+</body>
+</html>

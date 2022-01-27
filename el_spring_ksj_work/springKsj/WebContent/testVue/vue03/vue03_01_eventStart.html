@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script> 
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	
+	var vm = new Vue({
+		el:"#show",
+		data:{
+			msg:"이벤트 시작(inline)",
+			amount:0,
+			balance:0
+		}
+	});
+});
+</script>
+
+</head>
+<body>
+	<div id="show">
+		<h3>{{msg}}</h3>
+		금액:<input type="text" v-model="amount"/><br>
+		<button v-on:click="balance+=parseInt(amount)">예금</button>
+		<button @click="balance-=parseInt(amount)">출금</button><br>
+		<h4>현재 계좌 잔고:{{balance}}</h4>
+	</div>
+
+</body>
+</html>

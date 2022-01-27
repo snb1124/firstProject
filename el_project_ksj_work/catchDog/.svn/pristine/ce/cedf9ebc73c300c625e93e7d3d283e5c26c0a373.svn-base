@@ -1,0 +1,83 @@
+<%@page import="com.catchdog.disadoption.dao.DisadoptionDAO"%>
+<%@page import="com.catchdog.disadoption.vo.DisadoptionVO"%>
+<%@page import="java.util.List"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script type="text/javascript">
+<% 
+	// model에 담은 anum 가져오기
+	String anum = request.getParameter("anum");
+	System.out.println("anum >>> : " + anum);
+%>
+	
+	$(document).ready(function(){
+		//비밀번호 확인
+		$(document).on("click", "#pwbtn", function(){
+			// alert("pwbtn >>> : ");
+
+			let pwcheckURL = "disadoptionPwCheck.cd";
+			let reqType = "POST";
+			let dataParam = {
+				// anum을 val에담고   pwcheckURL인 컨트롤러  disadoptionPwCheck로 보낸다
+				anum: $("#anum").val(),
+				apw: $("#apw").val(),
+
+			};
+			//dataParam = $("#boardUpdateForm")ing.serialize();
+			//alert("dataParam >>> : " + dataParam);
+			
+			$.ajax({
+				url: pwcheckURL,
+				type: reqType,	
+				// disadoptionPwCheck컨트롤러가서 쿼리조회후  (data:dataParm) 데이터 체크 한다.
+				data: dataParam,	            
+				success: whenSuccess,
+				error: whenError
+			});
+			// resData -> controller return값 msg 
+			function whenSuccess(resData){	
+				alert("resData >>> : " + resData);
+				// 문자열 비교후 "PW_GOOD"이면 disadoptionSelect
+				if ("PW_GOOD" == resData){
+					//alert("비밀번호 GOOD.");
+					$("#apw").attr("readonly", true);
+					$("#pwform").attr({						
+						'action':'disadoptionSelect.cd',
+						'method':'POST',
+						'enctype':'application/x-www-form-urlencoded'
+					}).submit();
+				}else if ("PW_BAD" == resData){
+					//alert("비밀번호 BAD.");
+					$("#apw").val('');
+					$("#apw").focus();
+				};				
+			}
+			function whenError(e){
+				alert("e >>> : " + e.responseText);
+			}
+		});
+	});
+
+</script>
+</head>
+<body>
+<jsp:include page="/include/header.jsp" flush="true"></jsp:include>
+
+
+<div class="pwform">
+	<form name ="pwform" id="pwform">
+	<p>비밀번호를 입력하세요.</p>
+	<!-- model에서 넘어온 value의 anum값이 script val 로 간다. -->
+	<input type="hidden" id="anum" name="anum" value="<%= anum%>"/>
+	<input type="password" id="apw" name="apw"/>
+	<button type="button" id="pwbtn" name="pwbtn"> 확인</button>
+	</form>
+</div>
+</body>
+</html>

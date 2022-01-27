@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>vue_01</title>
+</head>
+<script type="text/javascript" src="https://unpkg.com/vue@2.5.16/dist/vue.js"></script>
+<body>
+	<!-- 
+		v-bind : 단방향
+		v-bind:src -> :src
+	 -->
+	<div id="simple">
+		<input type="text" id="a" v-bind:value="message">
+		<br>
+		<img v-bind:src="imagePath">
+		<br>
+		<img v-bind:src="imagePath1">
+		<br>
+		<img v-bind:src="imagePath2">
+		<br>
+		<img :src="imagePath1">
+	</div>
+	<script>
+		var model= { 
+			message: 'v-bind 디렉티브',
+			imagePath: "http://sample.bmaster.kro.kr/photos/61.jpg",
+			imagePath1: "http://sample.bmaster.kro.kr/photos/62.jpg",
+			imagePath2: "http://sample.bmaster.kro.kr/photos/63.jpg"
+		};
+		
+		var simple = new Vue({
+			el : '#simple',
+			data : model
+		});
+	</script>
+</body>
+</html>

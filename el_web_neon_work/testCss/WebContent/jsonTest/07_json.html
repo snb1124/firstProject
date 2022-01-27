@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>eval</title>
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				var bool = false;
+				console.log("bool >>> : " + bool);
+				console.log("typeof(bool) >>> : " + typeof(bool));
+				if(!bool){
+					console.log("bool >>> : " + bool);
+				}
+				
+				var bool_1 = "false";
+				console.log("bool_1 >>> : " + bool_1);
+				console.log("typeof(bool_1) >>> : " + typeof(bool_1));
+				
+				var evalBool = eval(bool_1); //bool_1=string type "false"
+				console.log("evalBool >>> : " + evalBool);
+				console.log("typeof(evalBool) >>> : " + typeof(evalBool));
+				if(!evalBool){
+					console.log("evalBool >>> : " + evalBool);
+				}
+			});
+		</script>
+	</head>
+	<body>
+		<h3>eval() 함수</h3>
+		<hr>
+	</body>
+</html>

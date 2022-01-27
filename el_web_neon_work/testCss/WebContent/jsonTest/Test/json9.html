@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>prop</title>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function{
+		
+		
+		//a링크 클래스명으로 호출해서 변수 goLink으로 초기화 
+		var goLink= $('.link');
+		console.log(goLink.attr('href'));
+		console.log.(goLink.prop('href'));
+	});//ready
+</script>
+</head>
+<body>
+	<a href="/testCss/jsonTest/08_json.html" class="link">링크</a>
+	<input type="checkbox" name="chk" id="chk" checked="checked">
+
+</body>
+</html>

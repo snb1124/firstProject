@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>id이용 호출해서 json 사용하기, 배열 뽑아내기 </title>
+<script type="text/javascript">
+function init(){
+	alert("init함수 진입")
+	
+var business = {
+		"name" : "OO사업",
+		"delivery" : "2021년 10월 11일",
+		"purpose" : "100억 모으기",
+		"way"	: ["사업", "직장", "투자"]
+		
+}
+
+	document.getElementById("name").innerHTML = business.name
+	document.getElementById("delivery").innerHTML = business.delivery
+	
+	var waylist = "";
+	
+	for(var i=0; i < business.way.length; i++){
+		waylist += "<li>"+business.way[i] +"</li>"
+	}
+
+	document.getElementById("way").innerHTML = waylist;
+	
+}// end of fucntion 
+</script>
+
+</head>
+<body onload="init()">
+<h1 id="name"></h1>
+<p>
+기간 : <span id="delivery"></span>
+</p>
+<p>
+수단 : <span id="way"></span>
+
+</p>
+
+</body>
+</html>

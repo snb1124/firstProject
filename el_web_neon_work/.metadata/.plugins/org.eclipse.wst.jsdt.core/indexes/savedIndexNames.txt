@@ -1,0 +1,9 @@
+INDEX VERSION 1.3+C:\00.KOSMO93\30.WEB\el_web_neon_work\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2942261574.index
+2682880306.index
+315081535.index
+923274294.index
+3260598223.index
+2820685495.index
+3334134064.index
+2001522810.index

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Vue 시작</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script> 
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		//$("h2").text("jquery 로딩 완료!!");
+		var vm = new Vue({
+			el:"#show",
+			data:{
+				msg:"회원가입",
+				id:"",
+				idValid:"",
+				pass:"",
+				passValid:"",
+				passFrm:"",
+				passFrmValid:"",				
+			},
+			watch:{
+				id:function(id){
+					// id를 입력하는 순간 크기 check
+					var len = id.length;
+					if( len>=8&&len<=12 ){
+						this.idValid="";	
+					}else{
+						this.idValid="id는 8~12입력";
+					}
+				},
+				pass:function(pass){
+					var len = pass.length;
+					if( len==4 ){
+						this.passValid="";	
+					}else{
+						this.passValid="패스워드는 4자로 입력";
+					}
+				},	
+				passFrm:function(passFrm){
+					
+					if( this.pass==passFrm ){
+						this.passFrmValid="";	
+					}else{
+						this.passFrmValid="동일한 패스워드가 아닙니다";
+					}
+				}				
+			}
+		});
+	});
+</script> 
+</head>
+<body>
+	<div id="show">
+		<h3>{{msg}}</h3>
+		<table border>
+			<tr><th>아이디</th>
+				<td><input type="text" v-model="id" />
+				<span >{{idValid}}</span>
+				</td>
+			</tr>		
+			<tr><th>패스워드</th>
+				<td><input type="password" v-model="pass" />
+				<span >{{passValid}}</span>
+				</td>
+			</tr>	
+			<tr><th>패스워드확인</th>
+				<td><input type="password" v-model="passFrm" />
+				<span >{{passFrmValid}}</span>
+				</td>
+			</tr>
+		</table>											
+	</div>
+</body>
+</html>

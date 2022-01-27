@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+                 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.catchdog.mainpage.dao.MainPageDAO">
+	<select id="selectAdoption" parameterType="com.catchdog.mainpage.vo.MainPageVO" resultType="com.catchdog.mainpage.vo.MainPageVO">
+			SELECT * FROM (
+    SELECT REC.*, ROWNUM AS RNUM FROM    
+    (    
+        SELECT A.ANUM ANUM, A.AIMAGE AS IMAGE, A.ASPECIAL SPECIAL, 
+        (               
+        CASE WHEN B.ACARESITE IS NOT NULL AND A.AUPKIND = B.AUPKIND AND A.AKIND LIKE '%' || B.AKIND || '%' THEN 1 ELSE                
+        CASE WHEN B.AKIND IS NOT NULL AND A.AUPKIND = B.AUPKIND AND A.ACARESITE LIKE '%' || B.ACARESITE || '%' THEN 2 ELSE
+        CASE WHEN B.AGENDER IS NOT NULL AND A.AGENDER = DECODE(B.AGENDER, NULL, '@', '수컷', 'M', '암컷', 'F') THEN 3 ELSE
+        CASE WHEN B.ASIZE IS NOT NULL AND A.ASIZE LIKE B.ASIZE THEN 4 ELSE 5 END END END END           
+        ) AS ORDERNO   
+        FROM DISADOPTION_BOARD A, CATCHDOG_RECOMMEND B     
+        WHERE A.DELETEYN = 'Y'        
+        <if test="mnum != null and mnum != ''">
+			AND B.MNUM = #{mnum}
+			ORDER BY ORDERNO, A.AKIND, A.ACARESITE, A.AGENDER, A.ASIZE
+			</if>
+    )   REC
+)
+WHERE RNUM  <![CDATA[<=]]>  5
+	</select>
+	
+	<select id="selectDisappearance" parameterType="com.catchdog.mainpage.vo.MainPageVO" resultType="com.catchdog.mainpage.vo.MainPageVO">
+		SELECT * FROM
+		(SELECT ROWNUM RNUM, DINUM, DIIMAGE IMAGE FROM CATCHDOG_DISAPPEARANCE)
+		WHERE RNUM <![CDATA[<=]]> 5
+	</select>
+	
+	<select id="selectGoods" parameterType="com.catchdog.mainpage.vo.MainPageVO" resultType="com.catchdog.mainpage.vo.MainPageVO">
+		SELECT * FROM
+		(SELECT ROWNUM RNUM, GNUM, GIMAGE IMAGE FROM CATCHDOG_GOODS)
+		WHERE RNUM <![CDATA[<=]]> 5
+	</select>
+</mapper>

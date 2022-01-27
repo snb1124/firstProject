@@ -1,0 +1,139 @@
+
+11월 10, 2021 20:10:15.234 NEW SESSION
+11월 10, 2021 20:10:15.234 [20296:17296:1110/201015.232:ERROR:chrome_browser_main_extra_parts_metrics.cc(230)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+11월 10, 2021 20:10:15.235 [20296:17296:1110/201015.232:ERROR:chrome_browser_main_extra_parts_metrics.cc(233)] crbug.com/1216328: Checking Bluetooth availability ended.
+11월 10, 2021 20:10:15.236 [20296:17296:1110/201015.232:ERROR:chrome_browser_main_extra_parts_metrics.cc(236)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+11월 10, 2021 20:10:15.236 [20296:17296:1110/201015.236:ERROR:chrome_browser_main_extra_parts_metrics.cc(240)] crbug.com/1216328: Checking default browser status ended.
+11월 10, 2021 20:10:15.237 [20296:10004:1110/201015.237:ERROR:device_event_log_impl.cc(214)] [20:10:15.237] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 10, 2021 20:10:15.272 [20296:10004:1110/201015.272:ERROR:device_event_log_impl.cc(214)] [20:10:15.271] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+
+11월 13, 2021 14:57:20.161 NEW SESSION
+11월 13, 2021 14:57:20.161 [14300:11360:1113/145720.159:ERROR:chrome_browser_main_extra_parts_metrics.cc(230)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+11월 13, 2021 14:57:20.162 [14300:11360:1113/145720.159:ERROR:chrome_browser_main_extra_parts_metrics.cc(233)] crbug.com/1216328: Checking Bluetooth availability ended.
+11월 13, 2021 14:57:20.162 [14300:11360:1113/145720.159:ERROR:chrome_browser_main_extra_parts_metrics.cc(236)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+11월 13, 2021 14:57:20.163 [14300:11360:1113/145720.163:ERROR:chrome_browser_main_extra_parts_metrics.cc(240)] crbug.com/1216328: Checking default browser status ended.
+11월 13, 2021 14:57:20.165 [14300:10180:1113/145720.165:ERROR:device_event_log_impl.cc(214)] [14:57:20.164] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 13, 2021 14:57:20.204 [14300:10180:1113/145720.203:ERROR:device_event_log_impl.cc(214)] [14:57:20.203] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+
+11월 14, 2021 14:50:10.290 NEW SESSION
+11월 14, 2021 14:50:10.290 [12840:15204:1114/145010.289:ERROR:chrome_browser_main_extra_parts_metrics.cc(230)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+11월 14, 2021 14:50:10.291 [12840:15204:1114/145010.289:ERROR:chrome_browser_main_extra_parts_metrics.cc(233)] crbug.com/1216328: Checking Bluetooth availability ended.
+11월 14, 2021 14:50:10.292 [12840:15204:1114/145010.289:ERROR:chrome_browser_main_extra_parts_metrics.cc(236)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+11월 14, 2021 14:50:10.293 [12840:15204:1114/145010.292:ERROR:chrome_browser_main_extra_parts_metrics.cc(240)] crbug.com/1216328: Checking default browser status ended.
+11월 14, 2021 14:50:10.295 [12840:18672:1114/145010.295:ERROR:device_event_log_impl.cc(214)] [14:50:10.296] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 14, 2021 14:50:10.325 [12840:18672:1114/145010.325:ERROR:device_event_log_impl.cc(214)] [14:50:10.326] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+
+11월 18, 2021 09:33:22.406 NEW SESSION
+11월 18, 2021 09:33:22.406 [17260:8968:1118/093322.403:ERROR:chrome_browser_main_extra_parts_metrics.cc(230)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+11월 18, 2021 09:33:22.407 [17260:8968:1118/093322.403:ERROR:chrome_browser_main_extra_parts_metrics.cc(233)] crbug.com/1216328: Checking Bluetooth availability ended.
+11월 18, 2021 09:33:22.408 [17260:8968:1118/093322.403:ERROR:chrome_browser_main_extra_parts_metrics.cc(236)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+11월 18, 2021 09:33:22.408 [17260:8968:1118/093322.406:ERROR:chrome_browser_main_extra_parts_metrics.cc(240)] crbug.com/1216328: Checking default browser status ended.
+11월 18, 2021 09:33:22.414 [17260:17296:1118/093322.414:ERROR:device_event_log_impl.cc(214)] [09:33:22.414] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 18, 2021 09:33:22.442 [17260:17296:1118/093322.442:ERROR:device_event_log_impl.cc(214)] [09:33:22.442] Bluetooth: bluetooth_adapter_winrt.cc:1163 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+11월 18, 2021 09:39:18.333 [17260:17296:1118/093918.332:ERROR:device_event_log_impl.cc(214)] [09:39:18.332] USB: usb_service_win.cc:258 Failed to get device driver name: 요소가 없습니다. (0x490)
+11월 18, 2021 11:50:46.459 [17260:17296:1118/115046.459:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+11월 18, 2021 11:50:46.460 [17260:17296:1118/115046.459:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+11월 18, 2021 11:50:46.461 [17260:17296:1118/115046.459:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+11월 18, 2021 11:50:46.462 [17260:17296:1118/115046.459:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+
+11월 25, 2021 14:31:12.323 NEW SESSION
+11월 25, 2021 14:31:12.323 [17708:4524:1125/143112.321:ERROR:chrome_browser_main_extra_parts_metrics.cc(226)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+11월 25, 2021 14:31:12.324 [17708:4524:1125/143112.321:ERROR:chrome_browser_main_extra_parts_metrics.cc(229)] crbug.com/1216328: Checking Bluetooth availability ended.
+11월 25, 2021 14:31:12.324 [17708:4524:1125/143112.321:ERROR:chrome_browser_main_extra_parts_metrics.cc(232)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+11월 25, 2021 14:31:12.325 [17708:4524:1125/143112.325:ERROR:chrome_browser_main_extra_parts_metrics.cc(236)] crbug.com/1216328: Checking default browser status ended.
+11월 25, 2021 14:31:12.326 [17708:22796:1125/143112.326:ERROR:device_event_log_impl.cc(214)] [14:31:12.326] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 25, 2021 14:31:12.358 [17708:22796:1125/143112.358:ERROR:device_event_log_impl.cc(214)] [14:31:12.358] Bluetooth: bluetooth_adapter_winrt.cc:1165 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+11월 25, 2021 14:33:54.849 [10756:17640:1125/143354.848:ERROR:chrome_browser_main_extra_parts_metrics.cc(226)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+11월 25, 2021 14:33:54.850 [10756:17640:1125/143354.848:ERROR:chrome_browser_main_extra_parts_metrics.cc(229)] crbug.com/1216328: Checking Bluetooth availability ended.
+11월 25, 2021 14:33:54.850 [10756:17640:1125/143354.848:ERROR:chrome_browser_main_extra_parts_metrics.cc(232)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+11월 25, 2021 14:33:54.853 [10756:17640:1125/143354.853:ERROR:chrome_browser_main_extra_parts_metrics.cc(236)] crbug.com/1216328: Checking default browser status ended.
+11월 25, 2021 14:33:54.853 [10756:1500:1125/143354.853:ERROR:device_event_log_impl.cc(214)] [14:33:54.853] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 25, 2021 14:33:54.884 [10756:1500:1125/143354.883:ERROR:device_event_log_impl.cc(214)] [14:33:54.884] Bluetooth: bluetooth_adapter_winrt.cc:1165 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+11월 25, 2021 14:33:58.857 [10756:1500:1125/143358.857:ERROR:interface_endpoint_client.cc(658)] Message 4 rejected by interface blink.mojom.WidgetHost
+11월 25, 2021 14:34:48.924 [20604:9464:1125/143448.924:ERROR:chrome_browser_main_extra_parts_metrics.cc(226)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+11월 25, 2021 14:34:48.925 [20604:9464:1125/143448.924:ERROR:chrome_browser_main_extra_parts_metrics.cc(229)] crbug.com/1216328: Checking Bluetooth availability ended.
+11월 25, 2021 14:34:48.925 [20604:9464:1125/143448.924:ERROR:chrome_browser_main_extra_parts_metrics.cc(232)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+11월 25, 2021 14:34:48.928 [20604:9464:1125/143448.927:ERROR:chrome_browser_main_extra_parts_metrics.cc(236)] crbug.com/1216328: Checking default browser status ended.
+11월 25, 2021 14:34:48.929 [20604:480:1125/143448.928:ERROR:device_event_log_impl.cc(214)] [14:34:48.928] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 25, 2021 14:34:48.959 [20604:480:1125/143448.959:ERROR:device_event_log_impl.cc(214)] [14:34:48.959] Bluetooth: bluetooth_adapter_winrt.cc:1165 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+11월 25, 2021 14:50:00.523 [20604:480:1125/145000.523:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+11월 25, 2021 14:50:00.524 [20604:480:1125/145000.523:ERROR:CONSOLE(0)] "TypeError: Cannot read properties of null (reading 'sourceURL')", source:  (0)
+11월 25, 2021 14:50:02.483 [20604:480:1125/145002.482:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+11월 25, 2021 14:50:02.483 [20604:480:1125/145002.482:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+11월 25, 2021 14:50:02.484 [20604:480:1125/145002.482:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+11월 25, 2021 14:50:02.485 [20604:480:1125/145002.483:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+
+12월 01, 2021 13:44:50.662 NEW SESSION
+12월 01, 2021 13:44:50.662 [11636:19164:1201/134450.660:ERROR:chrome_browser_main_extra_parts_metrics.cc(226)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+12월 01, 2021 13:44:50.662 [11636:19164:1201/134450.660:ERROR:chrome_browser_main_extra_parts_metrics.cc(229)] crbug.com/1216328: Checking Bluetooth availability ended.
+12월 01, 2021 13:44:50.663 [11636:19164:1201/134450.660:ERROR:chrome_browser_main_extra_parts_metrics.cc(232)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+12월 01, 2021 13:44:50.664 [11636:19164:1201/134450.663:ERROR:chrome_browser_main_extra_parts_metrics.cc(236)] crbug.com/1216328: Checking default browser status ended.
+12월 01, 2021 13:44:50.666 [11636:15472:1201/134450.665:ERROR:device_event_log_impl.cc(214)] [13:44:50.665] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+12월 01, 2021 13:44:50.712 [11636:15472:1201/134450.711:ERROR:device_event_log_impl.cc(214)] [13:44:50.711] Bluetooth: bluetooth_adapter_winrt.cc:1165 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+12월 01, 2021 17:33:24.458 [11636:15472:1201/173324.458:ERROR:interface_endpoint_client.cc(658)] Message 5 rejected by interface blink.mojom.WidgetHost
+12월 01, 2021 17:50:43.979 [11636:15472:1201/175043.978:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+12월 01, 2021 17:50:43.979 [11636:15472:1201/175043.978:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+12월 01, 2021 17:50:43.980 [11636:15472:1201/175043.978:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+12월 01, 2021 17:50:43.981 [11636:15472:1201/175043.978:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+12월 01, 2021 17:51:39.687 [11636:15472:1201/175139.686:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+12월 01, 2021 17:51:39.688 [11636:15472:1201/175139.687:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+12월 01, 2021 17:51:39.688 [11636:15472:1201/175139.687:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+12월 01, 2021 17:51:39.689 [11636:15472:1201/175139.687:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+12월 01, 2021 17:52:41.39 [11636:15472:1201/175241.039:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+12월 01, 2021 17:52:41.40 [11636:15472:1201/175241.039:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+12월 01, 2021 17:52:41.41 [11636:15472:1201/175241.039:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+12월 01, 2021 17:52:41.41 [11636:15472:1201/175241.039:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+12월 01, 2021 18:02:19.333 [11636:15472:1201/180219.332:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+12월 01, 2021 18:02:19.333 [11636:15472:1201/180219.332:ERROR:CONSOLE(0)] "TypeError: Cannot read properties of null (reading 'sourceURL')", source:  (0)
+12월 01, 2021 18:02:23.681 [11636:15472:1201/180223.681:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+12월 01, 2021 18:02:23.681 [11636:15472:1201/180223.681:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+12월 01, 2021 18:02:23.682 [11636:15472:1201/180223.681:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+12월 01, 2021 18:02:23.682 [11636:15472:1201/180223.681:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+12월 01, 2021 19:45:04.374 [11636:15472:1201/194504.373:ERROR:device_event_log_impl.cc(214)] [19:45:04.373] USB: usb_service_win.cc:261 Failed to get device driver name: 요소가 없습니다. (0x490)
+
+12월 03, 2021 12:22:49.60 NEW SESSION
+12월 03, 2021 12:22:49.61 [9264:3644:1203/122249.058:ERROR:chrome_browser_main_extra_parts_metrics.cc(226)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+12월 03, 2021 12:22:49.61 [9264:3644:1203/122249.058:ERROR:chrome_browser_main_extra_parts_metrics.cc(229)] crbug.com/1216328: Checking Bluetooth availability ended.
+12월 03, 2021 12:22:49.62 [9264:3644:1203/122249.058:ERROR:chrome_browser_main_extra_parts_metrics.cc(232)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+12월 03, 2021 12:22:49.63 [9264:3644:1203/122249.062:ERROR:chrome_browser_main_extra_parts_metrics.cc(236)] crbug.com/1216328: Checking default browser status ended.
+12월 03, 2021 12:22:49.70 [9264:5396:1203/122249.070:ERROR:device_event_log_impl.cc(214)] [12:22:49.070] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+12월 03, 2021 12:22:49.106 [9264:5396:1203/122249.105:ERROR:device_event_log_impl.cc(214)] [12:22:49.105] Bluetooth: bluetooth_adapter_winrt.cc:1165 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+12월 03, 2021 12:22:55.179 [9264:5396:1203/122255.178:ERROR:interface_endpoint_client.cc(658)] Message 0 rejected by interface blink.mojom.WidgetHost
+12월 03, 2021 12:28:11.386 [9264:5396:1203/122811.386:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+12월 03, 2021 12:28:11.387 [9264:5396:1203/122811.386:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+12월 03, 2021 12:28:11.388 [9264:5396:1203/122811.386:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+12월 03, 2021 12:28:11.389 [9264:5396:1203/122811.386:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+12월 03, 2021 12:28:36.277 [9264:5396:1203/122836.276:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+12월 03, 2021 12:28:36.278 [9264:5396:1203/122836.276:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+12월 03, 2021 12:28:36.278 [9264:5396:1203/122836.276:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+12월 03, 2021 12:28:36.280 [9264:5396:1203/122836.276:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+
+12월 08, 2021 16:57:49.756 NEW SESSION
+12월 08, 2021 16:57:49.756 [16456:14984:1208/165749.747:ERROR:chrome_browser_main_extra_parts_metrics.cc(226)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+12월 08, 2021 16:57:49.756 [16456:14984:1208/165749.747:ERROR:chrome_browser_main_extra_parts_metrics.cc(229)] crbug.com/1216328: Checking Bluetooth availability ended.
+12월 08, 2021 16:57:49.757 [16456:14984:1208/165749.747:ERROR:chrome_browser_main_extra_parts_metrics.cc(232)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+12월 08, 2021 16:57:49.757 [16456:14984:1208/165749.751:ERROR:chrome_browser_main_extra_parts_metrics.cc(236)] crbug.com/1216328: Checking default browser status ended.
+12월 08, 2021 16:57:49.758 [16456:13456:1208/165749.758:ERROR:device_event_log_impl.cc(214)] [16:57:49.758] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+12월 08, 2021 16:57:49.787 [16456:13456:1208/165749.787:ERROR:device_event_log_impl.cc(214)] [16:57:49.788] Bluetooth: bluetooth_adapter_winrt.cc:1165 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+12월 08, 2021 17:38:47.353 [16456:13456:1208/173847.352:ERROR:device_event_log_impl.cc(214)] [17:38:47.353] USB: usb_service_win.cc:261 Failed to get device driver name: 요소가 없습니다. (0x490)
+12월 08, 2021 17:38:47.357 [16456:13456:1208/173847.356:ERROR:device_event_log_impl.cc(214)] [17:38:47.357] USB: usb_service_win.cc:284 SetupDiEnumDeviceInterfaces: 사용 가능한 데이터가 없습니다. (0x103)
+
+12월 11, 2021 15:55:30.54 NEW SESSION
+12월 11, 2021 15:55:30.54 [900:8312:1211/155530.052:ERROR:device_event_log_impl.cc(214)] [15:55:30.052] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+12월 11, 2021 15:55:30.66 [900:14088:1211/155530.066:ERROR:chrome_browser_main_extra_parts_metrics.cc(226)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+12월 11, 2021 15:55:30.67 [900:14088:1211/155530.066:ERROR:chrome_browser_main_extra_parts_metrics.cc(229)] crbug.com/1216328: Checking Bluetooth availability ended.
+12월 11, 2021 15:55:30.67 [900:14088:1211/155530.066:ERROR:chrome_browser_main_extra_parts_metrics.cc(232)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+12월 11, 2021 15:55:30.70 [900:14088:1211/155530.070:ERROR:chrome_browser_main_extra_parts_metrics.cc(236)] crbug.com/1216328: Checking default browser status ended.
+12월 11, 2021 15:55:30.115 [900:8312:1211/155530.115:ERROR:device_event_log_impl.cc(214)] [15:55:30.115] Bluetooth: bluetooth_adapter_winrt.cc:1165 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+
+12월 12, 2021 19:01:14.853 NEW SESSION
+12월 12, 2021 19:01:14.853 [18196:10920:1212/190114.849:ERROR:chrome_browser_main_extra_parts_metrics.cc(226)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+12월 12, 2021 19:01:14.854 [18196:10920:1212/190114.850:ERROR:chrome_browser_main_extra_parts_metrics.cc(229)] crbug.com/1216328: Checking Bluetooth availability ended.
+12월 12, 2021 19:01:14.854 [18196:10920:1212/190114.850:ERROR:chrome_browser_main_extra_parts_metrics.cc(232)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+12월 12, 2021 19:01:14.855 [18196:10920:1212/190114.853:ERROR:chrome_browser_main_extra_parts_metrics.cc(236)] crbug.com/1216328: Checking default browser status ended.
+12월 12, 2021 19:01:14.860 [18196:4460:1212/190114.860:ERROR:device_event_log_impl.cc(214)] [19:01:14.860] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+12월 12, 2021 19:01:14.895 [18196:4460:1212/190114.895:ERROR:device_event_log_impl.cc(214)] [19:01:14.895] Bluetooth: bluetooth_adapter_winrt.cc:1165 RequestRadioAccessAsync failed: RadioAccessStatus::DeniedByUserWill not be able to change radio power.
+12월 12, 2021 19:02:43.722 [18196:15716:1212/190243.722:ERROR:database.cc(1773)] Passwords SQLite error: code 2067 errno 0: UNIQUE constraint failed: logins.origin_url, logins.username_element, logins.username_value, logins.password_element, logins.signon_realm sql: INSERT INTO logins (origin_url, action_url, username_element, username_value, password_element, password_value, submit_element, signon_realm, date_created, blacklisted_by_user, scheme, password_type, times_used, form_data, display_name, icon_url, federation_url, skip_zero_click, generation_upload_status, possible_username_pairs, id, date_last_used, moving_blocked_for, date_password_modified) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+12월 12, 2021 19:04:03.708 [18196:15984:1212/190403.707:ERROR:database.cc(1773)] Passwords SQLite error: code 2067 errno 0: UNIQUE constraint failed: logins.origin_url, logins.username_element, logins.username_value, logins.password_element, logins.signon_realm sql: INSERT INTO logins (origin_url, action_url, username_element, username_value, password_element, password_value, submit_element, signon_realm, date_created, blacklisted_by_user, scheme, password_type, times_used, form_data, display_name, icon_url, federation_url, skip_zero_click, generation_upload_status, possible_username_pairs, id, date_last_used, moving_blocked_for, date_password_modified) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+12월 12, 2021 19:10:50.433 [18196:7028:1212/191050.433:ERROR:database.cc(1773)] Passwords SQLite error: code 2067 errno 0: UNIQUE constraint failed: logins.origin_url, logins.username_element, logins.username_value, logins.password_element, logins.signon_realm sql: INSERT INTO logins (origin_url, action_url, username_element, username_value, password_element, password_value, submit_element, signon_realm, date_created, blacklisted_by_user, scheme, password_type, times_used, form_data, display_name, icon_url, federation_url, skip_zero_click, generation_upload_status, possible_username_pairs, id, date_last_used, moving_blocked_for, date_password_modified) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+12월 12, 2021 19:11:30.09 [18196:4460:1212/191130.008:ERROR:interface_endpoint_client.cc(658)] Message 0 rejected by interface blink.mojom.WidgetHost

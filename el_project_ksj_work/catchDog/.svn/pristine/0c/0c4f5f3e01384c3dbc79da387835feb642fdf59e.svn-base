@@ -1,0 +1,66 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="com.catchdog.adoption.vo.AdoptionVO" %>
+<%@ page import="java.util.List" %>
+<%
+	List<AdoptionVO> listAll = (List<AdoptionVO>)request.getAttribute("listAll");
+	System.out.println("listAll >>> : " + listAll);
+%>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>입양신청 목록</title>
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	</head>
+	<body>
+		<jsp:include page="/include/header.jsp" flush="true"></jsp:include>
+		<form name="adoptionSelectAllForm" id="adoptionSelectAllForm">
+			<script>
+				function selectAdoption(ele){
+					let id = ele.id;
+					$("#anum").val(id);
+					alert("id >>> : " + id);
+					
+					$("#adoptionSelectAllForm").attr({
+						"action":"/adoptionSelect.cd",
+						"method":"POST",
+						"enctype":"application/x-www-form-urlencoded"
+					}).submit();
+				}
+			</script>
+			<table>
+				<tr>
+			<%
+				for(int i=0; i<listAll.size(); i++){
+					AdoptionVO avo = listAll.get(i);
+					String image = avo.getAimage();
+					
+					if(i%5 == 4){
+			%>
+					<td><img src='<%= image %>' width="150" height="150"
+					onerror="this.src='image/image-available.jpg'"
+					id="<%= listAll.get(i).getAnum() %>"
+					onclick="selectAdoption(this)">
+					</td>
+				</tr>
+				<tr>
+			<%
+					} else {
+			%>
+					<td><img src='<%= image %>' width="150" height="150"
+					onerror="this.src='image/image-available.jpg'"
+					id="<%= listAll.get(i).getAnum() %>"
+					onclick="selectAdoption(this)">
+					</td>
+			<%
+					}
+				}
+			%>
+			</tr>
+			<tr>
+				<td><input type="hidden" id="anum" name="anum" value=""></td>
+			</tr>
+			</table>
+		</form>
+	</body>
+</html>

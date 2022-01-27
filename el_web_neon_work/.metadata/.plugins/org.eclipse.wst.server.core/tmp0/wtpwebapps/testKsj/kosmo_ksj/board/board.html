@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="EUC-KR">
+      <title>게시판</title>
+      <!-- 제이쿼리 CDN -->
+      <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+      <!-- 해당 스크립트 문 안에 코드를 자바스크립트로 인식해라  -->
+      <script type="text/javascript">
+         alert("자바스크립트 블럭 시작 >>> : ");
+         $(document).ready(function(){
+            alert("제이쿼리 블럭 시작 >>> : ");
+            //폼태그 데이터 서블릿으로 보내기
+            $("#boardBtn").click(function(){
+               alert("boardBtn click() 함수 진입 >>> : ");
+               console.log("boardBtn click() 함수 진입 >>> : ");
+               //val값이 없으면 val()인자값으로 초기화해라?였나
+               var v1 = $("#ISUD_TYPE").val();
+               alert("v1 >>> : " + v1);
+               //attr() vs prop()
+               //보낼 form태그  아이디
+            	//폼 태그 안에 있는 정보를 아래 액션 경로에 있는 서블릿으로 넘김
+            	//v1은 변수로 ISUD_TYPE 히든 타입 넘김 현재 I로 초기화 되어있음. 
+               $("#boardWrite")
+               .attr({
+                  "action":"/testKsj/board?ISUD_TYPE="+v1,
+                  "method":"GET",
+                  
+                  // 문자 넘기고 get parAmeter로 받고 
+                  //application/x-www-form-urlencoded'
+                  // cos.jar 에 있는 multipartrequest 에 있는 fileuploadutil을 사용해 데이터받음
+                 "enctype":"multipart/form-data"  
+               })
+               //제출 컨트롤러 ㄱㄱ
+               .submit();
+            });
+         });
+      </script>
+   </head>
+   <body>
+   <!-- 폼태그 -->
+      <form name="boardWrite" id="boardWrite">
+         <table border="1" align="center">
+            <tr>
+            <!--colspan합칠 셀의 개수 -->
+               <td colspan="2" align="center">
+                  <font size="4" style="color:blue">게시판 글쓰기</font>
+                <!--    <img src="/testWeb/img/pori.gif" width="25" height="25" alt="image">-->
+               </td>
+            </tr>
+            <tr>
+               <td align="center">글번호</td>
+               <td><input type="text" name="knum" id="knum" size="20" readonly></td>
+            </tr>
+            <tr>
+               <td align="center">제목</td>
+               <td><input type="text" name="ksubject" id="ksubject" size="53"></td>
+            </tr>
+            <tr>
+               <td align="center">이름</td>
+               <td><input type="text" name="kwriter" id="kwriter" size="20"></td>
+            </tr>
+            <tr>
+               <td align="center">비밀번호</td>
+               <td><input type="password" name="kpw" id="kpw" size="20"></td>
+            </tr>
+            <tr>
+               <td align="center">입력일</td>
+               <td><input type="text" name="insertdate" size="20" disabled></td>
+            </tr>
+            <tr>
+               <td align="center">수정일</td>
+               <td><input type="text" name="updatedate" size="20" disabled></td>
+            </tr>
+            <tr>
+               <td align="center">내용</td>
+               <td><textarea name="kmemo" name="kmemo" cols="50" rows="10"></textarea></td>
+            </tr>
+            <tr>
+               <td align="center">사진</td>
+               <td><input type="file" name="kphoto" id="kphoto"></td>
+            </tr>
+            <tr>
+               <td colspan="2" align="center">
+               <!-- hidden  숨기기 -->
+                  <input type="hidden" name="ISUD_TYPE" id="ISUD_TYPE" value="I">
+                  <!-- <input type="button" value="보내기 " id="boardBtn"> -->
+                  <!-- 버튼 아이디를 가지고 위에 펑션 추가함 -->
+                  <button type="button" id="boardBtn"width="25" height="25">보내기 
+                     <!--  <img src="/testWeb/img/naruhodo.gif" width="25" height="25" alt="image">
+                     보내기-->
+                  </button>
+                <!--   <button type="button" id="selectBtn"width="25" height="25">조회하기  </button> -->
+                
+                  <!-- <input type="reset" value="다시"> -->
+                  <button type="reset"width="25" height="25">다시
+                    <!--  <img src="/testWeb/img/nohohon.gif" width="25" height="25" alt="image">
+                     다시-->
+                  </button>
+               </td>
+            </tr>
+            <tr>
+               <td></td>
+               <td></td>
+            </tr>
+         </table>
+      </form>
+   </body>
+</html>

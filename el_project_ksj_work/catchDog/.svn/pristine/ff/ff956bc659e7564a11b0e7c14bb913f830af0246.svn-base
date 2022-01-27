@@ -1,0 +1,81 @@
+package com.catchdog.disadoption.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.catchdog.disadoption.dao.DisadoptionDAO;
+import com.catchdog.disadoption.vo.DisadoptionVO;
+import com.sun.istack.internal.logging.Logger;
+
+@Service
+@Transactional
+public class DisadoptionServiceImpl implements DisadoptionService {
+	Logger logger = Logger.getLogger(DisadoptionServiceImpl.class);
+	
+	private  DisadoptionDAO disadoptionDAO;
+	
+	
+	// 의존성 주입
+	@Autowired(required = false)
+	public DisadoptionServiceImpl(DisadoptionDAO disadoptionDAO) {
+		this.disadoptionDAO = disadoptionDAO;
+		
+	}
+	// 파양게시판 전체 조회
+	@Override
+	public List<DisadoptionVO> boardSelectAll(DisadoptionVO dvo) {
+		// TODO Auto-generated method stub
+		logger.info("DisadoptionServiceImpl boardSelectAll()함수 진입 >>> : ");
+		
+		List<DisadoptionVO> res = disadoptionDAO.boardSelectAll(dvo);
+		return disadoptionDAO.boardSelectAll(dvo);
+	}
+	// 파양게시판 선택조회
+	@Override
+	public List<DisadoptionVO> boardSelect(DisadoptionVO dvo) {
+		// TODO Auto-generated method stub
+		logger.info("DisadoptionServiceImpl boardSelect()함수 진입 >>> : ");
+		return disadoptionDAO.boardSelect(dvo);
+}
+	// 파양게시판 등록
+	@Override
+	public int boardInsert(DisadoptionVO dvo) {
+		// TODO Auto-generated method stub
+		logger.info("DisadoptionServiceImpl boardInsert()함수 진입 >>> : ");
+		return disadoptionDAO.boardInsert(dvo);
+	}
+	
+	// 페이징
+	@Override
+	public List<DisadoptionVO> boardSelectPaging(DisadoptionVO dvo) {
+		// TODO Auto-generated method stub
+		logger.info("DisadoptionServiceImpl boardSelectPaging()함수 진입 >>> : ");
+		return disadoptionDAO.boardSelectPaging(dvo);
+		
+	}
+	// 파양게시판 비밀번호 체크
+	@Override
+	public List<DisadoptionVO> disadoptionPwCheck(DisadoptionVO dvo) {
+		// TODO Auto-generated method stub
+		logger.info("DisadoptionServiceImpl disadoptionPwCheck()함수 진입 >>> : ");
+		return disadoptionDAO.disadoptionPwCheck(dvo);
+	}
+	// 파양게시판 수정
+	@Override
+	public int boardUpdate(DisadoptionVO dvo) {
+		// TODO Auto-generated method stub
+		logger.info("DisadoptionServiceImpl boardUpdate()함수 진입 >>> : ");
+		return disadoptionDAO.boardUpdate(dvo);
+	}
+	//파양게시판 삭제
+	@Override
+	public int boardDelete(DisadoptionVO dvo) {
+		// TODO Auto-generated method stub
+		logger.info("DisadoptionServiceImpl boardDelete()함수 진입 >>> : ");
+		return disadoptionDAO.boardDelete(dvo);
+	}
+
+}

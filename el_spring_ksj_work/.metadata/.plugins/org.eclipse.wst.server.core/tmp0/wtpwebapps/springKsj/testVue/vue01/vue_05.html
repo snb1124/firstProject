@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>vue_05</title>
+</head>
+<script type="text/javascript" src="https://unpkg.com/vue@2.5.16/dist/vue.js"></script>
+<body>
+<!-- 
+	v-if : 조건이 부합되지 않으면 렌더링을 하지 않음
+    v-show : 일단 HTML 요소를 렌더링한 후 
+             display 스타일 속성으로 화면에 보여줄지 여부결정 
+             diplay:none 
+-->
+<div id="account">
+	예금액 : <input type="text" v-model="amount" />
+	<img v-if="amount < 0" src="/springKsj/testVue/img/error.png"
+		 title="마이너스는 허용하지 않습니다."
+		 style="width:15px; height:15px; vertical-align:middle" />
+</div>
+<script>	
+	var simple1 = new Vue({
+		el : '#account', 
+		data : { amount: 0 }
+	});
+</script>
+</body>
+</html>

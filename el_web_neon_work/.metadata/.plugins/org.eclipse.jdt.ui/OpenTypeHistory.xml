@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+<typeInfo handle="=testKsj/src&lt;a.b.c.com.ksj.board.service{BoardService.java[BoardService" modifiers="513" timestamp="1631095123899"/>
+<typeInfo handle="=testKsj/src&lt;a.b.c.com.ksj.board.dao{BoardDAO.java[BoardDAO" modifiers="513" timestamp="1631095395996"/>
+<typeInfo handle="=testKsj/src&lt;a.b.c.com.ksj.book.dao{BookDAO.java[BookDAO" modifiers="513" timestamp="1631428027064"/>
+<typeInfo handle="=testKsj/src&lt;a.b.c.com.ksj.mem.dao{MemberDAO.java[MemberDAO" modifiers="513" timestamp="1631887631385"/>
+<typeInfo handle="=testKsj/src&lt;a.b.c.com.ksj.mem.service{MemberService.java[MemberService" modifiers="513" timestamp="1631888647163"/>
+<typeInfo handle="=testKsj/src&lt;a.b.c.com.ksj.login.Service{LoginService.java[LoginService" modifiers="513" timestamp="1632544602030"/>
+<typeInfo handle="=testKsj/src&lt;a.b.c.com.ksj.login.Dao{LoginDAO.java[LoginDAO" modifiers="513" timestamp="1632543651777"/>
+<typeInfo handle="=testKsj/src&lt;a.b.c.com.ksj.notice.dao{NoticeDAO.java[NoticeDAO" modifiers="513" timestamp="1632570187824"/>
+<typeInfo handle="=testKsj/src&lt;a.b.c.com.ksj.notice.service{NoticeService.java[NoticeService" modifiers="513" timestamp="1632570393137"/>
+</typeInfoHistroy>

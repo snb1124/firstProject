@@ -1,0 +1,167 @@
+package com.catchdog.member.vo;
+
+public class MemberVO {
+
+	private String mnum;
+	private String mname;
+	private String mid;
+	private String mpw;
+	private String mbirth;
+	private String mgender;
+	private String mhp;
+	private String memail;
+	private String mzonecode;
+	private String mroadaddress;
+	private String mjibunaddress;
+	private String mdeleteyn;
+	private String madmin;
+	private String minsertdate;
+	private String mupdatedate;
+	
+	public MemberVO() {
+		
+	}
+
+	public MemberVO(String mnum, String mname, String mid, String mpw, String mbirth, String mgender, String mhp,
+			String memail, String mzonecode, String mroadaddress, String mjibunaddress, String mdeleteyn, String madmin,
+			String minsertdate, String mupdatedate) {
+		
+		this.mnum = mnum;
+		this.mname = mname;
+		this.mid = mid;
+		this.mpw = mpw;
+		this.mbirth = mbirth;
+		this.mgender = mgender;
+		this.mhp = mhp;
+		this.memail = memail;
+		this.mzonecode = mzonecode;
+		this.mroadaddress = mroadaddress;
+		this.mjibunaddress = mjibunaddress;
+		this.mdeleteyn = mdeleteyn;
+		this.madmin = madmin;
+		this.minsertdate = minsertdate;
+		this.mupdatedate = mupdatedate;
+	}
+
+	public String getMnum() {
+		return mnum;
+	}
+
+	public void setMnum(String mnum) {
+		this.mnum = mnum;
+	}
+
+	public String getMname() {
+		return mname;
+	}
+
+	public void setMname(String mname) {
+		this.mname = mname;
+	}
+
+	public String getMid() {
+		return mid;
+	}
+
+	public void setMid(String mid) {
+		this.mid = mid;
+	}
+
+	public String getMpw() {
+		return mpw;
+	}
+
+	public void setMpw(String mpw) {
+		this.mpw = mpw;
+	}
+
+	public String getMbirth() {
+		return mbirth;
+	}
+
+	public void setMbirth(String mbirth) {
+		this.mbirth = mbirth;
+	}
+
+	public String getMgender() {
+		return mgender;
+	}
+
+	public void setMgender(String mgender) {
+		this.mgender = mgender;
+	}
+
+	public String getMhp() {
+		return mhp;
+	}
+
+	public void setMhp(String mhp) {
+		this.mhp = mhp;
+	}
+
+	public String getMemail() {
+		return memail;
+	}
+
+	public void setMemail(String memail) {
+		this.memail = memail;
+	}
+
+	public String getMzonecode() {
+		return mzonecode;
+	}
+
+	public void setMzonecode(String mzonecode) {
+		this.mzonecode = mzonecode;
+	}
+
+	public String getMroadaddress() {
+		return mroadaddress;
+	}
+
+	public void setMroadaddress(String mroadaddress) {
+		this.mroadaddress = mroadaddress;
+	}
+
+	public String getMjibunaddress() {
+		return mjibunaddress;
+	}
+
+	public void setMjibunaddress(String mjibunaddress) {
+		this.mjibunaddress = mjibunaddress;
+	}
+
+	public String getMdeleteyn() {
+		return mdeleteyn;
+	}
+
+	public void setMdeleteyn(String mdeleteyn) {
+		this.mdeleteyn = mdeleteyn;
+	}
+
+	public String getMadmin() {
+		return madmin;
+	}
+
+	public void setMadmin(String madmin) {
+		this.madmin = madmin;
+	}
+
+	public String getMinsertdate() {
+		return minsertdate;
+	}
+
+	public void setMinsertdate(String minsertdate) {
+		this.minsertdate = minsertdate;
+	}
+
+	public String getMupdatedate() {
+		return mupdatedate;
+	}
+
+	public void setMupdatedate(String mupdatedate) {
+		this.mupdatedate = mupdatedate;
+	}
+	
+	
+}

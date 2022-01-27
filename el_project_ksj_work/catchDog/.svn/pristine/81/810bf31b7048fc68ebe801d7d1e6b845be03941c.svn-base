@@ -1,0 +1,24 @@
+package com.catchdog.common.dao;
+
+import com.catchdog.adoption.review.vo.ReviewVO;
+import com.catchdog.disadoption.vo.DisadoptionVO;
+import com.catchdog.goods.vo.GoodsVO;
+import com.catchdog.member.vo.MemberVO;
+
+public interface ChabunDAO {
+		//	vo클래스 임포트 후 getXXXXChabun()함수 만든 후 인터페이스 추가
+	// ex) public CatchDogNoticeVO getNoticeChabun();
+	
+	public GoodsVO getGoodsChabun();
+	public GoodsVO getGpdChabun();
+	public MemberVO getMemChabun();
+	public ReviewVO getReviewChabun();
+//	public NoticeVO getNoticeChabun();
+//	public MemberVO getMemberChabun();
+	public DisadoptionVO getDisadoptionChabun();
+//	public DisappearanceVO getDisappearanceChabun();
+	
+}
+
+
+

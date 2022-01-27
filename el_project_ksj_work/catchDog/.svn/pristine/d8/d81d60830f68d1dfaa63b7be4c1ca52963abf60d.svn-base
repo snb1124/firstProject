@@ -1,0 +1,71 @@
+package com.catchdog.mainpage.vo;
+
+public class MainPageVO {
+	String rnum;
+	String image;
+	String mnum;
+	String anum;
+	String dinum;
+	String gnum;
+	
+	public MainPageVO() {}
+
+	public MainPageVO(String rnum, String image, String mnum, String anum, String dinum, String gnum) {
+		this.rnum = rnum;
+		this.image = image;
+		this.mnum = mnum;
+		this.anum = anum;
+		this.dinum = dinum;
+		this.gnum = gnum;
+	}
+
+	public String getRnum() {
+		return rnum;
+	}
+
+	public void setRnum(String rnum) {
+		this.rnum = rnum;
+	}
+
+	public String getImage() {
+		return image;
+	}
+
+	public void setImage(String image) {
+		this.image = image;
+	}
+
+	public String getMnum() {
+		return mnum;
+	}
+
+	public void setMnum(String mnum) {
+		this.mnum = mnum;
+	}
+
+	public String getDinum() {
+		return dinum;
+	}
+
+	public String getGnum() {
+		return gnum;
+	}
+
+	public void setDinum(String dinum) {
+		this.dinum = dinum;
+	}
+
+	public void setGnum(String gnum) {
+		this.gnum = gnum;
+	}
+
+	public String getAnum() {
+		return anum;
+	}
+	
+	public void setAnum(String anum) {
+		this.anum = anum;
+	}
+	
+	
+}

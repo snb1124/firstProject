@@ -1,0 +1,225 @@
+package com.catchdog.adoption.vo;
+
+
+public class AdoptionVO {
+	String adno;
+	String aupkind;
+	String akind;
+	String aneut;
+	String aage;
+	String aimage;
+	String agender;
+	String ainsertdate;
+	String acaresite;
+	String acaretel;
+	String aspecial;
+	String acolor;
+	
+	//API가 아닌 컬럼들
+	String mnum;
+	String anum;
+	String aname;
+	String asize;
+	String asubject;
+	String aupdatedate;
+	String adeleteyn;
+	String apw;
+	
+	public String getAsubject() {
+		return asubject;
+	}
+
+
+	public void setAsubject(String asubject) {
+		this.asubject = asubject;
+	}
+
+
+	public AdoptionVO() {
+		super();
+	}
+
+
+	public AdoptionVO(String adno, String aupkind, String akind, String aneut, String aage, String aimage,
+			String agender, String ainsertdate, String acaresite, String acaretel, String aspecial, String acolor,
+			String mnum, String anum, String aname, String asize, String asubject, String aupdatedate, String adeleteyn,
+			String apw) {
+		super();
+		this.adno = adno;
+		this.aupkind = aupkind;
+		this.akind = akind;
+		this.aneut = aneut;
+		this.aage = aage;
+		this.aimage = aimage;
+		this.agender = agender;
+		this.ainsertdate = ainsertdate;
+		this.acaresite = acaresite;
+		this.acaretel = acaretel;
+		this.aspecial = aspecial;
+		this.acolor = acolor;
+		this.mnum = mnum;
+		this.anum = anum;
+		this.aname = aname;
+		this.asize = asize;
+		this.asubject = asubject;
+		this.aupdatedate = aupdatedate;
+		this.adeleteyn = adeleteyn;
+		this.apw = apw;
+	}
+
+
+	public String getAdno() {
+		return adno;
+	}
+
+	public void setAdno(String adno) {
+		this.adno = adno;
+	}
+
+	public String getAupkind() {
+		return aupkind;
+	}
+
+	public void setAupkind(String aupkind) {
+		this.aupkind = aupkind;
+	}
+
+	public String getAkind() {
+		return akind;
+	}
+
+	public void setAkind(String akind) {
+		this.akind = akind;
+	}
+
+	public String getAneut() {
+		return aneut;
+	}
+
+	public void setAneut(String aneut) {
+		this.aneut = aneut;
+	}
+
+	public String getAage() {
+		return aage;
+	}
+
+	public void setAage(String aage) {
+		this.aage = aage;
+	}
+
+	public String getAimage() {
+		return aimage;
+	}
+
+	public void setAimage(String aimage) {
+		this.aimage = aimage;
+	}
+
+	public String getAgender() {
+		return agender;
+	}
+
+	public void setAgender(String agender) {
+		this.agender = agender;
+	}
+
+	public String getAinsertdate() {
+		return ainsertdate;
+	}
+
+	public void setAinsertdate(String ainsertdate) {
+		this.ainsertdate = ainsertdate;
+	}
+
+	public String getAcaresite() {
+		return acaresite;
+	}
+
+	public void setAcaresite(String acaresite) {
+		this.acaresite = acaresite;
+	}
+
+	public String getAcaretel() {
+		return acaretel;
+	}
+
+	public void setAcaretel(String acaretel) {
+		this.acaretel = acaretel;
+	}
+
+	public String getAspecial() {
+		return aspecial;
+	}
+
+	public void setAspecial(String aspecial) {
+		this.aspecial = aspecial;
+	}
+
+	public String getAcolor() {
+		return acolor;
+	}
+
+	public void setAcolor(String acolor) {
+		this.acolor = acolor;
+	}
+
+	public String getMnum() {
+		return mnum;
+	}
+
+	public void setMnum(String mnum) {
+		this.mnum = mnum;
+	}
+
+	public String getAnum() {
+		return anum;
+	}
+
+	public void setAnum(String anum) {
+		this.anum = anum;
+	}
+
+	public String getAname() {
+		return aname;
+	}
+
+	public void setAname(String aname) {
+		this.aname = aname;
+	}
+
+	public String getAsize() {
+		return asize;
+	}
+
+	public void setAsize(String asize) {
+		this.asize = asize;
+	}
+
+	public String getAupdatedate() {
+		return aupdatedate;
+	}
+
+	public void setAupdatedate(String aupdatedate) {
+		this.aupdatedate = aupdatedate;
+	}
+
+	public String getAdeleteyn() {
+		return adeleteyn;
+	}
+
+	public void setAdeleteyn(String adeleteyn) {
+		this.adeleteyn = adeleteyn;
+	}
+
+	public String getApw() {
+		return apw;
+	}
+
+	public void setApw(String apw) {
+		this.apw = apw;
+	}
+
+	
+}
+

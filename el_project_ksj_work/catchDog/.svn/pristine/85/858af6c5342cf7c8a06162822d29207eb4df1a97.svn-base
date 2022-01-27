@@ -1,0 +1,14 @@
+package com.catchdog.notice.dao;
+
+import java.util.ArrayList;
+
+import com.catchdog.notice.vo.NoticeVO;
+
+public interface NoticeDAO {
+
+	public ArrayList<NoticeVO>noticeSelectAll();
+	public ArrayList<NoticeVO>noticeSelect(NoticeVO cvo);
+	public int noticeInsert(NoticeVO cvo);
+	public int noticeUpdate(NoticeVO cvo);
+	public int noticeDelete(NoticeVO cvo);
+}

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans    xmlns="http://www.springframework.org/schema/beans"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:c="http://www.springframework.org/schema/c"
+      xmlns:context="http://www.springframework.org/schema/context"
+      xmlns:lang="http://www.springframework.org/schema/lang"
+      xmlns:mvc="http://www.springframework.org/schema/mvc"
+      xmlns:p="http://www.springframework.org/schema/p"
+      xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                     http://www.springframework.org/schema/beans/spring-beans.xsd
+                     http://www.springframework.org/schema/context 
+                     http://www.springframework.org/schema/context/spring-context.xsd
+                     http://www.springframework.org/schema/lang 
+                     http://www.springframework.org/schema/lang/spring-lang.xsd
+                     http://www.springframework.org/schema/mvc 
+                     http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+	<!-- Handlermapping = dispatherservlet(front controller)에서 콘트롤러를 찾아주는 역할  -->
+	<mvc:annotation-driven></mvc:annotation-driven>
+	<!-- context = 자원을 찾아가는 기능을 가지고 있는 컴포넌트이다.
+		 base-package 속성에 찾아갈 패키지명을 적는다. 
+		 = a.b.c.com패키지를 찾아가서 그 하위 패키지에 있는 자원을 찾아라 
+		 자원을 찾을 때는 어노테이션을 사용한다. @Component 컴포넌트 클래스 / @Controller 컨트롤러 클래스 / @Service 서비스 클래스 / @Repository 레퍼지토리 클래스(DAO,Mapper) 
+		 위에 있는 컴포넌트를 찾아서 Bean을 인스턴스 된다.(클래스를 메모리에 올린다)
+		 bean = component
+		 ant 카디널리티
+		 ** : 전부 다 찾아오기
+		 *  : 0개 또는 그 이상 글자 매칭
+		 ?  : 한글자만 매칭 
+		 / or \ : /** 또는 \** : 해당 세퍼레이터 밑으로 찾기 세퍼레이터?...
+	 -->
+	<context:component-scan base-package="a.b.c.com.**" />
+	<!-- 뷰 분석 : 뷰 리졸빙 : jsp파일을 찾는 행위   이 행위들을 하는 주체는 디스패쳐 서블릿이다. -->
+	<bean class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView"></property>
+		<!-- jsp를 모아둘 디렉토리 설정하기 prefix = 접두어라는 뜻  항상 WEB-INF 폴더 하위에 두어야한다.
+			view 파일을 WEB-INF 하위에 두는 이유가 1.보안 2.VO클래스를 사용하기 쉽게 하기 위해서 사용한다. 
+		-->
+		<property name="prefix" value="/WEB-INF/view/"/>
+		<!-- 확장자를 jsp로 하겠다  suffix = 접미어란뜻 -->
+		<property name="suffix" value=".jsp"/>
+	</bean>
+</beans>

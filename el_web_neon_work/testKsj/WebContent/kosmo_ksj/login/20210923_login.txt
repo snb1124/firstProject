@@ -1,0 +1,14 @@
+로그인 Modle2+Web MVC패턴
+=================================
+
+데이터소스
+
+데이터 베이스 : Oracle 11g 2 Release
+jdbc : ojdbc6.jar : Context/WebContent/WEB-INF/lib/ojdbc6.jar 
+sid : orclKOSMO00
+account : test02 / 1234
+url : jdbc:oracle:thin:@localhost:1521:orclKOSMO00
+jdbc driver : oracle.jdbc.driver.OracleDriver
+
+SID찾는 쿼리문 콘솔창에서 SQLPLUS열고 입력
+SEELCT NAME, DB_UNIQUE_NAME FROM V$DATABASE

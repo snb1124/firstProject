@@ -1,0 +1,47 @@
+package com.catchdog.mypage.controller;
+
+import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.catchdog.member.vo.MemberVO;
+import com.catchdog.mypage.service.MypageService;
+
+
+@Controller
+public class MypageController {
+	
+	Logger logger = Logger.getLogger(MypageController.class);
+	private MypageService mypageService;
+	
+	//생성자 오토와이어드
+		@Autowired(required=false)
+		public MypageController(MypageService mypageService) {
+			this.mypageService = mypageService;
+		}
+		
+	//로그인 입력폼
+	@GetMapping("mypageForm")
+	public String mypageForm() {
+		logger.info("mypageController mypageForm() 함수 진입 >>> : ");
+	
+		return "mypage/mypageForm";
+	}
+	
+	@PostMapping("mypagememForm")
+	@ResponseBody // 안쓰면 msg 값을 jsp페이지를 찾음
+	public String mypagememForm(Model model, MemberVO mvo) {
+		logger.info("mypageController mypagememForm() 함수 진입 >>> : ");
+
+		
+		logger.info("mypageController mypagememForm mvo.getMnum() >>> : " + mvo.getMnum());
+		model.addAttribute("mnum", mvo.getMnum());
+		
+		return "member/memUpdate";
+	}
+	
+}

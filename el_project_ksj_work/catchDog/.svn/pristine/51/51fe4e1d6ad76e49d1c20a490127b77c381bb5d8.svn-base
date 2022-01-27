@@ -1,0 +1,56 @@
+package com.catchdog.notice.service;
+
+import java.util.ArrayList;
+
+import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.catchdog.notice.dao.NoticeDAO;
+import com.catchdog.notice.vo.NoticeVO;
+
+@Service
+@Transactional
+public class NoticeServiceImpl implements NoticeService {
+	Logger logger = Logger.getLogger(NoticeServiceImpl.class);
+	private NoticeDAO noticeDAO;
+	
+	@Autowired(required=false)
+	public NoticeServiceImpl(NoticeDAO noticeDAO) {
+		this.noticeDAO = noticeDAO;
+	}
+	
+	//강사님꺼에는 Lis<NoticeVO>
+	@Override
+	public ArrayList<NoticeVO> noticeSelectAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ArrayList<NoticeVO> noticeSelect(NoticeVO cvo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	@Override
+	public int noticeInsert(NoticeVO cvo) {
+		// TODO Auto-generated method stub
+		logger.info("NoticeServiceImpl.noticeInsert() >>>");
+		return noticeDAO.noticeInsert(cvo);
+	}
+
+	@Override
+	public int noticeUpdate(NoticeVO cvo) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int noticeDelete(NoticeVO cvo) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

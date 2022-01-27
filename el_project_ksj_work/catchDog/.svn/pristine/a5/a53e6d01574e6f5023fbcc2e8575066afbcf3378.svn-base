@@ -1,0 +1,24 @@
+package com.catchdog.login.controller;
+
+import org.apache.log4j.Logger;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class LoginController {
+
+	Logger logger = Logger.getLogger(LoginController.class);
+	
+	//생성자 오토와이어드
+	
+	//로그인 입력폼
+	@GetMapping("loginForm")
+	public String loginForm() {
+		logger.info("LoginController loginForm() 함수 진입 >>> : ");
+		
+		return "login/LoginForm";
+	}
+	
+	
+	
+}

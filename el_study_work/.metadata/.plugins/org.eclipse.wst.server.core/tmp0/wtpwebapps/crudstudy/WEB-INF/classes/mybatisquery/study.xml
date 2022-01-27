@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+					"http:mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="a.b.c.com.study.dao.studyDAO">
+	<insert id="studyInsert" parameterType="studyVO">
+		INSERT INTO STUDY(
+							SID    <!-- 1 -->
+						   ,SPW	  <!-- 2 -->	
+						   ,SNAME
+						   ,INSERTDATE
+						   ,UPDATEDATE
+						   ,DELETEYN
+		)
+			VALUES(
+					#{sid, jdbcType=VARCHAR}
+					,#{spw, jdbcType=VARCHAR}
+					,#{sname, jdbcType=VARCHAR}
+					,SYSDATE
+					,SYSDATE
+					,'Y'
+			)	
+	</insert>
+	
+
+</mapper>				
