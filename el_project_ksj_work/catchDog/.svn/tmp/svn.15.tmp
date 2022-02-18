@@ -1,0 +1,14 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>CatchDog</title>
+
+</head>
+<body>
+<jsp:include page="/include/header.jsp" flush="true"></jsp:include>
+
+</body>
+</html>

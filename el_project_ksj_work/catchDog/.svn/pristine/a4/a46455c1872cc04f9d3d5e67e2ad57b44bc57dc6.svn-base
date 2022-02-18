@@ -1,0 +1,82 @@
+package com.catchdog.common.dao;
+
+import org.apache.log4j.Logger;
+import org.mybatis.spring.SqlSessionTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.catchdog.disadoption.vo.DisadoptionVO;
+import com.catchdog.disappearance.vo.DisappearanceVO;
+import com.catchdog.goods.vo.GoodsVO;
+import com.catchdog.member.vo.MemberVO;
+import com.catchdog.notice.vo.NoticeVO;
+import com.catchdog.review.vo.ReviewVO;
+
+@Repository
+public class ChabunDAOImpl implements ChabunDAO {
+	private Logger logger = Logger.getLogger(ChabunDAOImpl.class);
+	
+	@Autowired(required=false)
+	private SqlSessionTemplate sqlSession;
+	//ex)
+	//@Override
+	//public CatchDogNoticeVO getNoticeChabun(){
+	//} logger.info("공지사항 채번 다오 진입");
+	//return sqlSession.selectOne(getNoticeChabun);
+	//}
+
+	@Override
+	public GoodsVO getGoodsChabun() {
+		logger.info("굿즈 채번 다오 진입");
+		return sqlSession.selectOne("getGoodsChabun");
+	}
+
+	@Override
+	public GoodsVO getGpdChabun() {
+		logger.info("굿즈 상품번호 채번 다오 진입");
+		return sqlSession.selectOne("getGpdChabun");
+	}
+
+	@Override
+	public MemberVO getMemChabun() {
+		// TODO Auto-generated method stub
+		logger.info("회원가입 채번 다오 진입");
+		
+		return sqlSession.selectOne("getMemChabun");
+	}
+
+	@Override
+	public DisadoptionVO getDisadoptionChabun() {
+		// TODO Auto-generated method stub
+		logger.info("ChabunDAOImpl getDisadoptionChabun() >>> : ");
+		
+		return sqlSession.selectOne("getDisadoptionChabun");
+	}
+
+	@Override
+	public ReviewVO getReviewChabun() {
+		// TODO Auto-generated method stub
+		return sqlSession.selectOne("getReviewChabun");
+	}
+	
+	@Override
+	   public NoticeVO getNoticeChabun() {
+	      // TODO Auto-generated method stub
+	      logger.info("ChabunDAOImpl.getNoticeChabun(공지사항 게시판 글 채번)");
+	      return sqlSession.selectOne("getNoticeChabun");
+	}
+	
+//
+//	@Override
+//	public AdoptionVO getAdoptionChabun() {
+//		// TODO Auto-generated method stub
+//		return sqlSession.selectOne("getAdoptionChabun");;
+//	}
+//
+	@Override
+	public DisappearanceVO getDisappearanceChabun() {
+		// TODO Auto-generated method stub
+		return sqlSession.selectOne("getDisappearanceChabun");
+	}
+	
+}

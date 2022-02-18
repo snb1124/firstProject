@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+                 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace ="com.catchdog.notice.dao.NoticeDAO">
+
+<insert id="noticeInsert" parameterType="noticeVO">
+	INSERT INTO CATCHDOG_NOTICE( NNUM				<!-- COLUMN1 -->
+								,NADMIN				<!-- COLUMN2 -->
+								,NTITLE				<!-- COLUMN3 -->
+								,NCONTENT			<!-- COLUMN4 -->
+								,NIMAGE				<!-- COLUMN5 -->
+								,NDELETEYN			<!-- COLUMN6 -->
+								,NINSERTDATE		<!-- COLUMN7 -->
+								,NUPDATEDATE)		<!-- COLUMN8 -->
+						 VALUES( 
+						 		 #{nnum, jdbcType=VARCHAR}			<!-- placeholder 1 -->
+						 		 ,#{nadmin,jdbcType=VARCHAR}		<!-- placeholder 2 -->
+						 		 ,#{ntitle, jdbcType=VARCHAR}		<!-- placeholder 3 -->
+						 		 ,#{ncontent, jdbcType=VARCHAR}		<!-- placeholder 4 -->
+						 		 ,#{nimage, jdbcType=VARCHAR}		<!-- placeholder 5 -->
+						 		 ,'Y'								<!-- placeholder 6 -->
+						 		 ,SYSDATE							<!-- placeholder 7 -->
+						 		 ,SYSDATE)							<!-- placeholder 8 -->
+</insert> 
+<select id="noticeSelectAll" parameterType="noticeVO" resultType="noticeVO">
+	SELECT * FROM CATCHDOG_NOTICE WHERE NDELETEYN='Y' 
+	ORDER BY 1 ASC
+</select>
+
+<select id="noticeSelect" parameterType="noticeVO" resultType = "noticeVO">
+	SELECT A.NNUM			NNUM
+		  ,A.NADMIN			NADMIN
+		  ,A.NTITLE			NTITLE
+		  ,A.NCONTENT		NCONTENT
+		  ,A.NIMAGE			NIMAGE
+		  ,A.NDELETEYN		NDELETEYN
+		  ,TO_CHAR(A.NINSERTDATE, 'YYYY-MM-DD') NINSERTDATE 
+		  ,TO_CHAR(A.NUPDATEDATE, 'YYYY-MM-DD') NUPDATEDATE
+	FROM CATCHDOG_NOTICE A
+	WHERE A.NDELETEYN ='Y'
+	AND A.NNUM = #{nnum, jdbcType = VARCHAR}		  
+</select>
+<update id="noticeUpdate" parameterType="noticeVO" >
+	UPDATE CATCHDOG_NOTICE SET 
+								NCONTENT=#{ncontent,jdbcType=VARCHAR}
+								,NTITLE=#{ntitle, jdbcType=VARCHAR}
+								,NUPDATEDATE =SYSDATE
+	WHERE NDELETEYN ='Y' AND NNUM= #{nnum, jdbcType=VARCHAR}
+
+</update>
+
+<update id="noticeDelete" parameterType="noticeVO">
+	UPDATE CATCHDOG_NOTICE SET
+								 NDELETEYN='N' 
+							   , NUPDATEDATE=SYSDATE
+	WHERE NDELETEYN='Y' AND NNUM=#{nnum, jdbcType=VARCHAR}
+</update>
+
+<select id="noticeSelectPaging" parameterType="noticeVO" resultType="noticeVO">
+	SELECT * FROM (
+					SELECT A.NNUM									NNUM
+						  ,A.NADMIN									NADMIN
+						  ,A.NTITLE									NTITLE
+						  ,A.NCONTENT								NCONTENT
+						  ,A.NIMAGE									NIMAGE
+						  ,A.NDELETEYN								NDELETEYN
+						  ,TO_CHAR(A.NINSERTDATE, 'YYYY-MM-DD') 	NINSERTDATE
+						  ,TO_CHAR(A.NUPDATEDATE, 'YYYY-MM-DD') 	NUPDATEDATE
+						  
+						  <!-- 페이지 사이즈 :PAGESIZE -->
+						  ,CEIL(ROW_NUMBER() OVER(ORDER BY A.NNUM)/#{pageSize, jdbcType=VARCHAR}) pageSize
+						  ,COUNT(A.NNUM) OVER() AS totalCount
+					FROM CATCHDOG_NOTICE A
+					WHERE A.NDELETEYN = 'Y'
+					ORDER BY 1 ASC
+					<!-- 현재 페이지:cur Page -->	
+	) WHERE pageSize= #{curPage, jdbcType=VARCHAR}
+</select>
+
+</mapper>

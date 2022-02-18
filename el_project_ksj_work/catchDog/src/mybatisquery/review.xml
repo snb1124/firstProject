@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+						"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.catchdog.review.dao.ReviewDAO">
+
+<resultMap type="com.catchdog.review.vo.ReviewVO" id="rvo">
+	<result property="rbnum"			column="RBNUM" />
+	<result property="rbsubject"			column="RBSUBJECT" />
+	<result property="rbwriter"			column="RBWRITER" />
+	<result property="rbinsertdate"			column="RBINSERTDATE" />
+	<result property="rbcontent"			column="RBCONTENT" />
+	<result property="rbimage"			column="RBIMAGE" />
+	<result property="rbupdatedate"			column="RBUPDATEDATE" />
+	<result property="rbdeleteyn"			column="RBDELETEYN" />	
+</resultMap>
+
+<insert id="reviewInsert" parameterType="reviewVO">	
+		INSERT INTO CATCHDOG_REVIEW ( 	RBNUM,
+										RBSUBJECT,
+										RBWRITER,
+										RBINSERTDATE,
+										RBCONTENT,
+										RBIMAGE,
+										RBUPDATEDATE,
+										RBDELETEYN)
+								
+					VALUES(		#{rbnum, jdbcType=VARCHAR},
+								#{rbsubject, jdbcType=VARCHAR},
+								#{rbwriter, jdbcType=VARCHAR},
+								SYSDATE,
+								#{rbcontent, jdbcType=VARCHAR},
+								#{rbimage, jdbcType=VARCHAR},
+								SYSDATE,
+								'Y')
+</insert>
+
+<select id="reviewSelectPaging" parameterType="reviewVO" resultType="reviewVO">
+		SELECT * FROM (
+			SELECT A.RBNUM				RBNUM
+				  ,A.RBSUBJECT			RBSUBJECT
+				  ,A.RBWRITER			RBWRITER
+				  ,A.RBCONTENT			RBCONTENT
+				  ,A.RBIMAGE			RBIMAGE
+				  ,A.RBDELETEYN			RBDELETEYN
+				  ,TO_CHAR(A.RBINSERTDATE, 'YYYY-MM-DD') RBINSERTDATE
+				  ,TO_CHAR(A.RBUPDATEDATE, 'YYYY-MM-DD') RBUPDATEDATE
+				  ,CEIL(ROW_NUMBER() OVER(ORDER BY A.RBNUM)/ #{pageSize, jdbcType=VARCHAR}) PAGESIZE
+				  ,COUNT(A.RBNUM) OVER() AS TOTALCOUNT
+			FROM	CATCHDOG_REVIEW A 
+			WHERE 	A.RBDELETEYN= 'Y'
+			ORDER BY 1 DESC
+			<!-- ?: 현재 페이지 : CURPAGE -->
+		) WHERE pageSize = #{curPage, jdbcType=VARCHAR}
+</select>
+
+<select id="reviewSelectAll" parameterType="reviewVO" resultType="reviewVO">
+			SELECT A.RBNUM				RBNUM
+				  ,A.RBSUBJECT			RBSUBJECT
+				  ,A.RBWRITER			RBWRITER
+				  ,A.RBCONTENT			RBCONTENT
+				  ,A.RBIMAGE			RBIMAGE
+				  ,A.RBDELETEYN			RBDELETEYN
+				  ,TO_CHAR(A.RBINSERTDATE, 'YYYY-MM-DD') RBINSERTDATE
+				  ,TO_CHAR(A.RBUPDATEDATE, 'YYYY-MM-DD') RBUPDATEDATE
+			FROM	CATCHDOG_REVIEW A
+			WHERE 	A.RBDELETEYN= 'Y'	
+		<if test = "startdate !=null and startdate !='' and enddate !=null and enddate !=''">
+		<![CDATA[AND TO_CHAR(A.RBINSERTDATE, 'YYYY-MM-DD') >= TO_CHAR(TO_DATE(#{startdate, jdbcType=VARCHAR}),
+		'YYYY-MM-DD')]]>
+		<![CDATA[AND TO_CHAR(A.RBINSERTDATE, 'YYYY-MM-DD') <= TO_CHAR(TO_DATE(#{enddate, jdbcType=VARCHAR}),
+		'YYYY-MM-DD')]]>	
+		</if>
+		
+		<if test = "keyfilter =='key1'">
+			<![CDATA[AND A.RBSUBJECT LIKE '%' || #{keyword, jdbcType=VARCHAR} || '%']]>
+		</if>
+		<if test="keyfilter == 'key2'">
+			<![CDATA[AND A.RBCONTENT LIKE '%' || #{keyword, jdbcType=VARCHAR} || '%']]>
+		</if>	
+		<if test="keyfilter =='key3'">
+			<![CDATA[AND A.RBSUBJECT LIKE '%' || #{keyword, jdbcType=VARCHAR} || '%']]>
+			<![CDATA[OR A.RBCONTENT LIKE '%' || #{keyword, jdbcType=VARCHAR} || '%']]>
+		</if>
+		<if test ="keyfilter=='key4'">
+			<![CDATA[AND A.RBWRITERT LIKE '%' || #{keyword, jdbcType=VARCHAR} || '%']]>
+		</if>
+		<if test ="keyfilter== 'key5'">
+			<![CDATA[AND A.RBNUM LIKE '%' || #{keyword, jdbcType=VARCHAR} || '%']]>
+		</if>
+		ORDER BY 1 DESC
+</select>
+
+<select id = "reviewSelect" parameterType = "reviewVO" resultType = "reviewVO">
+	SELECT 		   A.RBNUM				RBNUM
+				  ,A.RBSUBJECT			RBSUBJECT
+				  ,A.RBWRITER			RBWRITER
+				  ,A.RBCONTENT			RBCONTENT
+				  ,A.RBIMAGE			RBIMAGE
+				  ,A.RBDELETEYN			RBDELETEYN
+				  ,TO_CHAR(A.RBINSERTDATE, 'YYYY-MM-DD') RBINSERTDATE
+				  ,TO_CHAR(A.RBUPDATEDATE, 'YYYY-MM-DD') RBUPDATEDATE
+			FROM	CATCHDOG_REVIEW A
+			WHERE 	A.RBDELETEYN= 'Y'	
+			AND 	A.RBNUM = #{rbnum, jdbcType=VARCHAR}
+</select>
+
+<update id="reviewUpdate" parameterType="reviewVO">
+	UPDATE CATCHDOG_REVIEW SET RBCONTENT=#{rbcontent, jdbcType=VARCHAR}, RBUPDATEDATE =SYSDATE
+	WHERE RBDELETEYN = 'Y' AND RBNUM = #{rbnum, jdbcType=VARCHAR}
+</update>
+
+<update id ="reviewDelete" parameterType="reviewVO">
+	UPDATE CATCHDOG_REVIEW SET RBDELETEYN ='N', RBUPDATEDATE = SYSDATE
+	WHERE RBDELETEYN = 'Y' AND RBNUM = #{rbnum, jdbcType=VARCHAR}
+</update>
+
+
+</mapper>

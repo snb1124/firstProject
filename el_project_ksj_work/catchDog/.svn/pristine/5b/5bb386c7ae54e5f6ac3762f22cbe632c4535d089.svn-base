@@ -1,0 +1,57 @@
+package com.catchdog.common;
+
+public class CommonUtils {
+	
+	//회원가입
+	public static final String MEMBER_PATH = "C:\\00.KOSMO93\\30.Web\\el_spring_catdog_work\\.metadata\\.plugins\\org.eclipse.wst.server.core\\tmp0\\wtpwebapps\\catchDog\\image\\memberimg";
+	public static final int MEMBER_SIZE = 2*1024*1024;
+	public static final String MEMBER_ENCODE = "UTF-8";
+	
+	//입양
+	public static final String ADOPTION_PATH = "\\catchDog\\image\\goodsimg";
+	public static final int ADOPTION_SIZE = 2*1024*1024;;
+	public static final String ADOPTION_ENCODE ="UTF-8";
+
+	//입양후기
+	public static final String ADOPTION_REVIEW_PATH = "C:\\00.KOSMO93\\30.Web\\el_final_project_work\\.metadata\\.plugins\\org.eclipse.wst.server.core\\tmp0\\wtpwebapps\\catchDog\\image\\reviewimg";
+	public static final int ADOPTION_REVIEW_SIZE = 2*1024*1024;;
+	public static final String ADOPTION_REVIEW_ENCODE ="UTF-8";
+
+	//파양
+	public static final String DISADOPTION_PATH = "\\catchDog\\image\\disadoptionimg";
+	public static final int DISADOPTION_SIZE = 2*1024*1024;;
+	public static final String DISADOPTION_ENCODE ="UTF-8";
+	
+	//실종
+	public static final String DISAPPEARANCE_PATH = "\\catchDog\\image\\disappearanceimg";
+	public static final int DISAPPEARANCE_SIZE = 2*1024*1024;;
+	public static final String DISAPPEARANCE_ENCODE ="UTF-8";
+	
+	//굿즈
+	public static final String GOODS_PATH = "C:\\00.KOSMO93\\30.WEB\\el_project_ksj_work\\.metadata\\.plugins\\org.eclipse.wst.server.core\\tmp0\\wtpwebapps\\catchDog\\image\\goodsimg";
+	public static final int GOODS_SIZE = 2*1024*1024;;
+	public static final String GOODS_ENCODE ="UTF-8";
+	
+	//공지사항
+	public static final String NOTICE_PATH = "\\catchDog\\image\\notice";
+	public static final int NOTICE_SIZE = 2*1024*1024;;
+	public static final String NOTICE_ENCODE ="UTF-8";
+	
+	//페이징은 이해도 가 내가 작성 어떻게 해야할지 헷갈림
+	public static final int BOARD_PAGE_SIZE = 3;
+	public static final int BOARD_GROUP_SIZE = 3;
+	public static final int BOARD_CUR_PAGE = 1;
+	public static final int BOARD_TOTAL_COUNT = 0;
+	
+	public static final int GOODS_PAGE_SIZE = 10;
+	public static final int GOODS_GROUP_SIZE = 9;
+	public static final int GOODS_CUR_PAGE = 1;
+	public static final int GOODS_TOTAL_COUNT = 0;
+	
+	
+	
+	
+	
+	
+	
+}

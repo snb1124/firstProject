@@ -1,0 +1,38 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="css/index.css">
+<link rel="stylesheet" type="text/css" href="css/default.css"> 
+<link rel="stylesheet" type="text/css" href="css/sub.css"> 
+
+</head>
+<body>
+<header class ="header">
+	<h1>
+    	<a href="index.jsp"><img src="image/CatchDog_1.png" alt="로고"></a>
+    	<span class="hide">CatchDOG</span>
+    </h1>
+    <nav class="lnb clear">
+        <ul>
+        <li><a href="adoptionSelectAll.cd">입양</a></li>   
+        <li><a href="reviewForm.cd">입양후기</a></li>         
+        <li><a href="disadoptionBoardSelectForm.cd">파양</a></li>
+        <li><a href="#menu_3">지역동물보호소 찾기</a></li>
+		<li><a href="#menu_4">굿즈 </a></li>
+        <li><a href="noticeForm.cd">공지사항</a></li>
+        </ul>
+    </nav>
+    <nav class="spot">
+    	<ul>
+    		<li><a href="loginForm.cd">로그인</a></li>
+    		<li><a href="memForm.cd">회원가입</a></li>
+    		<li><a href="#a"><img src="image/layout/ico_cart.jpg" alt="카트">굿즈</a></li>
+    	</ul>
+    </nav>
+</header>
+</body>
+</html>

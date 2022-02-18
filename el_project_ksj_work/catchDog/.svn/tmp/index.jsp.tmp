@@ -1,0 +1,28 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<<<<<<< .mine
+<head>
+<meta charset="EUC-KR">
+<title>CatchDog</title>
+
+</head>
+<body>
+<jsp:include page="/include/header.jsp" flush="true"></jsp:include>
+</body>
+||||||| .r87
+=======
+	<head>
+		<meta charset="UTF-8">
+		<title>CatchDog</title>
+	</head>
+	<body>
+		<jsp:include page="/include/header.jsp" flush="true"></jsp:include>
+		<script>
+			location.href='/mainpageData.cd';
+		</script>
+	</body>
+>>>>>>> .r113
+</html>
+

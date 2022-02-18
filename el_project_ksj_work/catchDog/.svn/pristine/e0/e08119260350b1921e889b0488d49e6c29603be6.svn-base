@@ -1,0 +1,48 @@
+package com.catchdog.notice.dao;
+
+import java.util.ArrayList;
+
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.catchdog.notice.vo.NoticeVO;
+
+@Repository
+public class NoticeDAOImpl implements NoticeDAO {
+
+	@Autowired(required=false)
+	private SqlSession sqlSession;
+	
+	@Override
+	public ArrayList<NoticeVO> noticeSelectAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ArrayList<NoticeVO> noticeSelect(NoticeVO cvo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int noticeInsert(NoticeVO cvo) {
+		// TODO Auto-generated method stub
+		return (Integer)sqlSession.insert("noticeInsert",cvo);
+				
+	}
+
+	@Override
+	public int noticeUpdate(NoticeVO cvo) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int noticeDelete(NoticeVO cvo) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

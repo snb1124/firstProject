@@ -1,0 +1,50 @@
+package com.catchdog.kakao.vo;
+
+
+
+public class KakaoVO {
+	
+	private String kname;
+	private String total;
+	private String quantity;
+	private String tax;
+	
+	public KakaoVO() {
+		
+	}
+	
+	public KakaoVO(String kname, String total, String quantity, String tax) {
+
+		this.kname = kname;
+		this.total = total;
+		this.quantity = quantity;
+		this.tax = tax;
+	}
+	
+	public String getKname() {
+		return kname;
+	}
+	public void setKname(String kname) {
+		this.kname = kname;
+	}
+	public String getTotal() {
+		return total;
+	}
+	public void setTotal(String total) {
+		this.total = total;
+	}
+
+	public String getQuantity() {
+		return quantity;
+	}
+	public void setQuantity(String quantity) {
+		this.quantity = quantity;
+	}
+	public String getTax() {
+		return tax;
+	}
+	public void setTax(String tax) {
+		this.tax = tax;
+	}
+
+}

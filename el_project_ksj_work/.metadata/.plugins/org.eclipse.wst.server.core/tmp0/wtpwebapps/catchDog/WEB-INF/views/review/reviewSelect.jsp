@@ -1,0 +1,120 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+<%@ page import="com.catchdog.review.vo.ReviewVO" %>
+<%@ page import="java.util.List"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>REVIEW SELECT</title>
+<style type="text/css">
+	div{
+		margin: 50px 0px 0px 100px;
+	}
+	.mem{ text-align: center;}
+</style>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript">
+<% request.setCharacterEncoding("UTF-8"); %>
+<%
+ 	Object obj = request.getAttribute("listR");
+	List<ReviewVO> list = (List)obj;
+	ReviewVO rvo = null;
+	if (list.size() == 1) {
+		rvo = list.get(0);
+	};
+
+%>	
+	
+	
+	//U
+	 $(document).ready(function(){
+		 
+		 $(document).on("click", "#U", function(){
+			 $("#reviewUpdate").attr({ "method":"POST"
+										   ,"action": "reviewUpdate.cd"	 
+			 }).submit();	
+			 
+		 });
+	
+			 
+	//D
+		 $(document).on("click","#D", function(){
+			 $("#reviewUpdate").attr({"method": "POST"
+									,"action" : "reviewDelete.cd"	 
+			 }).submit();	
+
+		 }); 
+	
+	 });
+</script>
+</head>
+<body>
+BOARD SELECT
+<hr>
+
+<div>
+<form name="reviewUpdate" id="reviewUpdate">
+<table border=1>
+<tr>
+<td colspan="2" align="center">입양 후기 수정하기 </td>
+</tr>
+<tr>
+	<tr>
+		<td align="center">글번호	</td>
+		<td><input type="text" name="rbnum" id="rbnum" size="20" value="<%=rvo.getRbnum() %>" readonly></td>
+	</tr>
+	<tr>
+		<td align="center">제목</td>
+		<td><input type="text" name="rbsubject" id="rbsubject" size="53" value="<%=rvo.getRbsubject() %>" readonly></td>
+	</tr>
+	<tr>
+		<td align="center">작성자</td>
+		<td><input type="text" name="rbwriter" id="rbwriter" size="53" value="<%=rvo.getRbwriter() %>" readonly></td>
+	</tr>
+		<tr>
+		<td align="center">작성일</td>
+		<td><input type="text" name="rbinsertdate" id="rbinsertdate" size="53" value="<%=rvo.getRbinsertdate() %>" readonly></td>
+	</tr>
+	<tr>
+		<td align="center">글내용</td>
+		<td>
+		<textarea name="rbcontent" id="rbcontent" cols="50" rows="10">"<%=rvo.getRbcontent() %>"</textarea>
+		</td>
+		</tr>
+	<tr>
+		<td align="center">사진</td>
+		<td>
+		<input type="file" name="rbimage" id="rbimage" value="<%=rvo.getRbimage() %>" readonly>
+	</td>
+	</tr>
+	<tr>
+		<td colspan="2" align="right">
+		<input type="button" value="글쓰기" id="rbbtn">
+	</td>
+	</tr>
+<tr>
+<td colspan="2" align="right">
+<button type="button" id="U">수정</button>
+<button type="button" id="D">삭제</button>
+</td>
+</tr>
+</table>
+</form>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

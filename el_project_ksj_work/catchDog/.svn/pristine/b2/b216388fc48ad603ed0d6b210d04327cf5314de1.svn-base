@@ -1,0 +1,81 @@
+package com.catchdog.goods.controller;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.catchdog.common.ChabunUtil;
+import com.catchdog.common.CommonUtils;
+import com.catchdog.common.FileUploadUtil;
+import com.catchdog.common.service.ChabunService;
+import com.catchdog.goods.service.GoodsService;
+import com.catchdog.goods.vo.GoodsVO;
+
+public class GoodsController {
+	Logger logger = Logger.getLogger(GoodsController.class);
+		
+	
+	private GoodsService goodsService;
+	private ChabunService chabunService;
+	
+	@Autowired(required=false)
+	public GoodsController(GoodsService goodsService, ChabunService chabunService) {
+		this.goodsService = goodsService;
+		this.chabunService = chabunService;
+	}
+	
+	@RequestMapping(value="goodsForm", method=RequestMethod.GET)
+	public String goodsForm() {
+		logger.info("컨트롤러 굿즈 폼 진입");
+		return "views/goods/goodsForm";
+	}
+	
+	
+	@RequestMapping(value="goodsInsert", method=RequestMethod.POST)
+	public String goodsInsert(HttpServletRequest req) {
+		
+		String gnum =ChabunUtil.getGoodsChabun("D", chabunService.getGoodsChabun().getGnum());
+		String gpdnum = ChabunUtil.getGpdChabun("D", chabunService.getGpdChabun().getGpdnum());
+		logger.info("인서트 채번 gnum-->>>"+gnum);
+		logger.info("인서트 채번 gpdnum-->>>"+gpdnum);
+		
+		FileUploadUtil fu = new FileUploadUtil(CommonUtils.GOODS_PATH
+                ,CommonUtils.GOODS_SIZE
+                ,CommonUtils.GOODS_ENCODE);
+		GoodsVO gvo = null;
+		gvo = new GoodsVO();
+		
+		gvo.setGnum(gnum);
+		gvo.setGpdnum(gpdnum);
+		gvo.setGname(fu.getParameter("gname"));
+		gvo.setGdday(fu.getParameter("gdday"));
+		gvo.setGmoney(fu.getParameter("gmoney"));
+		gvo.setGtarget(fu.getParameter("gtarget"));
+		gvo.setGprice(fu.getParameter("gprice"));
+		gvo.setGdetailpage(fu.getParameter("gdetailpage"));
+		
+		logger.info("컨트롤러gvo.setGnum >>> : " + gvo.getGnum());
+		logger.info("컨트롤러gvo.setGpdnum >>> : " + gvo.getGpdnum());
+		logger.info("컨트롤러gvo.setGdday>>> : " + gvo.getGdday());
+		logger.info("컨트롤러gvo.setGmoney >>> : " + gvo.getGmoney());
+		logger.info("컨트롤러gvo.setGtarget >>> : " + gvo.getGtarget());
+		logger.info("컨트롤러gvo.setGprice >>> : " + gvo.getGprice());
+		logger.info("컨트롤러gvo.setGdetailpage >>> : " + gvo.getGdetailpage());
+		
+		int nCnt = goodsService.goodsInsert(gvo);
+		logger.info("컨트롤러 인서트 ncnt---->"+nCnt);
+		req.setAttribute("nCnt", nCnt);
+		
+		if(nCnt>0) {return "views/goods/GoodsInsert";}
+				 
+		return null;
+	}
+	
+	
+	
+	
+	
+}

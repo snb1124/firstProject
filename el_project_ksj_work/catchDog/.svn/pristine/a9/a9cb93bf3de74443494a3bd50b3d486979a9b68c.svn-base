@@ -1,0 +1,58 @@
+package com.catchdog.adoption.controller;
+
+import java.util.List;
+
+import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import com.catchdog.adoption.service.AdoptionService;
+import com.catchdog.adoption.vo.AdoptionPagingVO;
+import com.catchdog.adoption.vo.AdoptionVO;
+
+@Controller
+public class AdoptionController {
+	
+	private Logger logger = Logger.getLogger(AdoptionController.class);
+	
+	private AdoptionService adoptionService;
+	
+	@Autowired(required=false)
+	public AdoptionController(AdoptionService adoptionService) {
+		this.adoptionService = adoptionService;
+	}
+	
+	@GetMapping("adoptionSelectAll")
+	public String adoptionSelectAll(AdoptionVO avo, AdoptionPagingVO apvo, Model model) {
+		
+		logger.info("adoption selectAll >>> : ");
+		
+		List<AdoptionVO> listAll = adoptionService.adoptionSelectAll(avo);
+		
+		logger.info("adoption listAll.size >>> : " + listAll.size());
+		
+		model.addAttribute("listAll", listAll);
+		
+		return "/adoption/adoptionSelectAll";
+	}
+	
+	@PostMapping("adoptionSelect")
+	public String adoptionSelect(AdoptionVO avo, Model model) {
+		
+		logger.info("adoption select >>> : ");
+		logger.info("adoption avo.anum >>> : " + avo.getAnum());
+		
+		List<AdoptionVO> listSel = adoptionService.adoptionSelect(avo);
+		
+		logger.info("adoption listSel size >>> : " + listSel.size());
+		
+		if(listSel.size() > 0) {
+			model.addAttribute("listSel", listSel);
+			return "adoption/adoptionSelect";
+		}
+		else return "/adoption/adoptionSelectAll";
+	}
+}

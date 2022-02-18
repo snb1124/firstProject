@@ -1,0 +1,214 @@
+package com.catchdog.goods.controller;
+
+import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.ui.Model;
+
+
+import com.catchdog.common.ChabunUtil;
+import com.catchdog.common.CommonUtils;
+import com.catchdog.common.FileUploadUtil;
+import com.catchdog.common.service.ChabunService;
+import com.catchdog.goods.service.GoodsService;
+import com.catchdog.goods.vo.GoodsVO;
+
+@Controller
+public class GoodsController {
+	Logger logger = Logger.getLogger(GoodsController.class);
+		
+	
+	private GoodsService goodsService;
+	private ChabunService chabunService;
+	
+	@Autowired(required=false)
+	public GoodsController(GoodsService goodsService, ChabunService chabunService) {
+		this.goodsService = goodsService;
+		this.chabunService = chabunService;
+	}
+	
+	@RequestMapping(value="goodsForm", method=RequestMethod.GET)
+	public String goodsForm() {
+		logger.info("컨트롤러 굿즈 폼 진입");
+		return "goods/goodsForm";
+	}
+	
+	@RequestMapping(value="goodsInsert", method=RequestMethod.POST)
+	public String goodsInsert(HttpServletRequest req) {
+		logger.info("컨트롤러 인서트 진입 ");
+		String gnum =ChabunUtil.getGoodsChabun("D", chabunService.getGoodsChabun().getGnum());
+		String gpdnum = ChabunUtil.getGpdChabun("D", chabunService.getGpdChabun().getGpdnum());
+		logger.info("인서트 채번 gnum-->>>"+gnum);
+		logger.info("인서트 채번 gpdnum-->>>"+gpdnum);
+		
+		FileUploadUtil fu = new FileUploadUtil(CommonUtils.GOODS_PATH
+                ,CommonUtils.GOODS_SIZE
+                ,CommonUtils.GOODS_ENCODE);
+		
+//		boolean bool = fu.imgfileUploadSize(req);
+//		logger.info("보드 인서트 bool ->>>"+bool);
+		// 이미지 파일 원본 사이즈 
+		 boolean bool = fu.imgfileUpload(req);
+		 logger.info("굿즈 컨트롤러  bool ->>>"+bool);
+		
+		GoodsVO gvo = null;
+		gvo = new GoodsVO();
+			
+		//GET으로 받아서 HttpServletRequest사용해서는 넘어감. 
+		//파일 업로드에 문제가 있는듯. 
+		/*
+		gvo.setGnum(gnum);
+		gvo.setGpdnum(gpdnum);
+		gvo.setGname(req.getParameter("gname"));
+		gvo.setGdday(req.getParameter("gdday"));
+		gvo.setGprice(req.getParameter("gprice"));
+		gvo.setGmoney(req.getParameter("gmoney"));
+		gvo.setGtarget(req.getParameter("gtarget"));
+		gvo.setGdetail(req.getParameter("gdetail"));
+		gvo.setGimage(req.getParameter("gimage"));
+		*/
+		
+		logger.info("gname->>"+fu.getParameter("gname"));
+		logger.info("gprice->>"+fu.getParameter("gprice"));
+		logger.info("gtarget->>"+fu.getParameter("gtarget"));
+		logger.info("gimage->>"+fu.getFileName("gimage"));
+		
+		gvo.setGnum(gnum);
+		gvo.setGpdnum(gpdnum);
+		gvo.setGname(fu.getParameter("gname"));
+		gvo.setGdday(fu.getParameter("gdday"));
+		gvo.setGmoney(fu.getParameter("gmoney"));
+		gvo.setGtarget(fu.getParameter("gtarget"));
+		gvo.setGprice(fu.getParameter("gprice"));
+		gvo.setGdetail(fu.getParameter("gdetail"));
+		gvo.setGimage(fu.getFileName("gimage"));
+		
+		logger.info("컨트롤러gvo.getGnum >>> : " + gvo.getGnum());
+		logger.info("컨트롤러gvo.getGpdnum >>> : " + gvo.getGpdnum());
+		logger.info("컨트롤러gvo.getGdday>>> : " + gvo.getGdday());
+		logger.info("컨트롤러gvo.getGmoney >>> : " + gvo.getGmoney());
+		logger.info("컨트롤러gvo.getGtarget >>> : " + gvo.getGtarget());
+		logger.info("컨트롤러gvo.getGprice >>> : " + gvo.getGprice());
+		logger.info("컨트롤러gvo.getGdetail >>> : " + gvo.getGdetail());
+		logger.info("컨트롤러gvo.getGimage()-->"+gvo.getGimage());
+		
+		int nCnt = goodsService.goodsInsert(gvo);
+		logger.info("컨트롤러 인서트 ncnt---->"+nCnt);
+		req.setAttribute("nCnt", nCnt);
+		if(nCnt>0) {return "goods/goodsInsert";}	 
+		else {return "goods/goodsForm";}	
+	}
+	
+	@RequestMapping(value="goodsSelectAllpaging", method=RequestMethod.GET)
+		public String goodsSelectAllpaging(Model model, GoodsVO gvo) {
+		logger.info("셀렉트 올 페이징 진입");
+		
+		int pageSize = CommonUtils.GOODS_PAGE_SIZE;
+		int groupSize = CommonUtils.GOODS_GROUP_SIZE;
+		int curPage = CommonUtils.GOODS_CUR_PAGE;
+		int totalCount = CommonUtils.BOARD_TOTAL_COUNT;
+		
+		if (gvo.getCurPage() !=null){
+			curPage = Integer.parseInt(gvo.getCurPage());
+		}
+		
+		gvo.setPageSize(String.valueOf(pageSize));
+		gvo.setGroupSize(String.valueOf(groupSize));
+		gvo.setCurPage(String.valueOf(curPage));
+		gvo.setTotalCount(String.valueOf(totalCount));
+		
+		logger.info("  컨트롤러 셀렉트올gvo.getPageSize() >>> : " + gvo.getPageSize());
+		logger.info("  컨트롤러 셀렉트올gvo.getGroupSize() >>> : " + gvo.getGroupSize());
+		logger.info("  컨트롤러 셀렉트올gvo.getCurPage() >>> : " + gvo.getCurPage());
+		logger.info("  컨트롤러 셀렉트올gvo.getTotalCount() >>> : " + gvo.getTotalCount());
+		logger.info("컨트롤러 셀렉트 올 gvo.getGimage()"+gvo.getGimage());
+		
+		List<GoodsVO> listAll = goodsService.goodsSelectAllpaging(gvo);
+		logger.info("컨트롤러 페이징 리스트 사이즈  " + listAll.size());
+		
+		if (listAll.size() > 0) { 
+			
+			model.addAttribute("pagingVO", gvo);
+			model.addAttribute("listAll", listAll);
+			return "goods/goodsSelectAllpaging";
+		}
+		//여기가 문제 
+		return "board/goodsForm";
+	
+		}
+	/*
+	@RequestMapping(value="goodsSelectAll", method=RequestMethod.GET)	
+	public String goodsSelectAll(Model model, GoodsVO gvo) {
+		logger.info("굿즈 컨트롤러 셀렉트올  진입");
+		List<GoodsVO> listAll = goodsService.goodsSelectAll(gvo);
+		logger.info(" 굿즈 컨트롤러 셀렉트올  listAll.size() >>> : " + listAll.size());
+		if(listAll.size() > 0 ) {
+			model.addAttribute("listAll", listAll);
+			return "goods/goodsSelectAll";
+		}
+		return"goods/goodsForm";	
+	}
+	*/
+	@RequestMapping(value="goodsSelect", method=RequestMethod.POST)
+	public String goodsSelect(GoodsVO gvo, Model model, HttpServletRequest req) {
+
+		
+		logger.info("컨트롤러 굿즈 셀렉트 진입");
+		logger.info("컨트롤러로 넘어온 gnum ->>"+gvo.getGnum());
+		logger.info("gname->"+gvo.getGname());
+		logger.info("g1->"+gvo.getGname());
+		logger.info("g2->"+gvo.getGdetail());
+		logger.info("g3->"+gvo.getGpdnum());
+		List<GoodsVO> listS = goodsService.goodsSelect(gvo);
+		logger.info("컨트롤러 셀렉트 gvo.getGimage()"+gvo.getGimage());
+		if(listS.size()>0) {
+			model.addAttribute("listS", listS);
+			return "goods/goodsSelect";
+		}
+		return "goods/goodsSelectAllpaging";
+	}
+	//사진 변경시 파일업로드 사용해야함
+	@RequestMapping(value="goodsUpdate", method=RequestMethod.GET)
+	public String goodsUpdate(GoodsVO gvo, Model model) {
+		
+		logger.info("컨트롤러 Update 함수 진입 >>> :");
+		logger.info("컨트롤러 Update gvo.getGnum() >>> : " + gvo.getGnum());
+		logger.info("컨트롤러 Update gvo.getGdetail() >>> : " + gvo.getGdetail());
+		logger.info("컨트롤러 update gvo.getGimage()"+gvo.getGimage());
+		int nCnt = goodsService.goodsUpdate(gvo);
+		logger.info("굿즈 컨트롤러 Update nCnt >>> : " + nCnt);
+		if (nCnt > 0) { return "goods/goodsUpdate";}
+		return "goods/goodsSelectAllpaging";
+	}
+	
+	@RequestMapping(value="goodsDelete", method=RequestMethod.GET)
+	public String goodsDelete(GoodsVO gvo, Model model) {
+		logger.info("컨트롤러 Delete 함수 진입 >>> :");	
+		logger.info("컨트롤러 Delete gvo.getGnum() >>> : " + gvo.getGnum());		
+		int nCnt = goodsService.goodsDelete(gvo);
+		logger.info("컨트롤러 딜리트  nCnt >>> : " + nCnt);
+		if (nCnt > 0) { return "goods/goodsDelete";}
+		return "goods/goodsSelectAllpaging";
+	}
+	
+	@RequestMapping(value="goodsPay", method=RequestMethod.POST)
+	public String goodsPay(GoodsVO gvo, Model model, HttpServletRequest req) {
+		logger.info("컨트롤러 굿즈페이 진입");
+		int nCnt = goodsService.goodsPay(gvo);
+		
+		System.out.println("gvo->>>"+gvo);
+		
+		if(nCnt>0) {
+			model.addAttribute("gvo", gvo);
+		return "goods/goodsPay";
+	}
+		return "goods/goodsSelectAllpaging";
+	
+	}
+}

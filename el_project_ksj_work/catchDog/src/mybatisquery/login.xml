@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+                 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.catchdog.login.dao.LoginDAO">
+
+<select id="loginCheck" parameterType="memberVO" resultType="memberVO">
+	SELECT	 A.MID 			MID
+			,A.MNUM		 	MNUM
+			,A.MNAME		MNAME
+			,A.MINSERTDATE 	MINSERTDATE
+	FROM	CATCHDOG_MEMBER A
+	WHERE	A.MDELETEYN = 'Y'
+	AND		A.MID = #{mid, jdbcType=VARCHAR}
+	AND 	A.MPW = #{mpw, jdbcType=VARCHAR}
+</select>
+
+<select id="FindId" parameterType="memberVO" resultType="memberVO">
+	SELECT	A.MID			MID
+		   ,TO_CHAR(A.MINSERTDATE, 'YYYY-MM-DD')	MINSERTDATE
+	FROM	CATCHDOG_MEMBER A
+	WHERE 	A.MDELETEYN = 'Y'
+	AND		A.MNAME = #{mname, jdbcType=VARCHAR}
+	AND		A.MEMAIL = #{memail, jdbcType=VARCHAR}
+</select> 
+
+<select id="IdCheck" parameterType="memberVO" resultType="memberVO">
+	SELECT	A.MID		MID
+		   ,A.MEMAIL	MEMAIL
+		   ,A.MNUM		MNUM
+		   ,TO_CHAR(A.MINSERTDATE, 'YYYY-MM-DD')	MINSERTDATE
+	FROM	CATCHDOG_MEMBER A
+	WHERE 	A.MDELETEYN = 'Y'
+	AND		A.MID = #{mid, jdbcType=VARCHAR}
+</select> 
+
+<insert id="tempPwInsert" parameterType="pwVO">
+	<selectKey keyProperty="pnum" resultType="String" order="BEFORE">
+		SELECT LPAD((NVL(MAX(A.PNUM), 0)) + 1, 8, '0') PNUM FROM TEMP_PW A
+	</selectKey>
+	INSERT INTO TEMP_PW(PNUM, PTEMPPW, MID, MNUM, INSERTDATE)
+				 VALUES( #{pnum, jdbcType=VARCHAR}, #{ptemppw, jdbcType=VARCHAR}, #{mid, jdbcType=VARCHAR}, #{mnum, jdbcType=VARCHAR}, SYSDATE)
+</insert>
+
+<update id="updatePw" parameterType="pwVO">
+	UPDATE CATCHDOG_MEMBER A
+	SET	   MPW = #{ptemppw, jdbcType=VARCHAR}
+	WHERE  A.MDELETEYN='Y'
+	AND	   A.MNUM = #{mnum, jdbcType=VARCHAR}
+</update>
+</mapper>

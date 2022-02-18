@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+                 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.catchdog.goods.dao.GoodsDAO">
+	<insert id="goodsInsert" parameterType="goodsVO">
+		INSERT INTO CATCHDOG_GOODS(
+									GNUM			<!-- 1 -->
+								   ,GPDNUM			<!-- 2 -->
+								   ,GNAME			<!-- 3 -->
+								   ,GIMAGE			<!-- 4 -->
+								   ,GDDAY			<!-- 5 -->
+								   ,GMONEY			<!-- 6 -->
+								   ,GTARGET			<!-- 7 -->
+								   ,GPRICE			<!-- 8 -->
+								   ,GDETAIL			<!-- 9 -->
+								   ,GINSERTDATE		<!-- 10 -->
+								   ,GUPDATEDATE		<!-- 11 -->
+								   ,GDELETEYN		<!-- 12 -->
+		)
+		VALUES
+				(
+								#{gnum, jdbcType=VARCHAR}	<!-- 1 -->
+							   ,#{gpdnum, jdbcType=VARCHAR}	<!-- 2 -->
+							   ,#{gname, jdbcType=VARCHAR}	<!-- 3 -->
+							   ,#{gimage, jdbcType=VARCHAR}	<!-- 4 -->
+							   ,#{gdday, jdbcType=VARCHAR}	<!-- 5 -->
+							   ,#{gmoney, jdbcType=VARCHAR}	<!-- 6 -->
+							   ,#{gtarget, jdbcType=VARCHAR}<!-- 7 -->
+							   ,#{gprice, jdbcType=VARCHAR}	<!-- 8 -->
+							   ,#{gdetail, jdbcType=VARCHAR}<!-- 9 -->
+							   ,SYSDATE						<!-- 10 -->
+							   ,SYSDATE						<!-- 11 -->
+							   ,'Y'							<!-- 12 -->
+				)
+	</insert>
+	<select id="goodsSelectAll" parameterType="goodsVO" resultType="goodsVO">
+	SELECT  	A.GNUM 		GNUM
+			   ,A.GPDNUM 	GPDNUM
+			   ,A.GNAME		GNAME
+			   ,A.GIMAGE	GIMAGE
+			   ,A.GDDAY		GDDAY
+			   ,A.GMONEY	GMONEY
+			   ,A.GTARGET	GTARGET
+			   ,A.GPRICE	GPRICE
+			   ,A.GDETAIL	GDETAIL
+			   ,A.GDELETEYN	GDELETEYN
+			   ,TO_CHAR(A.GINSERTDATE, 'YYYY-MM-DD') GINSERTDATE
+			   ,TO_CHAR(A.GUPDATEDATE, 'YYYY-MM-DD') GUPDATEDATE
+			   FROM CATCHDOG_GOODS A
+			   WHERE A.GDELETEYN = 'Y'
+			   ORDER BY 1 DESC
+	</select>
+	<select id="goodsSelect" parameterType="goodsVO" resultType="goodsVO">
+	SELECT  A.GNUM 	GNUM
+	       ,A.GPDNUM GPDNUM
+	       ,A.GNAME GNAME
+	       ,A.GIMAGE GIMAGE
+	       ,A.GDDAY GDDAY
+	       ,A.GTARGET GTARGET
+	       ,A.GPRICE GPRICE
+	       ,A.GDETAIL GDETAIL
+	       ,TO_CHAR(A.GINSERTDATE, 'YYYY-MM-DD') GINSERTDATE
+	       ,TO_CHAR(A.GUPDATEDATE, 'YYYY-MM-DD') GUPDATEDATE
+	       FROM CATCHDOG_GOODS A
+	       WHERE A.GDELETEYN = 'Y' AND A.GNUM = #{gnum, jdbcType=VARCHAR}
+</select>
+<update id="goodsUpdate" parameterType="goodsVO">
+	UPDATE CATCHDOG_GOODS SET GDETAIL=#{gdetail, jdbcType=VARCHAR}, GIMAGE=#{gimage, jdbcType=VARCHAR}, 
+	GNAME=#{gname, jdbcType=VARCHAR}, GDDAY=#{gdday, jdbcType=VARCHAR}, GTARGET=#{gtarget, jdbcType=VARCHAR},
+	GPRICE=#{gprice, jdbcType=VARCHAR} WHERE GNUM =#{gnum, jdbcType=VARCHAR}
+</update>
+
+<update id="goodsDelete" parameterType="goodsVO">
+	UPDATE CATCHDOG_GOODS SET GDELETEYN = 'N', GUPDATEDATE = SYSDATE
+	WHERE GDELETEYN = 'Y' AND GNUM = #{gnum, jdbcType=VARCHAR}
+</update>
+
+	<select id="goodsSelectAllpaging" parameterType="goodsVO" resultType="goodsVO">	
+	SELECT * FROM (
+							SELECT
+									A.GNUM			<!-- 1 -->
+								   ,A.GPDNUM			<!-- 2 -->
+								   ,A.GNAME			<!-- 3 -->
+								   ,A.GIMAGE			<!-- 4 -->
+								   ,A.GDDAY			<!-- 5 -->
+								   ,A.GMONEY			<!-- 6 -->
+								   ,A.GTARGET			<!-- 7 -->
+								   ,A.GPRICE			<!-- 8 -->
+								   ,A.GDETAIL
+								   ,A.GDELETEYN
+		       ,TO_CHAR(A.GINSERTDATE, 'YYYY-MM-DD') GINSERTDATE
+		       ,TO_CHAR(A.GUPDATEDATE, 'YYYY-MM-DD') GUPDATEDATE	  
+		       ,CEIL(ROW_NUMBER() OVER(ORDER BY A.GNUM)/ #{pageSize, jdbcType=VARCHAR} ) pageSize		
+			   ,COUNT(A.GNUM) OVER() AS totalCount       
+		FROM 	CATCHDOG_GOODS A
+		WHERE 	A.GDELETEYN = 'Y' 	
+		ORDER BY 1 DESC  
+		
+	) WHERE pageSize = #{curPage, jdbcType=VARCHAR}
+</select>
+	
+</mapper>

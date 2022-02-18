@@ -1,0 +1,16 @@
+package com.catchdog.shelter.common;
+
+public class ShelterCommon {
+	
+	//file path
+	// C:\00.KOSMO93\30.Web\el_web_neon _work\testCss\WebContent\xmlTest
+
+	public static final String XML_FILE_PATH = "C:\\00.KOSMO93\\30.Web\\el_catchdog_work\\catchDog\\WebContent\\WEB-INF\\views\\shelter";
+	public static final int SHELTER_CURPAGE = 1;
+	public static final int SHELTER_PAGESIZE =5;
+	public static final int SHELTER_GROUPSIZE = 5;
+	public static final int SHELTER_TOTALCOUNGT = 0;
+
+
+
+}

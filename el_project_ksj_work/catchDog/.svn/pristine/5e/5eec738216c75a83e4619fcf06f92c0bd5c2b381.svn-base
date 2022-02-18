@@ -1,0 +1,66 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Login</title>
+
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript">
+		
+		$(document).ready(function(){
+			$("#mid").attr('placeholder','아이디');
+			$('#mpw').attr('placeholder','비밀번호');
+			
+			$('#btn').click(function(){
+				console.log("btn >>> : ");
+				
+				$("#loginForm").attr({
+					'action':'login.cd',
+					'method':'POST',
+					'enctype':'application/x-www-form-urlencoded'
+				}).submit();
+			});
+		});
+</script>
+</head>
+<body>
+<jsp:include page="/include/header.jsp" flush="true"></jsp:include>
+
+	<form name="loginForm" id="loginForm">
+	<div id="contents" class="sub_con">
+            <div class="login_con01 clear">
+                <div class="login">
+                    <form action="" method="get">
+                        <fieldset>
+                            <legend>로그인</legend>
+                            <h4>CatchDog 이용을 위해 로그인을 해주세요</h4>
+                            <ul>
+                            <li><input type="text" name="mid" id="mid" value="이메일 아이디" title="아이디 입력"></li>
+                            <li><input type="password" name="mpw" id="mpw" value="" title="비밀번호 입력"></li>
+                            <li><button type="button" id="btn">로그인</button></li>
+                            </ul>                        
+                            <div>
+                                <input type="checkbox" id="text_id_save"><label for="text_id_save">아이디 저장</label> 
+                                <span>아직 회원이 아니신가요?</span><a href="memForm.cd">회원가입</a>              
+                            </div>
+                        </fieldset>	
+                    </form>
+                </div>
+                <div class="login_search">
+                    <div class="id_search">
+                        <h4>아이디를 잊으셨나요?</h4>
+                        <p>본인 인증 후 회원님의 아이디를 찾아 드립니다.</p>
+                        <a href="idFindForm.cd">아이디찾기</a>
+                    </div>
+                    <div class="pw_search">
+                        <h4>비밀번호를 잊으셨나요?</h4>
+                        <p>본인 인증 후 회원님의 비밀번호를 찾아 드립니다.</p>
+                        <a href="pwFindForm.cd">비밀번호 찾기</a>
+                    </div>
+                </div>
+            </div>
+	</form>	
+	
+</body>
+</html>

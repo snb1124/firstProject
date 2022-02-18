@@ -1,0 +1,133 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Login</title>
+<style type="text/css">
+	button {
+		cursor:pointer;
+	}
+</style>
+<script src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.3.js"></script>
+<script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript">
+	
+		$(document).ready(function(){
+			$("#mid").attr('placeholder','아이디');
+			$('#mpw').attr('placeholder','비밀번호');
+			
+			$('#btn').click(function(){
+				console.log("btn >>> : ");
+				
+				$("#loginForm").attr({
+					'action':'login.cd',
+					'method':'POST',
+					'enctype':'application/x-www-form-urlencoded'
+				}).submit();
+			});
+		});
+</script>
+</head>
+<body>
+<jsp:include page="/include/header.jsp" flush="true"></jsp:include>
+
+	<form name="loginForm" id="loginForm">
+	<div id="contents" class="sub_con">
+            <div class="login_con01 clear">
+                <div class="login">
+                    <form action="" method="get">
+                        <fieldset>
+                            <legend>로그인</legend>
+                            <h4>CatchDog 이용을 위해 로그인을 해주세요</h4>
+                            <ul>
+                            <li><input type="text" name="mid" id="mid" value="" title="아이디 입력" placeholder="이메일 아이디"></li>
+                            <li><input type="password" name="mpw" id="mpw" value="" title="비밀번호 입력"></li>
+                            <li><button type="button" id="btn">로그인</button></li>
+                            </ul>                        
+                            <div>
+                                <span>아직 회원이 아니신가요?</span><a href="memForm.cd">회원가입</a>
+							    <div id="naver_id_login" style="margin-left: -13px; display: inline-block;"></div>
+							  <!-- //네이버 로그인 버튼 노출 영역 -->
+							  <script type="text/javascript">
+							  	var naver_id_login = new naver_id_login("i2N985GdjT6UNzp8kb8g", "http://localhost:8088/NaverCallback.cd");
+							  	var state = naver_id_login.getUniqState();
+								  	naver_id_login.setButton("green",3,46);
+								  	naver_id_login.setDomain("http://localhost:8088/Login.cd");
+								  	naver_id_login.setState(state);
+								  	naver_id_login.setPopup();
+								  	naver_id_login.init_naver_id_login();
+							  </script>
+							<div class="button-login" align ="center" style="margin-right: -20px; display: inline-block;padding-left: 5px;">
+							    <a id="kakao-login-btn" >
+							    	<img src="image/loginimg/kakao_login_medium_narrow.png" style="cursor:pointer;" />
+							    </a>
+							    <script type='text/javascript'>
+							    Kakao.init('e439bd992667016af212fb6b7dff46dd');	
+							    //1. 로그인 시도
+								Kakao.Auth.createLoginButton({
+									container: '#kakao-login-btn',
+									success: function(authObj) {							         
+								          //2. 로그인 성공시, API 호출
+								          Kakao.API.request({
+								            url: '/v2/user/me',
+								            success: function(response) {
+											  	scope : 'account_email';        
+										        if (response.kakao_account.gender == 'female'){
+										        	var userGender = '01'
+										        }else{
+										        	var userGender = '02'
+										        }									      								          
+												$("#token").val(response.id);
+												$("#name").val(response.properties.nickname);
+												$("#gender").val(userGender);
+												$("#birthyear").val(response.kakao_account.birthyear);
+												$("#birthday").val(response.kakao_account.birthday);
+												$("#email").val(response.kakao_account.email);
+												$("#social").val('K');											
+												if ($("#token").val != null){
+													$("#socialLogin").submit();
+												}		              
+								        }
+								          });
+								          var token = authObj.access_token
+								          console.log("token >>> : " + token);
+								        },
+								        fail: function(err) {
+//								          alert(JSON.stringify(err));
+								        }
+								      });									        
+
+								</script>
+						    </div>
+                            </div>
+                        </fieldset>	
+                    </form>
+                </div>
+                <div class="login_search">
+                    <div class="id_search">
+                        <h4>아이디를 잊으셨나요?</h4>
+                        <p>본인 인증 후 회원님의 아이디를 찾아 드립니다.</p>
+                        <a href="FindIdForm.cd">아이디찾기</a>
+                    </div>
+                    <div class="pw_search">
+                        <h4>비밀번호를 잊으셨나요?</h4>
+                        <p>본인 인증 후 회원님의 비밀번호를 찾아 드립니다.</p>
+                        <a href="IdCheckForm.cd">비밀번호 찾기</a>
+                    </div>
+                </div>
+            </div>
+	</form>
+	<form name="socialLogin" id="socialLogin" action="socialLogin.cd" method="post">
+		<input type="hidden" name="token"     id="token"     value="" />
+		<input type="hidden" name="name"      id="name"      value="" />
+		<input type="hidden" name="gender"    id="gender"    value="" />
+		<input type="hidden" name="birthday"  id="birthday"  value="" />
+		<input type="hidden" name="birthyear" id="birthyear" value="" />
+		<input type="hidden" name="mobile"    id="mobile"    value="" />
+		<input type="hidden" name="email"     id="email"     value="" />
+		<input type="hidden" name="social"    id="social"    value="" />
+	</form>
+</html>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+				"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.catchdog.adoption.dao.AdoptionDAO">
+	<select id="adoptionSelectAll" resultType="adoptionVO">
+	SELECT *
+	FROM	(SELECT 	A.MNUM			MNUM,
+						A.ANUM			ANUM,
+						A.ASUBJECT		ASUBJECT,
+						A.APW			APW,
+						A.ADNO			ADNO,
+						A.ANAME			ANAME,
+						A.AUPKIND		AUPKIND,
+						A.AKIND			AKIND,
+						A.ACOLOR		ACOLOR,
+						A.ASIZE			ASIZE,
+						A.AFUR			AFUR,
+						A.ANEUT			ANEUT,
+						A.AAGE			AAGE,
+						A.AIMAGE		AIMAGE,
+						A.AGENDER		AGENDER,
+						A.ACARESITE		ACARESITE,
+						A.ACARETEL		ACARETEL,
+						A.ASPECIAL		ASPECIAL,
+						A.DELETEYN		DELETEYN,
+						A.INSERTDATE	INSERTDATE,
+						A.UPDATEDATE	UPDATEDATE,
+						CEIL(ROW_NUMBER() OVER(ORDER BY A.ANUM DESC)/ #{pageSize} ) pageSize,
+						COUNT(A.ANUM) OVER() AS totalCount
+				FROM	DISADOPTION_BOARD	A
+				WHERE	A.DELETEYN	=	'Y'
+				AND		A.ANUM	LIKE	'A%'
+				AND		A.ANUM NOT LIKE	'AA%'
+				<if test="acaresite != null and acaresite != '' and acaresite != '전체'">
+					<![CDATA[AND A.ACARESITE LIKE #{acaresite} || '%']]>
+				</if>
+				<if test="asize != null and asize != ''">
+					<![CDATA[AND A.ASIZE LIKE '%' || #{asize} || '%']]>
+				</if>
+				<if test="agender != null and agender != ''">
+					<![CDATA[AND A.AGENDER = #{agender}]]>
+				</if>
+				ORDER BY A.ANUM DESC)
+	WHERE	pageSize = #{curPage}
+	</select>
+	
+	<select id="adoptionSelect" parameterType="adoptionVO" resultType="adoptionVO">
+		SELECT 	A.MNUM			MNUM,
+				A.ANUM			ANUM,
+				A.ASUBJECT		ASUBJECT,
+				A.APW			APW,
+				A.ADNO			ADNO,
+				A.ANAME			ANAME,
+				A.AUPKIND		AUPKIND,
+				A.AKIND			AKIND,
+				A.ACOLOR		ACOLOR,
+				A.ASIZE			ASIZE,
+				A.AFUR			AFUR,
+				A.ANEUT			ANEUT,
+				A.AAGE			AAGE,
+				A.AIMAGE		AIMAGE,
+				A.AGENDER		AGENDER,
+				A.ACARESITE		ACARESITE,
+				A.ACARETEL		ACARETEL,
+				A.ASPECIAL		ASPECIAL,
+				A.DELETEYN		DELETEYN,
+				A.INSERTDATE	INSERTDATE,
+				A.UPDATEDATE	UPDATEDATE
+		FROM	DISADOPTION_BOARD	A
+		WHERE	A.DELETEYN	=	'Y'
+		AND		A.ANUM		=	#{anum}
+	</select>
+</mapper>

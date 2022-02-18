@@ -1,0 +1,109 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import="com.catchdog.goods.vo.GoodsVO" %> 
+<%@ page import="java.util.List" %>     
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	div {
+			margin: 50px 0px 0px 100px;
+		}
+	.mem{text-align: center;}
+</style>
+<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	//  U
+	$(document).on("click", "#U", function(){
+		//alert("U >>> : ");		
+		$("#goodsUpdateForm").attr({ "method":"POST"
+			                        ,"action":"goodsUpdate.cd"}).submit();
+	});
+	$(document).on("click", "#D", function(){
+		//alert("D >>> : ");
+		$("#goodsUpdateForm").attr({ "method":"POST"
+			                        ,"action":"goodsDelete.cd"}).submit();
+	});
+});//ready
+</script>			
+</head>					
+<body>					
+						
+<%
+	Object obj = request.getAttribute("listS");
+	List<GoodsVO> list = (List)obj;
+	GoodsVO gvo = null;
+	if (list.size() == 1) {
+		gvo = list.get(0);
+	};
+	System.out.println("셀렉트 gvo.getGnum()->>>"+gvo.getGnum());
+	System.out.println("셀렉트 gvo.getGpdnum-->>>"+gvo.getGpdnum());
+	System.out.println("셀렉트 gvo.getGimage ->> "+gvo.getGimage());
+%>
+
+<div>
+<form name="goodsUpdateForm" id="goodsUpdateForm">
+<table border=1>
+<tr>				
+<td colspan="2" align="center">굿즈 글 수정하기</td>
+</tr>						
+<tr>						
+<td class="mem">글번호</td>
+<td><input type="text" name="gnum" id="gnum" value="<%= gvo.getGnum() %>" readonly/></td>
+</tr>						
+<tr>						
+<td class="mem">상품번호</td>
+<td><input type="text" name="gpdnum" id="gpdnum" value="<%= gvo.getGpdnum() %>" readonly/></td>
+</tr>					
+<tr>						
+<td class="mem">상품명</td>
+<td>					
+<input type="text" name="gname" id="gname" value="<%= gvo.getGname() %>" style="width:100px"/>
+</td>						
+</tr>												
+<tr>							
+<td class="mem">사진</td>
+  <td> 							
+<img src="image/goodsimg/<%= gvo.getGimage() %>" border="1"  width="40" height="50" alt="image">
+</td>						
+</tr>
+<!-- 나중에 캘린더로 수정 -->
+<tr>						
+<td class="mem">등록일</td>
+<td> 						
+<input type="text" name="gdday" id="gdday" value="<%= gvo.getGdday() %>" />		      
+</td>					
+</tr>					
+<tr>					
+<td class="mem">목표금액</td>
+<td> 					
+<input type="text" name="gtarget" id="gtarget" value="<%= gvo.getGtarget() %>" />		      
+</td>				
+</tr>				
+<tr>				
+<td class="mem">상품가격</td>
+<td> 				
+<input type="text" name="gprice" id="gprice" value="<%= gvo.getGprice() %>" />		      
+</td>				
+</tr>				
+<tr>				
+<td class="mem">상세소개</td>
+<td>				
+<textarea name="gdetail" id="gdetail" rows="5" cols="50"><%= gvo.getGdetail()%>					
+</textarea>						
+</td>							
+</tr>							
+<tr>					
+<td colspan="2" align="right"> 		
+<button type="button" id="U">수정</button>
+<button type="button" id="D">삭제</button>
+</td>				
+</tr>			
+</table>		
+</form>		
+</div>		
+</body>		
+</html>		

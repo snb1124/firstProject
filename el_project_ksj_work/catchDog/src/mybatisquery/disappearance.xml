@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+                 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+							
+<mapper namespace="com.catchdog.disappearance.dao.DisappearanceDAO">
+
+
+<insert id="disappearanceInsert" parameterType="disappearanceVO">
+
+	INSERT INTO CATCHDOG_DISAPPEARANCE( 	 
+								 DINUM      	<!-- 1 -->	
+								,MNUM 			<!-- 2 -->
+								,DINAME			<!-- 3 -->
+								,DIUPKIND 		<!-- 4 -->
+	                          	,DIKIND   		<!-- 5 -->
+	                          	,DIDATE 		<!-- 6 -->
+	                          	,DIIMAGE 		<!-- 7 -->
+	                          	,DISPECIAL   	<!-- 8 -->	
+	                          	,DIAGE  		<!-- 9 -->
+	                          	,DIHP 			<!-- 10 -->
+	                          	,DIPOSITION 	<!-- 11 -->
+	                          	,DIINSERTDATE 	<!-- 12 -->
+	                          	,DIUPDATEDATE	<!-- 13 -->	
+	                          	,DIDELETEYN	 	<!-- 14 -->
+	                         ) 
+	                  VALUES
+	                  		( 	 
+	                  			 #{dinum, jdbcType=VARCHAR} 				
+	                  			,#{mnum, jdbcType=VARCHAR} 		
+	                  			,#{diname, jdbcType=VARCHAR} 				
+	                          	,#{diupkind, jdbcType=VARCHAR}  				
+	                          	,#{dikind, jdbcType=VARCHAR} 			
+	                          	,#{didate, jdbcType=VARCHAR}  			
+	                  			,#{diimage, jdbcType=VARCHAR} 					                          	
+	                          	,#{dispecial, jdbcType=VARCHAR}  			
+	                          	,#{diage, jdbcType=VARCHAR} 		
+	                          	,#{dihp, jdbcType=VARCHAR}  	
+	                  			,#{diposition, jdbcType=VARCHAR} 	
+	                          	,SYSDATE  								
+	                          	,SYSDATE 		
+	                          	,'Y'  																
+	                         ) 
+</insert>
+
+
+<select id="disappearanceselectAll" parameterType="disappearanceVO" resultType="disappearanceVO">
+	SELECT * FROM(
+		SELECT		A.DINUM 	 DINUM
+		       ,A.DINAME  DINAME
+		       ,A.DIUPKIND 	 DIUPKIND
+		       ,A.DIKIND	 DIKIND
+		       ,A.DIDATE  DIDATE
+		       ,A.DIIMAGE	 DIIMAGE
+		       ,A.DISPECIAL	 DISPECIAL
+		       ,A.DIAGE	 DIAGE
+		       ,A.DIHP	DIHP
+		       ,A.DIPOSITION	 DIPOSITION
+		       ,A.DIDELETEYN	DIDELETEYN
+		       ,TO_CHAR(A.DIINSERTDATE, 'YYYY-MM-DD') DIINSERTDATE  
+		       <!--  ? : 페이지 사이즈 : pageSize  -->
+		       ,CEIL(ROW_NUMBER() OVER(ORDER BY A.DINUM DESC)/ #{pageSize, jdbcType=VARCHAR} ) pageSize		
+			   ,COUNT(A.DINUM) OVER() AS totalCount       
+		FROM 	CATCHDOG_DISAPPEARANCE A
+		WHERE 	A.DIDELETEYN = 'Y'
+		ORDER BY 1 DESC  
+		<!--  ? : 현재 페이지 : curPage -->
+	) WHERE pageSize = #{curPage, jdbcType=VARCHAR}
+</select>
+<select id="disappearanceselect" parameterType="disappearanceVO" resultType="disappearanceVO">
+	SELECT * FROM CATCHDOG_DISAPPEARANCE 
+			 WHERE DINUM = #{dinum, jdbcType=VARCHAR}
+			 AND DIDELETEYN = 'Y'
+</select>
+
+</mapper>

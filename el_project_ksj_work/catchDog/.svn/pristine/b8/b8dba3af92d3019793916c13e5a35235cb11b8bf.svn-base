@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+                 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.catchdog.goods.dao.GoodsDAO">
+	<insert id="goodsInsert" parameterType="goodsVO">
+		INSERT INTO CATCHDOG_GOODS(
+									GNUM			<!-- 1 -->
+								   ,GPDNUM			<!-- 2 -->
+								   ,GNAME			<!-- 3 -->
+								   ,GIMAGE			<!-- 4 -->
+								   ,GDDAY			<!-- 5 -->
+								   ,GMONEY			<!-- 6 -->
+								   ,GTARGET			<!-- 7 -->
+								   ,GPRICE			<!-- 8 -->
+								   ,GDETAIL			<!-- 9 -->
+								   ,GINSERTDATE		<!-- 10 -->
+								   ,GUPDATEDATE		<!-- 11 -->
+								   ,GDELETEYN		<!-- 12 -->
+		)
+		VALUES
+				(
+								#{gnum, jdbcType=VARCHAR}	<!-- 1 -->
+							   ,#{gpdnum, jdbcType=VARCHAR}	<!-- 2 -->
+							   ,#{gname, jdbcType=VARCHAR}	<!-- 3 -->
+							   ,#{gimage, jdbcType=VARCHAR}	<!-- 4 -->
+							   ,#{gdday, jdbcType=VARCHAR}	<!-- 5 -->
+							   ,#{gmoeny, jdbcType=VARCHAR}	<!-- 6 -->
+							   ,#{gtarget, jdbcType=VARCHAR}<!-- 7 -->
+							   ,#{gprice, jdbcType=VARCHAR}	<!-- 8 -->
+							   ,#{gdetail, jdbcType=VARCHAR}<!-- 9 -->
+							   ,SYSDATE						<!-- 10 -->
+							   ,SYSDATE						<!-- 11 -->
+							   ,'Y'							<!-- 12 -->
+				)
+	</insert>
+</mapper>

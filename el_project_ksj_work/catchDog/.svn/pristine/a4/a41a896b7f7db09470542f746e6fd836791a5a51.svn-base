@@ -1,0 +1,113 @@
+package com.catchdog.goods.vo;
+
+public class GoodsVO {
+	
+	private String gnum;
+	private String gpdnum;
+	private String gname;
+	private String gimage;
+	private String gdday;
+	private String gmoney;
+	private String gtarget;
+	private String gprice;
+	private String gdetailpage;
+	private String insertdate;
+	private String gupdatdate;
+	private String gdeleteyn;
+	
+	public GoodsVO() {
+		
+	}
+	
+	
+	public GoodsVO(String gnum, String gpdnum, String gname, String gimage, String gdday, String gmoney, String gtarget, String gprice,
+			String gdetailpage, String insertdate, String gupdatdate, String gdeleteyn) {
+		
+		this.gnum = gnum;
+		this.gpdnum = gpdnum;
+		this.gname = gname;
+		this.gimage = gimage;
+		this.gdday = gdday;
+		this.gmoney = gmoney;
+		this.gtarget = gtarget;
+		this.gprice = gprice;
+		this.gdetailpage = gdetailpage;
+		this.insertdate = insertdate;
+		this.gupdatdate = gupdatdate;
+		this.gdeleteyn = gdeleteyn;
+	}
+	public String getGnum() {
+		return gnum;
+	}
+	public void setGnum(String gnum) {
+		this.gnum = gnum;
+	}
+	public String getGpdnum() {
+		return gpdnum;
+	}
+	public void setGpdnum(String gpdnum) {
+		this.gpdnum = gpdnum;
+	}
+	public String getGname() {
+		return gname;
+	}
+	public void setGname(String gname) {
+		this.gname = gname;
+	}
+	public String getGimage() {
+		return gimage;
+	}
+	public void setGimage(String gimage) {
+		this.gimage = gimage;
+	}
+	public String getGdday() {
+		return gdday;
+	}
+	public void setGdday(String gdday) {
+		this.gdday = gdday;
+	}
+	public String getGmoney() {
+		return gmoney;
+	}
+	public void setGmoney(String gmoney) {
+		this.gmoney = gmoney;
+	}
+	public String getGtarget() {
+		return gtarget;
+	}
+	public void setGtarget(String gtarget) {
+		this.gtarget = gtarget;
+	}
+	public String getGprice() {
+		return gprice;
+	}
+	public void setGprice(String gprice) {
+		this.gprice = gprice;
+	}
+	public String getGdetailpage() {
+		return gdetailpage;
+	}
+	public void setGdetailpage(String gdetailpage) {
+		this.gdetailpage = gdetailpage;
+	}
+	public String getInsertdate() {
+		return insertdate;
+	}
+	public void setInsertdate(String insertdate) {
+		this.insertdate = insertdate;
+	}
+	public String getGupdatdate() {
+		return gupdatdate;
+	}
+	public void setGupdatdate(String gupdatdate) {
+		this.gupdatdate = gupdatdate;
+	}
+	public String getGdeleteyn() {
+		return gdeleteyn;
+	}
+	public void setGdeleteyn(String gdeleteyn) {
+		this.gdeleteyn = gdeleteyn;
+	}
+	
+	
+}

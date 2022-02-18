@@ -1,0 +1,17 @@
+1636370470556	Delete element
+1636372787115	Rename type 'Chabundao'
+1636373534186	Rename package 'com.catchdog.common.Service'
+1636456944655	Rename type 'GoodsVO'
+1636457015574	Rename type 'CatchDogDAO'
+1636457096549	Rename type 'CatchDogService'
+1636470957831	Delete element
+1636511941382	Rename type 'CatchDogGoodsVO'
+1636511953497	Rename type 'CatchDogGoodsService'
+1636511963092	Rename type 'CatchDogGoodsServiceImpl'
+1636511969861	Rename type 'CatchDogGoodsDAO'
+1636511977893	Rename type 'CatchDogGoodsDAOImpl'
+1636511991449	Rename type 'CatchDogController'
+1636512006711	Rename type 'Controller'
+1636512024756	Delete element
+1636721807446	Delete element
+1636815549586	Delete element

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+                 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.catchdog.member.dao.MemberDAO">
+
+<insert id="memberInsert" parameterType="memberVO">
+
+	INSERT INTO CATCHDOG_MEMBER( 	 
+								 MNUM      		
+								,MNAME 			
+								,MID 			
+								,MPW 			
+	                          	,MGENDER   		
+	                          	,MBIRTH 		
+	                          	,MHP 			
+	                          	,MEMAIL   		
+	                          	,MZONECODE  	
+	                          	,MROADADDRESS 	
+	                          	,MJIBUNADDRESS 	
+	                          	,MADMIN 		
+	                          	,MDELETEYN		
+	                          	,MINSERTDATE	 	
+	                          	,MUPDATEDATE		
+	                         ) 
+	                  VALUES
+	                  		( 	 
+	                  			 #{mnum, jdbcType=VARCHAR} 				
+	                  			,#{mname, jdbcType=VARCHAR} 		
+	                  			,#{mid, jdbcType=VARCHAR} 				
+	                          	,#{mpw, jdbcType=VARCHAR}  				
+	                          	,#{mgender, jdbcType=VARCHAR} 			
+	                          	,#{mbirth, jdbcType=VARCHAR}  			
+	                  			,#{mhp, jdbcType=VARCHAR} 					                          	
+	                          	,#{memail, jdbcType=VARCHAR}  			
+	                          	,#{mzonecode, jdbcType=VARCHAR} 		
+	                          	,#{mroadaddress, jdbcType=VARCHAR}  	
+	                  			,#{mjibunaddress, jdbcType=VARCHAR} 	
+	                          	,#{madmin, jdbcType=VARCHAR} 			
+	                          	,'Y'  									
+	                          	,SYSDATE  								
+	                          	,SYSDATE 								
+	                         ) 
+</insert>
+
+<select id="memberSelectAll" parameterType="memberVO" resultType="memberVO">	
+	SELECT	 A.MNUM 			MNUM 
+			,A.MNAME 			MNAME 
+			,A.MID 				MID 
+			,A.MPW 				MPW 
+            ,A.MGENDER 			MGENDER    
+            ,A.MBIRTH 			MBIRTH 
+            ,A.MHP 				MHP 
+            ,A.MEMAIL 			MEMAIL   
+            ,A.MZONECODE 		MZONECODE  
+            ,A.MROADADDRESS 	MROADADDRESS 
+            ,A.MJIBUNADDRESS 	MJIBUNADDRESS 
+            ,A.MADMIN 			MADMIN 
+            ,A.MDELETEYN 		MDELETEYN
+            ,TO_CHAR(A.MINSERTDATE, 'YYYY-MM-DD')  MINSERTDATE 
+            ,TO_CHAR(A.MUPDATEDATE, 'YYYY-MM-DD')  MUPDATEDATE     
+	FROM 	CATCHDOG_MEMBER A
+	WHERE 	A.MDELETEYN = 'Y' 	
+	ORDER BY 1 DESC  
+</select>
+
+<select id="memberSelect" parameterType="memberVO" resultType="memberVO">
+	SELECT	 A.MNUM 			MNUM 
+			,A.MNAME 			MNAME 
+			,A.MID 				MID 
+			,A.MPW 				MPW
+            ,A.MGENDER 			MGENDER    
+            ,A.MBIRTH 			MBIRTH 
+            ,A.MHP 				MHP 
+            
+            ,A.MEMAIL 			MEMAIL   
+            ,A.MZONECODE 		MZONECODE  
+            ,A.MROADADDRESS 	MROADADDRESS 
+            ,A.MJIBUNADDRESS 	MJIBUNADDRESS 
+            
+            ,A.MADMIN 			MADMIN 
+            ,A.MDELETEYN 		MDELETEYN
+            ,TO_CHAR(A.MINSERTDATE, 'YYYY-MM-DD')  MINSERTDATE 
+           	,TO_CHAR(A.MUPDATEDATE, 'YYYY-MM-DD')  MUPDATEDATE     
+	FROM 	CATCHDOG_MEMBER A
+	WHERE 	A.MDELETEYN = 'Y' 
+	AND 	A.MNUM = #{mnum, jdbcType=VARCHAR}
+</select>
+
+<update id="memberUpdate" parameterType="memberVO">
+	UPDATE   CATCHDOG_MEMBER 
+	SET 	 MEMAIL 		= #{memail, jdbcType=VARCHAR}
+			,MZONECODE  	= #{mzonecode, jdbcType=VARCHAR}
+			,MROADADDRESS 	= #{mroadaddress, jdbcType=VARCHAR}
+			,MJIBUNADDRESS 	= #{mjibunaddress, jdbcType=VARCHAR}
+			
+	       	,MUPDATEDATE = SYSDATE
+	WHERE 	MDELETEYN = 'Y' 
+	AND 	MNUM = #{mnum, jdbcType=VARCHAR}
+</update>
+
+<update id="memberDelete" parameterType="memberVO">
+	UPDATE 	 CATCHDOG_MEMBER 
+	SET 	 MDELETEYN = 'N'
+			,MUPDATEDATE = SYSDATE
+	WHERE 	MDELETEYN = 'Y' 
+	AND 	MNUM = #{mnum, jdbcType=VARCHAR}
+</update>
+
+
+<select id="memberIdCheck" parameterType="memberVO" resultType="memberVO">
+	SELECT 	A.MID MID
+	FROM 	CATCHDOG_MEMBER A 
+	WHERE 	MDELETEYN = 'Y'
+	AND     A.MID = #{mid, jdbcType=VARCHAR}
+</select>
+</mapper>
+

@@ -1,0 +1,86 @@
+package com.catchdog.notice.controller;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.catchdog.common.ChabunUtil;
+import com.catchdog.common.CommonUtils;
+import com.catchdog.common.FileUploadUtil;
+import com.catchdog.common.service.ChabunService;
+import com.catchdog.notice.service.NoticeService;
+import com.catchdog.notice.vo.NoticeVO;
+
+@Controller
+public class NoticeController {
+	Logger logger = Logger.getLogger(NoticeController.class);
+	
+	private NoticeService catchDogNoticeService;
+	private ChabunService chabunService;
+	
+	//해당 인스턴스 변수에 스프링으로부터 자동으로 Bean을 주입, new 연사자와 같음
+	@Autowired(required=false)
+	public NoticeController( NoticeService catchDogNoticeService) {
+		this.catchDogNoticeService = catchDogNoticeService;
+	}
+	
+	//게시판 글 입력 폼 
+	@GetMapping("/noticeForm")
+	public String noticeForm(){
+		
+		logger.info("CatchDogNoticeController.noticeInsert() >>>");
+		
+		return "notice/catchDogNoticeForm";
+	}
+	
+	//공지사항 입력 폼에 글쓰기 
+	@PostMapping("/noticeInsert")
+	//@RequestMapping(value="noticeInsert", method= {RequestMethod.POST, RequestMethod.GET})
+	public String noticeInsert(HttpServletRequest req){
+		logger.info("CatchDogNoticeController.noticeInsert()>>>");
+		
+		//게시판 번호 체번구하기
+		String nnum = "";//ChabunUtil.getNoticeChabun("N",chabunService.getNoticeChabun().getNnum());
+		logger.info("CatchDogNoticeController.noticeInser.nnum >>>:" + nnum);
+		
+		//이미지 업로드
+		FileUploadUtil fu = new FileUploadUtil(CommonUtils.NOTICE_PATH,
+											   CommonUtils.NOTICE_SIZE,
+											   CommonUtils.NOTICE_ENCODE);
+		boolean bool = fu.imgfileUpload(req);
+		//boolean bool = fu.imgfileUploadSize(req);
+		logger.info("CatchDogNoticeController.noticeInsert.bool(이미지 업로드) >>>:" + bool);
+		
+		//채번, 이미지 업로드 성공하면 vo 세팅하기 
+		NoticeVO _cvo = null;
+		_cvo = new NoticeVO();
+	
+		_cvo.setNnum(nnum);
+		_cvo.setNtitle(fu.getParameter("ntitle"));
+		_cvo.setNcontent(fu.getParameter("ncontent"));
+		_cvo.setNimage(fu.getParameter("nimage"));
+		
+		logger.info("CatchDogNoticeController.noticeInsert _cvo.getNnum()>>>" +  _cvo.getNnum());
+		logger.info("CatchDogNoticeController.noticeInsert _cvo.getNcontent()>>>" +  _cvo.getNcontent());
+		logger.info("CatchDogNoticeController.noticeInsert _cvo.getNimage()>>>" + _cvo.getNimage());
+		
+		int nCnt = catchDogNoticeService.noticeInsert(_cvo);
+		logger.info("CatchDogNoticeController.noticeInsert nCnt(이미지 업로드)" + nCnt);
+		
+		if(nCnt >0) {return "notice/CatchDogNoticeInsert";}
+		return "notice/catchDogNoticeForm";
+	}
+	
+	//전체조회 
+	@PostMapping("/noticeSelectAll")
+	public String noticeSelectAll() {
+		logger.info("NoticeController.noticeSelectAll() >>>");
+		return "notice/noticeSelectAll";
+	}
+}
